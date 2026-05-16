@@ -19,12 +19,13 @@ def fetch_all_players(): #fetches all ACTIVE nba players for the 2025-26 season
 
 def get_all_player_stats(season="2025-26"): #fetches advanced stats for all players in the specified season
     print("Fetching advanced stats for all players...")
-    stats_data = leaguedashplayerstats.LeagueDashPlayerStats( 
+    stats_data = leaguedashplayerstats.LeagueDashPlayerStats(
         measure_type_detailed_defense="Advanced",
         season=season
     ).get_data_frames()[0]
 
     return stats_data
+
 
 def get_player_positions(season="2025-26"):
     print("Fetching player positions...")
@@ -34,52 +35,49 @@ def get_player_positions(season="2025-26"):
     return position_data[['PERSON_ID', 'POSITION']]
 
 
-def normalize_and_price(players_stats):
+def normalize_and_price(all_stats_list):
     """
     Calculate normalized scores and prices for players.
     Price ranges from exactly $1M to $10M using min-max scaling.
     Returns prices in millions (1.0 to 10.0).
-    Weights: 50% PER, 30% TS%, 20% USG%
+    Weights: 50% PIE, 30% TS%, 20% USG%
     """
-    if len(players_stats) == 0:
+    if len(all_stats_list) == 0:
         return []
 
     # Find max values for normalization
-    max_per = players_stats['PER'].max() # Find the maximum PER value among all players for normalization
-    max_ts_pct = players_stats['TS_PCT'].max() # Find the maximum TS% value among all players for normalization
-    max_usg_pct = players_stats['USG_PCT'].max() # Find the maximum USG% value among all players for normalization
+    max_PIE = max(p['PIE'] for p in all_stats_list)
+    max_ts_pct = max(p['TS_PCT'] for p in all_stats_list)
+    max_usg_pct = max(p['USG_PCT'] for p in all_stats_list)
 
-    # Avoid division by zero by ensuring max values are at least 1
-    max_per = max_per if max_per > 0 else 1
+    # Avoid division by zero
+    max_PIE = max_PIE if max_PIE > 0 else 1
     max_ts_pct = max_ts_pct if max_ts_pct > 0 else 1
     max_usg_pct = max_usg_pct if max_usg_pct > 0 else 1
 
     # First pass: calculate raw weighted scores for all players
     raw_scores = []
-    for _, row in players_stats.iterrows():
-        # Normalize each metric by dividing by the max value
-        per_norm = row['PER'] / max_per 
+    for row in all_stats_list:
+        PIE_norm = row['PIE'] / max_PIE
         ts_norm = row['TS_PCT'] / max_ts_pct
         usg_norm = row['USG_PCT'] / max_usg_pct
 
-        # Weighted score: 50% PER, 30% TS%, 20% USG%
-        weighted_score = (0.5 * per_norm +
+        # Weighted score: 50% PIE, 30% TS%, 20% USG%
+        weighted_score = (0.5 * PIE_norm +
                          0.3 * ts_norm +
                          0.2 * usg_norm)
         raw_scores.append(weighted_score)
 
-    # Find min and max of raw scores for min-max scaling
+    # Find min and max for min-max scaling
     min_score = min(raw_scores)
     max_score = max(raw_scores)
     score_range = max_score - min_score
     score_range = score_range if score_range > 0 else 1
 
-    # Second pass: apply min-max normalization to get prices from 1-10
+    # Second pass: scale to $1M-$10M
     prices = []
     for score in raw_scores:
-        # Normalize score to 0-1 range
         normalized = (score - min_score) / score_range
-        # Scale to 1-10 million range
         price = 1.0 + (normalized * 9.0)
         prices.append(round(price, 2))
 
@@ -97,7 +95,8 @@ def main():
     all_stats = get_all_player_stats()
     print(f"Fetched stats for {len(all_stats)} total players\n")
 
-    all_positions = get_player_positions() # Fetch player positions to include in the final output
+    # Fetch player positions
+    all_positions = get_player_positions()
 
     # Merge stats with active players by PERSON_ID
     all_stats_list = []
@@ -124,7 +123,7 @@ def main():
                     'position': position,
                     'team_name': player.get('TEAM_NAME', 'N/A'),
                     'team_abbreviation': player.get('TEAM_ABBREVIATION', 'N/A'),
-                    'PER': stat_row.get('PER', 0),
+                    'PIE': stat_row.get('PIE', 0),
                     'TS_PCT': stat_row.get('TS_PCT', 0),
                     'USG_PCT': stat_row.get('USG_PCT', 0),
                     'DEF_RATING': stat_row.get('DEF_RATING', 0)
@@ -136,33 +135,8 @@ def main():
         print("No players matched. Exiting.")
         return
 
-    # Convert to dataframe-like structure for normalization
-    class StatsFrame:
-        def __init__(self, data):
-            self.data = data
-
-        def __len__(self):
-            return len(self.data)
-
-        def iterrows(self):
-            for i, row in enumerate(self.data):
-                yield i, row
-
-        def __getitem__(self, key):
-            class Column:
-                def __init__(self, data, col):
-                    self.values = [d[col] for d in data if col in d]
-
-                def max(self):
-                    return max(self.values) if self.values else 1
-
-                def min(self):
-                    return min(self.values) if self.values else 0
-
-            return Column(self.data, key)
-
-    stats_frame = StatsFrame(all_stats_list)
-    prices = normalize_and_price(stats_frame)
+    # Calculate prices
+    prices = normalize_and_price(all_stats_list)
 
     # Prepare final output
     output_data = []
@@ -173,8 +147,8 @@ def main():
             'position': stats['position'],
             'team_name': stats['team_name'],
             'team_abbreviation': stats['team_abbreviation'],
-            'price': prices[i],  # Price in millions (1.0 to 10.0)
-            'per': round(stats['PER'], 2),
+            'price': prices[i],
+            'pie': round(stats['PIE'], 4),
             'ts_pct': round(stats['TS_PCT'], 4),
             'usg_pct': round(stats['USG_PCT'], 4),
             'def_rating': round(stats['DEF_RATING'], 2)
@@ -185,10 +159,10 @@ def main():
     with open(output_path, 'w') as f:
         json.dump(output_data, f, indent=2)
 
-    print(f"Saved {len(output_data)} players to {output_path}")
+    print(f"✓ Saved {len(output_data)} players to {output_path}")
     price_min = min(p['price'] for p in output_data)
     price_max = max(p['price'] for p in output_data)
-    print(f"\nPrice range: ${price_min:.2f}M - ${price_max:.2f}M")
+    print(f"Price range: ${price_min:.2f}M - ${price_max:.2f}M")
 
 
 if __name__ == '__main__':
