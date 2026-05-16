@@ -2,7 +2,7 @@
   {
     "id": 1630173,
     "name": "Precious Achiuwa",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 4.45,
@@ -14,7 +14,7 @@
   {
     "id": 1628389,
     "name": "Bam Adebayo",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 6.11,
@@ -26,7 +26,7 @@
   {
     "id": 1630534,
     "name": "Ochai Agbaji",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 3.2,
@@ -38,7 +38,7 @@
   {
     "id": 1630583,
     "name": "Santi Aldama",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 5.13,
@@ -50,7 +50,7 @@
   {
     "id": 1629638,
     "name": "Nickeil Alexander-Walker",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 6.67,
@@ -62,7 +62,7 @@
   {
     "id": 1628960,
     "name": "Grayson Allen",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 6.0,
@@ -74,7 +74,7 @@
   {
     "id": 1628386,
     "name": "Jarrett Allen",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 6.87,
@@ -86,7 +86,7 @@
   {
     "id": 1630631,
     "name": "Jose Alvarado",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 4.08,
@@ -98,7 +98,7 @@
   {
     "id": 203937,
     "name": "Kyle Anderson",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 3.74,
@@ -110,7 +110,7 @@
   {
     "id": 1628384,
     "name": "OG Anunoby",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 6.0,
@@ -122,7 +122,7 @@
   {
     "id": 1630166,
     "name": "Deni Avdija",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 7.79,
@@ -134,7 +134,7 @@
   {
     "id": 1629028,
     "name": "Deandre Ayton",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 6.24,
@@ -146,7 +146,7 @@
   {
     "id": 1628963,
     "name": "Marvin Bagley III",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 6.36,
@@ -158,7 +158,7 @@
   {
     "id": 1642846,
     "name": "Ace Bailey",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 4.92,
@@ -170,7 +170,7 @@
   {
     "id": 1630163,
     "name": "LaMelo Ball",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 7.38,
@@ -182,7 +182,7 @@
   {
     "id": 1631094,
     "name": "Paolo Banchero",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 6.97,
@@ -194,7 +194,7 @@
   {
     "id": 1630217,
     "name": "Desmond Bane",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 6.48,
@@ -206,7 +206,7 @@
   {
     "id": 1631230,
     "name": "Dominick Barlow",
-    "position": "N/A",
+    "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 4.0,
@@ -218,7 +218,7 @@
   {
     "id": 203084,
     "name": "Harrison Barnes",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 4.63,
@@ -230,7 +230,7 @@
   {
     "id": 1630567,
     "name": "Scottie Barnes",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 6.03,
@@ -242,7 +242,7 @@
   {
     "id": 1629628,
     "name": "RJ Barrett",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 6.82,
@@ -254,7 +254,7 @@
   {
     "id": 1642419,
     "name": "Jamison Battle",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 4.87,
@@ -266,7 +266,7 @@
   {
     "id": 201587,
     "name": "Nicolas Batum",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 3.33,
@@ -278,7 +278,7 @@
   {
     "id": 1630180,
     "name": "Saddiq Bey",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 5.76,
@@ -290,7 +290,7 @@
   {
     "id": 1629048,
     "name": "Goga Bitadze",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 5.8,
@@ -302,7 +302,7 @@
   {
     "id": 1641710,
     "name": "Anthony Black",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 5.4,
@@ -314,7 +314,7 @@
   {
     "id": 1641737,
     "name": "Adem Bona",
-    "position": "N/A",
+    "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 4.29,
@@ -326,7 +326,7 @@
   {
     "id": 1626164,
     "name": "Devin Booker",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 8.06,
@@ -338,7 +338,7 @@
   {
     "id": 1631123,
     "name": "Jamaree Bouyea",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 4.15,
@@ -350,7 +350,7 @@
   {
     "id": 1628396,
     "name": "Tony Bradley",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 4.24,
@@ -362,7 +362,7 @@
   {
     "id": 1631128,
     "name": "Christian Braun",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 4.57,
@@ -374,7 +374,7 @@
   {
     "id": 1628969,
     "name": "Mikal Bridges",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 4.89,
@@ -386,7 +386,7 @@
   {
     "id": 1628970,
     "name": "Miles Bridges",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 5.8,
@@ -398,7 +398,7 @@
   {
     "id": 1628415,
     "name": "Dillon Brooks",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 6.65,
@@ -410,7 +410,7 @@
   {
     "id": 1628971,
     "name": "Bruce Brown",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 3.82,
@@ -422,7 +422,7 @@
   {
     "id": 1627759,
     "name": "Jaylen Brown",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 8.88,
@@ -434,7 +434,7 @@
   {
     "id": 1641738,
     "name": "Kobe Brown",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 4.63,
@@ -446,7 +446,7 @@
   {
     "id": 1628973,
     "name": "Jalen Brunson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 7.72,
@@ -458,7 +458,7 @@
   {
     "id": 1642868,
     "name": "Carter Bryant",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 3.59,
@@ -470,7 +470,7 @@
   {
     "id": 1628418,
     "name": "Thomas Bryant",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 5.8,
@@ -482,7 +482,7 @@
   {
     "id": 1641824,
     "name": "Matas Buzelis",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 6.11,
@@ -494,7 +494,7 @@
   {
     "id": 203484,
     "name": "Kentavious Caldwell-Pope",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 4.06,
@@ -506,7 +506,7 @@
   {
     "id": 1641739,
     "name": "Toumani Camara",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 4.5,
@@ -518,7 +518,7 @@
   {
     "id": 203991,
     "name": "Clint Capela",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 3.24,
@@ -530,7 +530,7 @@
   {
     "id": 1642928,
     "name": "Dylan Cardwell",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 3.51,
@@ -542,7 +542,7 @@
   {
     "id": 1642382,
     "name": "Branden Carlson",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 5.67,
@@ -554,7 +554,7 @@
   {
     "id": 1642267,
     "name": "Bub Carrington",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 4.46,
@@ -566,7 +566,7 @@
   {
     "id": 1628975,
     "name": "Jevon Carter",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 3.96,
@@ -578,7 +578,7 @@
   {
     "id": 1628976,
     "name": "Wendell Carter Jr.",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 5.06,
@@ -590,7 +590,7 @@
   {
     "id": 1627936,
     "name": "Alex Caruso",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 3.68,
@@ -602,7 +602,7 @@
   {
     "id": 1642264,
     "name": "Stephon Castle",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 6.39,
@@ -614,7 +614,7 @@
   {
     "id": 1630577,
     "name": "Julian Champagnie",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 4.7,
@@ -626,7 +626,7 @@
   {
     "id": 1630551,
     "name": "Justin Champagnie",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 4.71,
@@ -638,7 +638,7 @@
   {
     "id": 1642353,
     "name": "Cam Christie",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 3.12,
@@ -650,7 +650,7 @@
   {
     "id": 1631108,
     "name": "Max Christie",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 4.94,
@@ -662,7 +662,7 @@
   {
     "id": 1631321,
     "name": "Sidy Cissoko",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 2.57,
@@ -674,7 +674,7 @@
   {
     "id": 1641740,
     "name": "Jaylen Clark",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 2.97,
@@ -686,7 +686,7 @@
   {
     "id": 203903,
     "name": "Jordan Clarkson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 5.01,
@@ -698,7 +698,7 @@
   {
     "id": 1629651,
     "name": "Nic Claxton",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 5.09,
@@ -710,7 +710,7 @@
   {
     "id": 1642383,
     "name": "Walter Clayton Jr.",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 4.08,
@@ -722,7 +722,7 @@
   {
     "id": 1642363,
     "name": "Nique Clifford",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 3.45,
@@ -734,7 +734,7 @@
   {
     "id": 1642270,
     "name": "Donovan Clingan",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 5.01,
@@ -746,7 +746,7 @@
   {
     "id": 1641730,
     "name": "Noah Clowney",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 5.08,
@@ -758,7 +758,7 @@
   {
     "id": 1629599,
     "name": "Amir Coffey",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 3.77,
@@ -770,7 +770,7 @@
   {
     "id": 1642268,
     "name": "Isaiah Collier",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 5.35,
@@ -782,7 +782,7 @@
   {
     "id": 1628381,
     "name": "John Collins",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 6.24,
@@ -794,7 +794,7 @@
   {
     "id": 201144,
     "name": "Mike Conley",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 2.39,
@@ -806,7 +806,7 @@
   {
     "id": 1626192,
     "name": "Pat Connaughton",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 4.4,
@@ -818,7 +818,7 @@
   {
     "id": 1630536,
     "name": "Sharife Cooper",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 5.89,
@@ -830,7 +830,7 @@
   {
     "id": 1641731,
     "name": "Bilal Coulibaly",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 4.49,
@@ -842,7 +842,7 @@
   {
     "id": 1642907,
     "name": "Cedric Coward",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 5.72,
@@ -854,7 +854,7 @@
   {
     "id": 1630595,
     "name": "Cade Cunningham",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 7.45,
@@ -866,7 +866,7 @@
   {
     "id": 201939,
     "name": "Stephen Curry",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 8.95,
@@ -878,7 +878,7 @@
   {
     "id": 1630700,
     "name": "Dyson Daniels",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 3.83,
@@ -890,7 +890,7 @@
   {
     "id": 201942,
     "name": "DeMar DeRozan",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 6.22,
@@ -902,7 +902,7 @@
   {
     "id": 1628978,
     "name": "Donte DiVincenzo",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 4.41,
@@ -914,7 +914,7 @@
   {
     "id": 1631217,
     "name": "Moussa Diabat\u00e9",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 4.64,
@@ -926,7 +926,7 @@
   {
     "id": 1642885,
     "name": "Mohamed Diawara",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 4.25,
@@ -938,7 +938,7 @@
   {
     "id": 1641711,
     "name": "Gradey Dick",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 4.21,
@@ -950,7 +950,7 @@
   {
     "id": 1631172,
     "name": "Ousmane Dieng",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 4.22,
@@ -962,7 +962,7 @@
   {
     "id": 1642265,
     "name": "Rob Dillingham",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 4.04,
@@ -974,7 +974,7 @@
   {
     "id": 1629029,
     "name": "Luka Don\u010di\u0107",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 10.0,
@@ -986,7 +986,7 @@
   {
     "id": 1629652,
     "name": "Luguentz Dort",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 3.11,
@@ -998,7 +998,7 @@
   {
     "id": 1630245,
     "name": "Ayo Dosunmu",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 6.24,
@@ -1010,7 +1010,7 @@
   {
     "id": 203083,
     "name": "Andre Drummond",
-    "position": "N/A",
+    "position": "C",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 3.46,
@@ -1022,7 +1022,7 @@
   {
     "id": 1627739,
     "name": "Kris Dunn",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 3.67,
@@ -1034,7 +1034,7 @@
   {
     "id": 1642346,
     "name": "Ryan Dunn",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 3.17,
@@ -1046,7 +1046,7 @@
   {
     "id": 201142,
     "name": "Kevin Durant",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 7.96,
@@ -1058,7 +1058,7 @@
   {
     "id": 1631105,
     "name": "Jalen Duren",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 8.0,
@@ -1070,7 +1070,7 @@
   {
     "id": 1642856,
     "name": "Egor D\u00ebmin",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 4.73,
@@ -1082,7 +1082,7 @@
   {
     "id": 1631106,
     "name": "Tari Eason",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 3.93,
@@ -1094,7 +1094,7 @@
   {
     "id": 1642845,
     "name": "VJ Edgecombe",
-    "position": "N/A",
+    "position": "G",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 4.71,
@@ -1106,7 +1106,7 @@
   {
     "id": 1630162,
     "name": "Anthony Edwards",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 8.64,
@@ -1118,7 +1118,7 @@
   {
     "id": 1642348,
     "name": "Justin Edwards",
-    "position": "N/A",
+    "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 4.26,
@@ -1130,7 +1130,7 @@
   {
     "id": 1631165,
     "name": "Keon Ellis",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 3.8,
@@ -1142,7 +1142,7 @@
   {
     "id": 1629234,
     "name": "Drew Eubanks",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 4.98,
@@ -1154,7 +1154,7 @@
   {
     "id": 1642847,
     "name": "Jeremiah Fears",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 5.61,
@@ -1166,7 +1166,7 @@
   {
     "id": 1642271,
     "name": "Kyle Filipowski",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 5.5,
@@ -1178,7 +1178,7 @@
   {
     "id": 1642843,
     "name": "Cooper Flagg",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 6.43,
@@ -1190,7 +1190,7 @@
   {
     "id": 1642853,
     "name": "Rasheer Fleming",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 3.46,
@@ -1202,7 +1202,7 @@
   {
     "id": 1631323,
     "name": "Simone Fontecchio",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 5.08,
@@ -1214,7 +1214,7 @@
   {
     "id": 1628368,
     "name": "De'Aaron Fox",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 6.42,
@@ -1226,7 +1226,7 @@
   {
     "id": 1629655,
     "name": "Daniel Gafford",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 5.95,
@@ -1238,7 +1238,7 @@
   {
     "id": 1642066,
     "name": "Myron Gardner",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 4.48,
@@ -1250,7 +1250,7 @@
   {
     "id": 1629636,
     "name": "Darius Garland",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 7.05,
@@ -1262,7 +1262,7 @@
   {
     "id": 1630568,
     "name": "Luka Garza",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 6.43,
@@ -1274,7 +1274,7 @@
   {
     "id": 1641718,
     "name": "Keyonte George",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 7.71,
@@ -1286,7 +1286,7 @@
   {
     "id": 1642273,
     "name": "Kyshawn George",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 5.64,
@@ -1298,7 +1298,7 @@
   {
     "id": 1630581,
     "name": "Josh Giddey",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 6.06,
@@ -1310,7 +1310,7 @@
   {
     "id": 1628983,
     "name": "Shai Gilgeous-Alexander",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 9.77,
@@ -1322,7 +1322,7 @@
   {
     "id": 1630264,
     "name": "Anthony Gill",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 5.21,
@@ -1334,7 +1334,7 @@
   {
     "id": 1631221,
     "name": "Collin Gillespie",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 4.94,
@@ -1346,7 +1346,7 @@
   {
     "id": 203497,
     "name": "Rudy Gobert",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 5.17,
@@ -1358,7 +1358,7 @@
   {
     "id": 1642864,
     "name": "Hugo Gonz\u00e1lez",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 3.15,
@@ -1370,7 +1370,7 @@
   {
     "id": 1630692,
     "name": "Jordan Goodwin",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 3.78,
@@ -1382,7 +1382,7 @@
   {
     "id": 203924,
     "name": "Jerami Grant",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 6.59,
@@ -1394,7 +1394,7 @@
   {
     "id": 1631260,
     "name": "AJ Green",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 4.74,
@@ -1406,7 +1406,7 @@
   {
     "id": 203110,
     "name": "Draymond Green",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 3.82,
@@ -1418,7 +1418,7 @@
   {
     "id": 1629750,
     "name": "Javonte Green",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 4.59,
@@ -1430,7 +1430,7 @@
   {
     "id": 1630182,
     "name": "Josh Green",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 4.3,
@@ -1442,7 +1442,7 @@
   {
     "id": 1629656,
     "name": "Quentin Grimes",
-    "position": "N/A",
+    "position": "G",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 5.16,
@@ -1454,7 +1454,7 @@
   {
     "id": 1631243,
     "name": "Mouhamed Gueye",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 2.92,
@@ -1466,7 +1466,7 @@
   {
     "id": 1629060,
     "name": "Rui Hachimura",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 4.95,
@@ -1478,7 +1478,7 @@
   {
     "id": 203501,
     "name": "Tim Hardaway Jr.",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 5.67,
@@ -1490,7 +1490,7 @@
   {
     "id": 201935,
     "name": "James Harden",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 7.82,
@@ -1502,7 +1502,7 @@
   {
     "id": 1630702,
     "name": "Jaden Hardy",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 6.15,
@@ -1514,7 +1514,7 @@
   {
     "id": 1642844,
     "name": "Dylan Harper",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 5.63,
@@ -1526,7 +1526,7 @@
   {
     "id": 203914,
     "name": "Gary Harris",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 2.93,
@@ -1538,7 +1538,7 @@
   {
     "id": 202699,
     "name": "Tobias Harris",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 4.93,
@@ -1550,7 +1550,7 @@
   {
     "id": 1628404,
     "name": "Josh Hart",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 5.14,
@@ -1562,7 +1562,7 @@
   {
     "id": 1628392,
     "name": "Isaiah Hartenstein",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 5.23,
@@ -1574,7 +1574,7 @@
   {
     "id": 1630573,
     "name": "Sam Hauser",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 4.26,
@@ -1586,7 +1586,7 @@
   {
     "id": 1641722,
     "name": "Jordan Hawkins",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 3.22,
@@ -1598,7 +1598,7 @@
   {
     "id": 1629637,
     "name": "Jaxson Hayes",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 6.67,
@@ -1610,7 +1610,7 @@
   {
     "id": 1641707,
     "name": "Taylor Hendricks",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 4.23,
@@ -1622,7 +1622,7 @@
   {
     "id": 1627741,
     "name": "Buddy Hield",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 5.08,
@@ -1634,7 +1634,7 @@
   {
     "id": 1628988,
     "name": "Aaron Holiday",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 4.48,
@@ -1646,7 +1646,7 @@
   {
     "id": 201950,
     "name": "Jrue Holiday",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 5.99,
@@ -1658,7 +1658,7 @@
   {
     "id": 1641842,
     "name": "Ronald Holland II",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 4.18,
@@ -1670,7 +1670,7 @@
   {
     "id": 1631096,
     "name": "Chet Holmgren",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 7.02,
@@ -1682,7 +1682,7 @@
   {
     "id": 201143,
     "name": "Al Horford",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 4.17,
@@ -1694,7 +1694,7 @@
   {
     "id": 1641724,
     "name": "Jett Howard",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 4.36,
@@ -1706,7 +1706,7 @@
   {
     "id": 1628989,
     "name": "Kevin Huerter",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 4.63,
@@ -1718,7 +1718,7 @@
   {
     "id": 1630643,
     "name": "Jay Huff",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 5.26,
@@ -1730,7 +1730,7 @@
   {
     "id": 1630574,
     "name": "Ariel Hukporti",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 3.88,
@@ -1742,7 +1742,7 @@
   {
     "id": 1629631,
     "name": "De'Andre Hunter",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 5.31,
@@ -1754,7 +1754,7 @@
   {
     "id": 1630538,
     "name": "Bones Hyland",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 5.72,
@@ -1766,7 +1766,7 @@
   {
     "id": 1642345,
     "name": "Oso Ighodaro",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 4.54,
@@ -1778,7 +1778,7 @@
   {
     "id": 1627742,
     "name": "Brandon Ingram",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 6.85,
@@ -1790,7 +1790,7 @@
   {
     "id": 1628371,
     "name": "Jonathan Isaac",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 2.21,
@@ -1802,7 +1802,7 @@
   {
     "id": 1641713,
     "name": "GG Jackson",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 6.36,
@@ -1814,7 +1814,7 @@
   {
     "id": 1630543,
     "name": "Isaiah Jackson",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 5.57,
@@ -1826,7 +1826,7 @@
   {
     "id": 1631245,
     "name": "Quenton Jackson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 5.62,
@@ -1838,7 +1838,7 @@
   {
     "id": 1641748,
     "name": "Andre Jackson Jr.",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 2.18,
@@ -1850,7 +1850,7 @@
   {
     "id": 1628991,
     "name": "Jaren Jackson Jr.",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 6.64,
@@ -1862,7 +1862,7 @@
   {
     "id": 1631218,
     "name": "Trayce Jackson-Davis",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 4.08,
@@ -1874,7 +1874,7 @@
   {
     "id": 1642857,
     "name": "Kasparas Jaku\u010dionis",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 4.38,
@@ -1886,7 +1886,7 @@
   {
     "id": 1642355,
     "name": "Bronny James",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 3.56,
@@ -1898,7 +1898,7 @@
   {
     "id": 2544,
     "name": "LeBron James",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 7.16,
@@ -1910,7 +1910,7 @@
   {
     "id": 1642883,
     "name": "Sion James",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 2.53,
@@ -1922,7 +1922,7 @@
   {
     "id": 1631170,
     "name": "Jaime Jaquez Jr.",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 5.68,
@@ -1934,7 +1934,7 @@
   {
     "id": 1642450,
     "name": "Daniss Jenkins",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 4.76,
@@ -1946,7 +1946,7 @@
   {
     "id": 1630198,
     "name": "Isaiah Joe",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 6.24,
@@ -1958,7 +1958,7 @@
   {
     "id": 1642358,
     "name": "AJ Johnson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 2.57,
@@ -1970,7 +1970,7 @@
   {
     "id": 1629661,
     "name": "Cameron Johnson",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 4.98,
@@ -1982,7 +1982,7 @@
   {
     "id": 1630552,
     "name": "Jalen Johnson",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 6.98,
@@ -1994,7 +1994,7 @@
   {
     "id": 1629640,
     "name": "Keldon Johnson",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 6.05,
@@ -2006,7 +2006,7 @@
   {
     "id": 1642848,
     "name": "Tre Johnson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 5.19,
@@ -2018,7 +2018,7 @@
   {
     "id": 203999,
     "name": "Nikola Joki\u0107",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 9.06,
@@ -2030,7 +2030,7 @@
   {
     "id": 1630529,
     "name": "Herbert Jones",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 2.89,
@@ -2042,7 +2042,7 @@
   {
     "id": 1642461,
     "name": "Spencer Jones",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 3.72,
@@ -2054,7 +2054,7 @@
   {
     "id": 1630200,
     "name": "Tre Jones",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 6.1,
@@ -2066,7 +2066,7 @@
   {
     "id": 1626145,
     "name": "Tyus Jones",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 1.0,
@@ -2078,7 +2078,7 @@
   {
     "id": 1627884,
     "name": "Derrick Jones Jr.",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 4.5,
@@ -2090,7 +2090,7 @@
   {
     "id": 1631107,
     "name": "Nikola Jovi\u0107",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 3.87,
@@ -2102,7 +2102,7 @@
   {
     "id": 1641750,
     "name": "Ryan Kalkbrenner",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 6.48,
@@ -2114,7 +2114,7 @@
   {
     "id": 1628379,
     "name": "Luke Kennard",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 5.68,
@@ -2126,7 +2126,7 @@
   {
     "id": 1630557,
     "name": "Corey Kispert",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 5.47,
@@ -2138,7 +2138,7 @@
   {
     "id": 1628467,
     "name": "Maxi Kleber",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 1.76,
@@ -2150,7 +2150,7 @@
   {
     "id": 1642261,
     "name": "Dalton Knecht",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 4.59,
@@ -2162,7 +2162,7 @@
   {
     "id": 1642851,
     "name": "Kon Knueppel",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 6.73,
@@ -2174,7 +2174,7 @@
   {
     "id": 1642278,
     "name": "Tyler Kolek",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 4.06,
@@ -2186,7 +2186,7 @@
   {
     "id": 1629723,
     "name": "John Konchar",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 2.7,
@@ -2198,7 +2198,7 @@
   {
     "id": 1628436,
     "name": "Luke Kornet",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 4.96,
@@ -2210,7 +2210,7 @@
   {
     "id": 1630249,
     "name": "V\u00edt Krej\u010d\u00ed",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 4.6,
@@ -2222,7 +2222,7 @@
   {
     "id": 1628398,
     "name": "Kyle Kuzma",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 5.77,
@@ -2234,7 +2234,7 @@
   {
     "id": 1631222,
     "name": "Jake LaRavia",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 3.87,
@@ -2246,7 +2246,7 @@
   {
     "id": 1629111,
     "name": "Jock Landale",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 5.19,
@@ -2258,7 +2258,7 @@
   {
     "id": 1641796,
     "name": "Pelle Larsson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 5.07,
@@ -2270,7 +2270,7 @@
   {
     "id": 1627747,
     "name": "Caris LeVert",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 3.92,
@@ -2282,7 +2282,7 @@
   {
     "id": 202695,
     "name": "Kawhi Leonard",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 9.24,
@@ -2294,7 +2294,7 @@
   {
     "id": 201572,
     "name": "Brook Lopez",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 4.33,
@@ -2306,7 +2306,7 @@
   {
     "id": 1631126,
     "name": "Caleb Love",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 4.74,
@@ -2318,7 +2318,7 @@
   {
     "id": 1642863,
     "name": "Khaman Maluach",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 4.22,
@@ -2330,7 +2330,7 @@
   {
     "id": 1630572,
     "name": "Sandro Mamukelashvili",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 5.98,
@@ -2342,7 +2342,7 @@
   {
     "id": 1629611,
     "name": "Terance Mann",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 3.64,
@@ -2354,7 +2354,7 @@
   {
     "id": 1630544,
     "name": "Tre Mann",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 4.23,
@@ -2366,7 +2366,7 @@
   {
     "id": 1628374,
     "name": "Lauri Markkanen",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 7.55,
@@ -2378,7 +2378,7 @@
   {
     "id": 1630230,
     "name": "Naji Marshall",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 5.67,
@@ -2390,7 +2390,7 @@
   {
     "id": 1628997,
     "name": "Caleb Martin",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 2.75,
@@ -2402,7 +2402,7 @@
   {
     "id": 1631213,
     "name": "Tyrese Martin",
-    "position": "N/A",
+    "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 3.64,
@@ -2414,7 +2414,7 @@
   {
     "id": 1631097,
     "name": "Bennedict Mathurin",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 6.46,
@@ -2426,7 +2426,7 @@
   {
     "id": 1631255,
     "name": "Karlo Matkovi\u0107",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 5.73,
@@ -2438,7 +2438,7 @@
   {
     "id": 1630178,
     "name": "Tyrese Maxey",
-    "position": "N/A",
+    "position": "G",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 7.62,
@@ -2450,7 +2450,7 @@
   {
     "id": 1630540,
     "name": "Miles McBride",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 4.83,
@@ -2462,7 +2462,7 @@
   {
     "id": 1642272,
     "name": "Jared McCain",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 4.94,
@@ -2474,7 +2474,7 @@
   {
     "id": 203468,
     "name": "CJ McCollum",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 6.34,
@@ -2486,7 +2486,7 @@
   {
     "id": 204456,
     "name": "T.J. McConnell",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 5.89,
@@ -2498,7 +2498,7 @@
   {
     "id": 1630183,
     "name": "Jaden McDaniels",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 5.57,
@@ -2510,7 +2510,7 @@
   {
     "id": 1631121,
     "name": "Bryce McGowens",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 4.48,
@@ -2522,7 +2522,7 @@
   {
     "id": 1629162,
     "name": "Jordan McLaughlin",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 3.51,
@@ -2534,7 +2534,7 @@
   {
     "id": 1629001,
     "name": "De'Anthony Melton",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 5.46,
@@ -2546,7 +2546,7 @@
   {
     "id": 1630241,
     "name": "Sam Merrill",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 5.77,
@@ -2558,7 +2558,7 @@
   {
     "id": 203114,
     "name": "Khris Middleton",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 4.64,
@@ -2570,7 +2570,7 @@
   {
     "id": 1641706,
     "name": "Brandon Miller",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 7.05,
@@ -2582,7 +2582,7 @@
   {
     "id": 1641757,
     "name": "Jordan Miller",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 5.74,
@@ -2594,7 +2594,7 @@
   {
     "id": 1631159,
     "name": "Leonard Miller",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 5.8,
@@ -2606,7 +2606,7 @@
   {
     "id": 1631169,
     "name": "Josh Minott",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 5.8,
@@ -2618,7 +2618,7 @@
   {
     "id": 1642274,
     "name": "Yves Missi",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 3.25,
@@ -2630,7 +2630,7 @@
   {
     "id": 1642349,
     "name": "Ajay Mitchell",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 5.79,
@@ -2642,7 +2642,7 @@
   {
     "id": 1630558,
     "name": "Davion Mitchell",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 4.03,
@@ -2654,7 +2654,7 @@
   {
     "id": 1628378,
     "name": "Donovan Mitchell",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 8.62,
@@ -2666,7 +2666,7 @@
   {
     "id": 1630596,
     "name": "Evan Mobley",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 6.23,
@@ -2678,7 +2678,7 @@
   {
     "id": 1628370,
     "name": "Malik Monk",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 6.07,
@@ -2690,7 +2690,7 @@
   {
     "id": 1630541,
     "name": "Moses Moody",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 5.2,
@@ -2702,7 +2702,7 @@
   {
     "id": 1630530,
     "name": "Trey Murphy III",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 6.56,
@@ -2714,7 +2714,7 @@
   {
     "id": 1627750,
     "name": "Jamal Murray",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 7.79,
@@ -2726,7 +2726,7 @@
   {
     "id": 1631200,
     "name": "Kris Murray",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 2.7,
@@ -2738,7 +2738,7 @@
   {
     "id": 1642867,
     "name": "Collin Murray-Boyles",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 4.99,
@@ -2750,7 +2750,7 @@
   {
     "id": 1629004,
     "name": "Svi Mykhailiuk",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 4.91,
@@ -2762,7 +2762,7 @@
   {
     "id": 1631250,
     "name": "Pete Nance",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 4.87,
@@ -2774,7 +2774,7 @@
   {
     "id": 1629614,
     "name": "Andrew Nembhard",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 5.98,
@@ -2786,7 +2786,7 @@
   {
     "id": 1642948,
     "name": "Ryan Nembhard",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 3.37,
@@ -2798,7 +2798,7 @@
   {
     "id": 1630174,
     "name": "Aaron Nesmith",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 4.8,
@@ -2810,7 +2810,7 @@
   {
     "id": 1642854,
     "name": "Asa Newell",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 5.27,
@@ -2822,7 +2822,7 @@
   {
     "id": 1642949,
     "name": "Yanic Konan Niederh\u00e4user",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 6.23,
@@ -2834,7 +2834,7 @@
   {
     "id": 1630192,
     "name": "Zeke Nnaji",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 3.61,
@@ -2846,7 +2846,7 @@
   {
     "id": 203994,
     "name": "Jusuf Nurki\u0107",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 4.61,
@@ -2858,7 +2858,7 @@
   {
     "id": 1626220,
     "name": "Royce O'Neale",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 4.31,
@@ -2870,7 +2870,7 @@
   {
     "id": 1629006,
     "name": "Josh Okogie",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 2.81,
@@ -2882,7 +2882,7 @@
   {
     "id": 1630168,
     "name": "Onyeka Okongwu",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 5.42,
@@ -2894,7 +2894,7 @@
   {
     "id": 1630171,
     "name": "Isaac Okoro",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 3.9,
@@ -2906,7 +2906,7 @@
   {
     "id": 203482,
     "name": "Kelly Olynyk",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 4.7,
@@ -2918,7 +2918,7 @@
   {
     "id": 1626162,
     "name": "Kelly Oubre Jr.",
-    "position": "N/A",
+    "position": "F-G",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 4.98,
@@ -2930,7 +2930,7 @@
   {
     "id": 1627780,
     "name": "Gary Payton II",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 5.8,
@@ -2942,7 +2942,7 @@
   {
     "id": 1642877,
     "name": "Micah Peavy",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 1.86,
@@ -2954,7 +2954,7 @@
   {
     "id": 1642869,
     "name": "Noah Penda",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 2.83,
@@ -2966,7 +2966,7 @@
   {
     "id": 1641763,
     "name": "Julian Phillips",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 3.16,
@@ -2978,7 +2978,7 @@
   {
     "id": 1629618,
     "name": "Jalen Pickett",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 3.61,
@@ -2990,7 +2990,7 @@
   {
     "id": 1641764,
     "name": "Brandin Podziemski",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 5.43,
@@ -3002,7 +3002,7 @@
   {
     "id": 1627751,
     "name": "Jakob Poeltl",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 6.28,
@@ -3014,7 +3014,7 @@
   {
     "id": 1641854,
     "name": "Craig Porter Jr.",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 2.64,
@@ -3026,7 +3026,7 @@
   {
     "id": 1629008,
     "name": "Michael Porter Jr.",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 7.87,
@@ -3038,7 +3038,7 @@
   {
     "id": 1626171,
     "name": "Bobby Portis",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 6.17,
@@ -3050,7 +3050,7 @@
   {
     "id": 1642366,
     "name": "Quinten Post",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 4.74,
@@ -3062,7 +3062,7 @@
   {
     "id": 1630695,
     "name": "Micah Potter",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 6.52,
@@ -3074,7 +3074,7 @@
   {
     "id": 1642962,
     "name": "Drake Powell",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 3.29,
@@ -3086,7 +3086,7 @@
   {
     "id": 203939,
     "name": "Dwight Powell",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 4.75,
@@ -3098,7 +3098,7 @@
   {
     "id": 1626181,
     "name": "Norman Powell",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 7.41,
@@ -3110,7 +3110,7 @@
   {
     "id": 1630202,
     "name": "Payton Pritchard",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 5.77,
@@ -3122,7 +3122,7 @@
   {
     "id": 1642878,
     "name": "Tyrese Proctor",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 5.4,
@@ -3134,7 +3134,7 @@
   {
     "id": 1641765,
     "name": "Olivier-Maxence Prosper",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 6.45,
@@ -3146,7 +3146,7 @@
   {
     "id": 1642852,
     "name": "Derik Queen",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 5.23,
@@ -3158,7 +3158,7 @@
   {
     "id": 1629674,
     "name": "Neemias Queta",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 5.76,
@@ -3170,7 +3170,7 @@
   {
     "id": 1630193,
     "name": "Immanuel Quickley",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 5.56,
@@ -3182,7 +3182,7 @@
   {
     "id": 203944,
     "name": "Julius Randle",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 6.91,
@@ -3194,7 +3194,7 @@
   {
     "id": 1642875,
     "name": "Maxime Raynaud",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 5.61,
@@ -3206,7 +3206,7 @@
   {
     "id": 1630559,
     "name": "Austin Reaves",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 7.85,
@@ -3218,7 +3218,7 @@
   {
     "id": 1630194,
     "name": "Paul Reed",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 6.64,
@@ -3230,7 +3230,7 @@
   {
     "id": 1629675,
     "name": "Naz Reid",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 5.5,
@@ -3242,7 +3242,7 @@
   {
     "id": 1642954,
     "name": "Will Richard",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 3.94,
@@ -3254,7 +3254,7 @@
   {
     "id": 1630208,
     "name": "Nick Richards",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 4.61,
@@ -3266,7 +3266,7 @@
   {
     "id": 1642859,
     "name": "Jase Richardson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 4.48,
@@ -3278,7 +3278,7 @@
   {
     "id": 1642860,
     "name": "Will Riley",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 4.84,
@@ -3290,7 +3290,7 @@
   {
     "id": 1642258,
     "name": "Zaccharie Risacher",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 4.34,
@@ -3302,7 +3302,7 @@
   {
     "id": 1629130,
     "name": "Duncan Robinson",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 5.17,
@@ -3314,7 +3314,7 @@
   {
     "id": 1629011,
     "name": "Mitchell Robinson",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 4.79,
@@ -3326,7 +3326,7 @@
   {
     "id": 1631157,
     "name": "Ryan Rollins",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 6.36,
@@ -3338,7 +3338,7 @@
   {
     "id": 1641712,
     "name": "Rayan Rupert",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 2.8,
@@ -3350,7 +3350,7 @@
   {
     "id": 1642920,
     "name": "Kobe Sanders",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
     "price": 4.7,
@@ -3362,7 +3362,7 @@
   {
     "id": 1630611,
     "name": "Gui Santos",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 5.51,
@@ -3374,7 +3374,7 @@
   {
     "id": 1642879,
     "name": "Ben Saraf",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 3.95,
@@ -3386,7 +3386,7 @@
   {
     "id": 1642259,
     "name": "Alex Sarr",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 6.09,
@@ -3398,7 +3398,7 @@
   {
     "id": 1631248,
     "name": "Baylor Scheierman",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 4.13,
@@ -3410,7 +3410,7 @@
   {
     "id": 203471,
     "name": "Dennis Schr\u00f6der",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 4.8,
@@ -3422,7 +3422,7 @@
   {
     "id": 1630578,
     "name": "Alperen Sengun",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 6.67,
@@ -3434,7 +3434,7 @@
   {
     "id": 1641729,
     "name": "Brice Sensabaugh",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 6.67,
@@ -3446,7 +3446,7 @@
   {
     "id": 1629012,
     "name": "Collin Sexton",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 7.18,
@@ -3458,7 +3458,7 @@
   {
     "id": 1629013,
     "name": "Landry Shamet",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 4.63,
@@ -3470,7 +3470,7 @@
   {
     "id": 1630545,
     "name": "Terrence Shannon Jr.",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
     "price": 5.08,
@@ -3482,7 +3482,7 @@
   {
     "id": 1630549,
     "name": "Day'Ron Sharpe",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 6.21,
@@ -3494,7 +3494,7 @@
   {
     "id": 1631101,
     "name": "Shaedon Sharpe",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 7.08,
@@ -3506,7 +3506,7 @@
   {
     "id": 1642347,
     "name": "Jamal Shead",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 2.79,
@@ -3518,7 +3518,7 @@
   {
     "id": 1641767,
     "name": "Ben Sheppard",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 3.54,
@@ -3530,7 +3530,7 @@
   {
     "id": 1642263,
     "name": "Reed Sheppard",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 5.44,
@@ -3542,7 +3542,7 @@
   {
     "id": 1627783,
     "name": "Pascal Siakam",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 7.32,
@@ -3554,7 +3554,7 @@
   {
     "id": 1629014,
     "name": "Anfernee Simons",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 6.04,
@@ -3566,7 +3566,7 @@
   {
     "id": 1630579,
     "name": "Jericho Sims",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 6.23,
@@ -3578,7 +3578,7 @@
   {
     "id": 1642914,
     "name": "Javon Small",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 5.59,
@@ -3590,7 +3590,7 @@
   {
     "id": 203935,
     "name": "Marcus Smart",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 3.71,
@@ -3602,7 +3602,7 @@
   {
     "id": 1630696,
     "name": "Dru Smith",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 3.31,
@@ -3614,7 +3614,7 @@
   {
     "id": 1630188,
     "name": "Jalen Smith",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 5.54,
@@ -3626,7 +3626,7 @@
   {
     "id": 1631095,
     "name": "Jabari Smith Jr.",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 4.8,
@@ -3638,7 +3638,7 @@
   {
     "id": 1631110,
     "name": "Jeremy Sochan",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 3.81,
@@ -3650,7 +3650,7 @@
   {
     "id": 1642285,
     "name": "Cam Spencer",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 5.83,
@@ -3662,7 +3662,7 @@
   {
     "id": 1630311,
     "name": "Pat Spencer",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
     "price": 4.05,
@@ -3674,7 +3674,7 @@
   {
     "id": 1630191,
     "name": "Isaiah Stewart",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 5.5,
@@ -3686,7 +3686,7 @@
   {
     "id": 1631124,
     "name": "Julian Strawther",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 5.34,
@@ -3698,7 +3698,7 @@
   {
     "id": 1630591,
     "name": "Jalen Suggs",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 5.62,
@@ -3710,7 +3710,7 @@
   {
     "id": 1630256,
     "name": "Jae'Sean Tate",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 3.64,
@@ -3722,7 +3722,7 @@
   {
     "id": 1631207,
     "name": "Dalen Terry",
-    "position": "N/A",
+    "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 3.09,
@@ -3734,7 +3734,7 @@
   {
     "id": 1641708,
     "name": "Amen Thompson",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
     "price": 5.59,
@@ -3746,7 +3746,7 @@
   {
     "id": 1641709,
     "name": "Ausar Thompson",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
     "price": 4.14,
@@ -3758,7 +3758,7 @@
   {
     "id": 202691,
     "name": "Klay Thompson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 5.15,
@@ -3770,7 +3770,7 @@
   {
     "id": 1641772,
     "name": "Nae'Qwan Tomlin",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 3.81,
@@ -3782,7 +3782,7 @@
   {
     "id": 1626157,
     "name": "Karl-Anthony Towns",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
     "price": 7.32,
@@ -3794,7 +3794,7 @@
   {
     "id": 1642849,
     "name": "Nolan Traore",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 4.35,
@@ -3806,7 +3806,7 @@
   {
     "id": 1629018,
     "name": "Gary Trent Jr.",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 3.92,
@@ -3818,7 +3818,7 @@
   {
     "id": 1626167,
     "name": "Myles Turner",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
     "price": 5.1,
@@ -3830,7 +3830,7 @@
   {
     "id": 1642281,
     "name": "Jaylon Tyson",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 5.68,
@@ -3842,7 +3842,7 @@
   {
     "id": 202685,
     "name": "Jonas Valan\u010di\u016bnas",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 7.71,
@@ -3854,7 +3854,7 @@
   {
     "id": 1629020,
     "name": "Jarred Vanderbilt",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
     "price": 2.98,
@@ -3866,7 +3866,7 @@
   {
     "id": 1630170,
     "name": "Devin Vassell",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 4.81,
@@ -3878,7 +3878,7 @@
   {
     "id": 1629216,
     "name": "Gabe Vincent",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 2.43,
@@ -3890,7 +3890,7 @@
   {
     "id": 1641774,
     "name": "Tristan Vukcevic",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 7.24,
@@ -3902,7 +3902,7 @@
   {
     "id": 202696,
     "name": "Nikola Vu\u010devi\u0107",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 5.68,
@@ -3914,7 +3914,7 @@
   {
     "id": 1629731,
     "name": "Dean Wade",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
     "price": 3.07,
@@ -3926,7 +3926,7 @@
   {
     "id": 1631133,
     "name": "Jabari Walker",
-    "position": "N/A",
+    "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 3.92,
@@ -3938,7 +3938,7 @@
   {
     "id": 1641716,
     "name": "Jarace Walker",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 4.85,
@@ -3950,7 +3950,7 @@
   {
     "id": 1641717,
     "name": "Cason Wallace",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 3.39,
@@ -3962,7 +3962,7 @@
   {
     "id": 1630811,
     "name": "Keaton Wallace",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
     "price": 3.56,
@@ -3974,7 +3974,7 @@
   {
     "id": 1641775,
     "name": "Jordan Walsh",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 4.18,
@@ -3986,7 +3986,7 @@
   {
     "id": 1642266,
     "name": "Ja'Kobe Walter",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
     "price": 4.48,
@@ -3998,7 +3998,7 @@
   {
     "id": 1642276,
     "name": "Kel'el Ware",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 5.47,
@@ -4010,7 +4010,7 @@
   {
     "id": 1629023,
     "name": "P.J. Washington",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 4.61,
@@ -4022,7 +4022,7 @@
   {
     "id": 1630570,
     "name": "Trendon Watford",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
     "price": 4.65,
@@ -4034,7 +4034,7 @@
   {
     "id": 1642364,
     "name": "Jamir Watkins",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
     "price": 3.82,
@@ -4046,7 +4046,7 @@
   {
     "id": 1631212,
     "name": "Peyton Watson",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
     "price": 5.8,
@@ -4058,7 +4058,7 @@
   {
     "id": 1642377,
     "name": "Jaylen Wells",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
     "price": 4.86,
@@ -4070,7 +4070,7 @@
   {
     "id": 1641705,
     "name": "Victor Wembanyama",
-    "position": "N/A",
+    "position": "F-C",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
     "price": 8.95,
@@ -4082,7 +4082,7 @@
   {
     "id": 201566,
     "name": "Russell Westbrook",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
     "price": 5.82,
@@ -4094,7 +4094,7 @@
   {
     "id": 1629632,
     "name": "Coby White",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
     "price": 7.66,
@@ -4106,7 +4106,7 @@
   {
     "id": 1628401,
     "name": "Derrick White",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
     "price": 4.99,
@@ -4118,7 +4118,7 @@
   {
     "id": 1630598,
     "name": "Aaron Wiggins",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 4.63,
@@ -4130,7 +4130,7 @@
   {
     "id": 203952,
     "name": "Andrew Wiggins",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
     "price": 5.43,
@@ -4142,7 +4142,7 @@
   {
     "id": 1630314,
     "name": "Brandon Williams",
-    "position": "N/A",
+    "position": "G",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
     "price": 6.32,
@@ -4154,7 +4154,7 @@
   {
     "id": 1642262,
     "name": "Cody Williams",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
     "price": 3.58,
@@ -4166,7 +4166,7 @@
   {
     "id": 1631119,
     "name": "Jaylin Williams",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 4.66,
@@ -4178,7 +4178,7 @@
   {
     "id": 1629026,
     "name": "Kenrich Williams",
-    "position": "N/A",
+    "position": "G-F",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
     "price": 4.77,
@@ -4190,7 +4190,7 @@
   {
     "id": 1631109,
     "name": "Mark Williams",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
     "price": 6.37,
@@ -4202,7 +4202,7 @@
   {
     "id": 1630172,
     "name": "Patrick Williams",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 3.08,
@@ -4214,7 +4214,7 @@
   {
     "id": 1630533,
     "name": "Ziaire Williams",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 4.96,
@@ -4226,7 +4226,7 @@
   {
     "id": 1629057,
     "name": "Robert Williams III",
-    "position": "N/A",
+    "position": "C-F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 6.19,
@@ -4238,7 +4238,7 @@
   {
     "id": 1629627,
     "name": "Zion Williamson",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
     "price": 7.71,
@@ -4250,7 +4250,7 @@
   {
     "id": 1630592,
     "name": "Jalen Wilson",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 4.2,
@@ -4262,7 +4262,7 @@
   {
     "id": 1642874,
     "name": "Danny Wolf",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
     "price": 4.51,
@@ -4274,7 +4274,7 @@
   {
     "id": 1627824,
     "name": "Guerschon Yabusele",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
     "price": 3.8,
@@ -4286,7 +4286,7 @@
   {
     "id": 1642905,
     "name": "Yang Hansen",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
     "price": 2.59,
@@ -4298,7 +4298,7 @@
   {
     "id": 1627826,
     "name": "Ivica Zubac",
-    "position": "N/A",
+    "position": "C",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
     "price": 5.85,
@@ -4310,7 +4310,7 @@
   {
     "id": 1641783,
     "name": "Tristan da Silva",
-    "position": "N/A",
+    "position": "F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
     "price": 4.47,

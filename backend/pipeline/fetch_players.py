@@ -1,5 +1,5 @@
 import json
-from nba_api.stats.endpoints import commonallplayers, leaguedashplayerstats
+from nba_api.stats.endpoints import commonallplayers, leaguedashplayerstats, playerindex
 
 
 def fetch_all_players(): #fetches all ACTIVE nba players for the 2025-26 season
@@ -25,6 +25,13 @@ def get_all_player_stats(season="2025-26"): #fetches advanced stats for all play
     ).get_data_frames()[0]
 
     return stats_data
+
+def get_player_positions(season="2025-26"):
+    print("Fetching player positions...")
+    import time
+    time.sleep(1)
+    position_data = playerindex.PlayerIndex(season=season).get_data_frames()[0]
+    return position_data[['PERSON_ID', 'POSITION']]
 
 
 def normalize_and_price(players_stats):
@@ -90,6 +97,8 @@ def main():
     all_stats = get_all_player_stats()
     print(f"Fetched stats for {len(all_stats)} total players\n")
 
+    all_positions = get_player_positions() # Fetch player positions to include in the final output
+
     # Merge stats with active players by PERSON_ID
     all_stats_list = []
     for _, player in all_players.iterrows():
@@ -98,6 +107,10 @@ def main():
 
         # Find matching stats for this player
         player_stats = all_stats[all_stats['PLAYER_ID'] == player_id]
+
+        # Get position
+        pos_row = all_positions[all_positions['PERSON_ID'] == player_id]
+        position = pos_row.iloc[0]['POSITION'] if len(pos_row) > 0 else 'N/A'
 
         if len(player_stats) > 0:
             stat_row = player_stats.iloc[0]
@@ -108,7 +121,7 @@ def main():
                 all_stats_list.append({
                     'player_id': player_id,
                     'player_name': player_name,
-                    'position': player.get('POSITION', 'N/A'),
+                    'position': position,
                     'team_name': player.get('TEAM_NAME', 'N/A'),
                     'team_abbreviation': player.get('TEAM_ABBREVIATION', 'N/A'),
                     'PER': stat_row.get('PER', 0),
