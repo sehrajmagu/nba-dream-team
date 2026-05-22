@@ -1,0 +1,112 @@
+.team-slots {
+  background-color: var(--nba-dark);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--nba-gray);
+  margin-bottom: 20px;
+}
+
+.team-slots h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slots-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.slot {
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.position-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--nba-red);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.player-slot {
+  border: 2px solid var(--nba-gray);
+  border-radius: 4px;
+  padding: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-height: 100px;
+}
+
+.player-slot.empty {
+  border-style: dashed;
+  color: var(--nba-gray-light);
+  justify-content: center;
+  font-size: 12px;
+}
+
+.player-slot.filled {
+  background-color: var(--nba-gray);
+  border-color: var(--nba-red);
+  position: relative;
+}
+
+.headshot {
+  width: 60px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.player-info {
+  text-align: center;
+  width: 100%;
+  padding: 0 4px;
+}
+
+.player-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--nba-light);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.player-price {
+  font-size: 10px;
+  color: var(--nba-red);
+  margin: 0;
+  font-weight: 600;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: var(--nba-red);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.player-slot.filled:hover .remove-btn {
+  opacity: 1;
+}

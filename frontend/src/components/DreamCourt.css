@@ -1,0 +1,125 @@
+.dream-court {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.court-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.court-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.court-container {
+  flex: 1;
+  position: relative;
+  background-color: var(--nba-gray);
+  border: 2px solid var(--nba-red);
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1.2;
+  max-height: 500px;
+}
+
+.court-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.court-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.court-player {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+}
+
+.court-player img {
+  width: 50px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid var(--nba-red);
+  box-shadow: 0 0 8px rgba(194, 30, 30, 0.5);
+}
+
+.court-player-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--nba-light);
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgba(10, 10, 10, 0.7);
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.simulation-section {
+  background-color: var(--nba-dark);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--nba-gray);
+}
+
+.simulation-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.opponent-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.opponent-selector label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--nba-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.opponent-dropdown {
+  width: 100%;
+}
+
+.simulate-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.warning {
+  color: var(--nba-gray-light);
+  font-size: 12px;
+  margin-top: 8px;
+}

@@ -1,0 +1,102 @@
+/* Dark NBA Theme */
+:root {
+  --nba-black: #0a0a0a;
+  --nba-dark: #111111;
+  --nba-red: #C21E1E;
+  --nba-red-dark: #8b0000;
+  --nba-light: #e8e8e8;
+  --nba-gray: #333333;
+  --nba-gray-light: #555555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--nba-black);
+  color: var(--nba-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background-color: var(--nba-red);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--nba-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(194, 30, 30, 0.3);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input {
+  background-color: var(--nba-gray);
+  color: var(--nba-light);
+  border: 2px solid var(--nba-gray-light);
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--nba-red);
+  box-shadow: 0 0 0 3px rgba(194, 30, 30, 0.1);
+}
+
+select {
+  background-color: var(--nba-gray);
+  color: var(--nba-light);
+  border: 2px solid var(--nba-gray-light);
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--nba-red);
+}
+
+select option {
+  background-color: var(--nba-dark);
+  color: var(--nba-light);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nba-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nba-red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nba-red-dark);
+}
