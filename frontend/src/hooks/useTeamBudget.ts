@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { Player } from '../types';
 
-const SALARY_CAP = 25;
+const SALARY_CAP = 30;
 
 export const useTeamBudget = (selectedTeam: Player[]) => {
   const totalSpent = selectedTeam.reduce((sum, player) => sum + player.price, 0);

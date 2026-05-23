@@ -9,6 +9,7 @@ export interface Player {
   ts_pct: number;
   usg_pct: number;
   def_rating: number;
+  slot?: Position;
 }
 
 export type Position = 'PG' | 'SG' | 'SF' | 'PF' | 'C';
@@ -22,11 +23,18 @@ export interface SeriesResult {
   game: number;
   result: string;
   score: string;
-  playByPlay: string[];
+  userBoxScore: Record<string, number>;
+  opponentBoxScore: Record<string, number>;
+}
+
+export interface SeriesSummary {
+  seriesWinner: string;
+  userWins: number;
+  opponentWins: number;
 }
 
 export interface SimulationState {
   isRunning: boolean;
   results: SeriesResult[];
-  selectedOpponent: string | null;
+  selectedOpponent: Player[] | null;
 }

@@ -134,6 +134,9 @@ def simulate_possession(
     base_ppp = get_base_ppp(play_type, ball_handler.get('ts_pct', 0.55))
     adjusted_ppp = apply_defensive_adjustment(base_ppp, defender.get('def_rating', 112))
 
+    quality_multiplier = max(0.7, min(1.3, 0.85 + (ball_handler.get('pie', 0.1) / 0.1) * 0.15))
+    adjusted_ppp *= quality_multiplier
+
     # Determine outcome
     turnover_prob = 0.13
     if random.random() < turnover_prob:
@@ -297,6 +300,26 @@ def main():
 
     print(f"\nSeries Winner: Team {series_result['series_winner']}")
     print(f"Final: Team A {series_result['team_a_wins']}-{series_result['team_b_wins']} Team B")
+
+    players = load_players('backend/data/players.json')
+    players_by_price = sorted(players, key=lambda p: p['price'], reverse=True)
+
+    team_a = players_by_price[0:5]
+    team_b = players_by_price[5:10]
+
+    print("Team A defensive ratings:")
+    for p in team_a:
+        print(f"  {p['name']}: {p['def_rating']}")
+
+    print("\nTeam B defensive ratings:")
+    for p in team_b:
+        print(f"  {p['name']}: {p['def_rating']}")
+
+    print("\nYour team stats:")
+    for name in ['Precious Achiuwa', 'Ochai Agbaji', 'Nickeil Alexander-Walker']:
+        p = next((x for x in players if x['name'] == name), None)
+        if p:
+            print(f"  {p['name']}: pie={p['pie']}, ts={p['ts_pct']}, usg={p['usg_pct']}, price={p['price']}")
 
 
 if __name__ == '__main__':

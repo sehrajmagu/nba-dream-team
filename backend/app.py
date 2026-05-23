@@ -13,7 +13,8 @@ CORS(app)
 
 # Load players data
 def load_players():
-    with open('data/players.json', 'r') as f:
+    data_path = Path(__file__).parent / 'data' / 'players.json'
+    with open(data_path, 'r') as f:
         return json.load(f)
 
 # Opponent team mappings
@@ -76,15 +77,15 @@ def simulate():
 
         # Extract team player IDs and opponent
         team_ids = data.get('teamIds', [])
-        opponent = data.get('opponent', '')
+        opponent_ids = data.get('opponentIds', [])
 
         if not team_ids or len(team_ids) != 5:
-            return jsonify({'error': 'Must provide exactly 5 player IDs'}), 400
+            return jsonify({'error': 'Must provide exactly 5 player IDs for user team'}), 400
 
-        if not opponent:
-            return jsonify({'error': 'Must provide opponent name'}), 400
+        if not opponent_ids or len(opponent_ids) != 5:
+            return jsonify({'error': 'Must provide exactly 5 player IDs for opponent'}), 400
 
-        # Load players data to get team info
+        # Load players data
         players = load_players()
         players_by_id = {p['id']: p for p in players}
 
@@ -92,13 +93,13 @@ def simulate():
         user_team = [players_by_id[pid] for pid in team_ids if pid in players_by_id]
 
         if len(user_team) != 5:
-            return jsonify({'error': 'One or more players not found'}), 404
+            return jsonify({'error': 'One or more user team players not found'}), 404
 
-        # Get opponent team
-        opponent_team = get_opponent_team(opponent, players)
+        # Build opponent team
+        opponent_team = [players_by_id[pid] for pid in opponent_ids if pid in players_by_id]
 
-        if len(opponent_team) < 5:
-            return jsonify({'error': f'Could not find enough players for {opponent}'}), 404
+        if len(opponent_team) != 5:
+            return jsonify({'error': 'One or more opponent team players not found'}), 404
 
         # Run simulation
         series_results = simulate_series(user_team, opponent_team)
@@ -110,16 +111,29 @@ def simulate():
             opponent_score = game['score_b']
             result = 'WIN' if user_score > opponent_score else 'LOSS'
 
+            # Calculate box score (points per player)
+            user_box_score = {p['name']: 0 for p in user_team}
+            opponent_box_score = {p['name']: 0 for p in opponent_team}
+
+            for play in game['possession_log']:
+                if play.get('team') == 'A':
+                    if play.get('ball_handler') in user_box_score:
+                        user_box_score[play['ball_handler']] += play.get('points_scored', 0)
+                else:
+                    if play.get('ball_handler') in opponent_box_score:
+                        opponent_box_score[play['ball_handler']] += play.get('points_scored', 0)
+
             formatted_results.append({
                 'game': game['game'],
                 'result': result,
                 'score': f'{user_score} - {opponent_score}',
-                'playByPlay': game['possession_log'][:15]  # Limit to first 15 plays
+                'userBoxScore': user_box_score,
+                'opponentBoxScore': opponent_box_score
             })
 
         return jsonify({
             'series': formatted_results,
-            'seriesWinner': 'You' if series_results['series_winner'] == 'A' else opponent,
+            'seriesWinner': 'You' if series_results['series_winner'] == 'A' else 'Opponent',
             'userWins': series_results['team_a_wins'],
             'opponentWins': series_results['team_b_wins'],
             'message': 'Simulation complete!'

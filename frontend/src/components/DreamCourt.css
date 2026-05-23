@@ -80,6 +80,17 @@
   padding: 16px;
   border-radius: 8px;
   border: 1px solid var(--nba-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.simulate-controls {
+  position: sticky;
+  top: 0;
+  background-color: var(--nba-dark);
+  z-index: 10;
+  padding: 8px 0;
 }
 
 .simulation-section h3 {
@@ -88,25 +99,11 @@
   margin: 0 0 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  display: none;
 }
 
 .opponent-selector {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.opponent-selector label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--nba-light);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.opponent-dropdown {
-  width: 100%;
+  display: none;
 }
 
 .simulate-btn {

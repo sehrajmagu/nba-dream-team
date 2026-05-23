@@ -1,12 +1,13 @@
 import React from 'react';
-import { SeriesResult } from '../types';
+import { SeriesResult, SeriesSummary } from '../types';
 import './PlayByPlayLog.css';
 
 interface PlayByPlayLogProps {
   results: SeriesResult[];
+  summary: SeriesSummary | null;
 }
 
-export const PlayByPlayLog: React.FC<PlayByPlayLogProps> = ({ results }) => {
+export const PlayByPlayLog: React.FC<PlayByPlayLogProps> = ({ results, summary }) => {
   if (results.length === 0) {
     return (
       <div className="play-by-play-log">
@@ -21,6 +22,18 @@ export const PlayByPlayLog: React.FC<PlayByPlayLogProps> = ({ results }) => {
   return (
     <div className="play-by-play-log">
       <h3>Series Results</h3>
+
+      {summary && (
+        <div className={`series-summary-header ${summary.seriesWinner === 'You' ? 'victory' : 'defeat'}`}>
+          <div className="summary-content">
+            <h2 className="series-winner">{summary.seriesWinner === 'You' ? '🏆 VICTORY' : 'DEFEAT'}</h2>
+            <p className="series-score">
+              {summary.seriesWinner === 'You' ? 'You' : 'Opponent'} wins the series {summary.userWins} - {summary.opponentWins}
+            </p>
+          </div>
+        </div>
+      )}
+
       <div className="series-summary">
         {results.map((result, idx) => (
           <div key={idx} className={`game-result ${result.result.toLowerCase()}`}>
@@ -31,16 +44,36 @@ export const PlayByPlayLog: React.FC<PlayByPlayLogProps> = ({ results }) => {
               </span>
             </div>
             <div className="game-score">{result.score}</div>
-            {result.playByPlay.length > 0 && (
-              <div className="game-plays">
-                {result.playByPlay.slice(0, 3).map((play, pidx) => (
-                  <p key={pidx} className="play">{play}</p>
-                ))}
-                {result.playByPlay.length > 3 && (
-                  <p className="more-plays">+{result.playByPlay.length - 3} more plays</p>
-                )}
+
+            <div className="box-score">
+              <div className="team-score">
+                <h4>Your Team</h4>
+                <div className="player-stats">
+                  {Object.entries(result.userBoxScore)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([player, points]) => (
+                      <div key={player} className="player-stat">
+                        <span className="player-name">{player}</span>
+                        <span className="player-points">{Math.round(points)}</span>
+                      </div>
+                    ))}
+                </div>
               </div>
-            )}
+
+              <div className="team-score opponent">
+                <h4>Opponent</h4>
+                <div className="player-stats">
+                  {Object.entries(result.opponentBoxScore)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([player, points]) => (
+                      <div key={player} className="player-stat">
+                        <span className="player-name">{player}</span>
+                        <span className="player-points">{Math.round(points)}</span>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>

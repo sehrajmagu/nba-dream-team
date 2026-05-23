@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Player, Position, SeriesResult } from './types';
+import { Player, Position, SeriesResult, SeriesSummary } from './types';
 import { PlayerSelection } from './components/PlayerSelection';
 import { SelectedTeamSlots } from './components/SelectedTeamSlots';
 import { BudgetTracker } from './components/BudgetTracker';
@@ -23,8 +23,10 @@ const EMPTY_ROSTER: TeamRoster = {
 function App() {
   const [allPlayers] = useState<Player[]>(playersData);
   const [selectedTeam, setSelectedTeam] = useState<TeamRoster>(EMPTY_ROSTER);
-  const [selectedOpponent, setSelectedOpponent] = useState<string | null>(null);
+  const [selectedOpponent, setSelectedOpponent] = useState<Player[]>([]);
   const [seriesResults, setSeriesResults] = useState<SeriesResult[]>([]);
+  const [seriesSummary, setSeriesSummary] = useState<SeriesSummary | null>(null);
+  const [showResults, setShowResults] = useState(false);
   const [isSimulating, setIsSimulating] = useState(false);
 
   const selectedTeamArray = Object.values(selectedTeam).filter((p): p is Player => p !== null);
@@ -47,7 +49,7 @@ function App() {
   };
 
   const handleSimulate = async () => {
-    if (selectedTeamArray.length !== 5 || !selectedOpponent) return;
+    if (selectedTeamArray.length !== 5 || selectedOpponent.length !== 5) return;
 
     setIsSimulating(true);
 
@@ -59,7 +61,7 @@ function App() {
         },
         body: JSON.stringify({
           teamIds: selectedTeamArray.map(p => p.id),
-          opponent: selectedOpponent,
+          opponentIds: selectedOpponent.map(p => p.id),
         }),
       });
 
@@ -69,6 +71,12 @@ function App() {
 
       const data = await response.json();
       setSeriesResults(data.series);
+      setSeriesSummary({
+        seriesWinner: data.seriesWinner,
+        userWins: data.userWins,
+        opponentWins: data.opponentWins,
+      });
+      setShowResults(true);
     } catch (error) {
       console.error('Error running simulation:', error);
       alert('Failed to run simulation. Make sure the backend is running on http://localhost:5000');
@@ -100,21 +108,24 @@ function App() {
 
         <main className="main-content">
           <DreamCourt
+            allPlayers={allPlayers}
             selectedTeam={selectedTeamArray}
             selectedOpponent={selectedOpponent}
             onOpponentChange={setSelectedOpponent}
             onSimulate={handleSimulate}
             isSimulating={isSimulating}
           />
-          <PlayByPlayLog results={seriesResults} />
+          {seriesResults.length > 0 && (
+            <PlayByPlayLog results={seriesResults} summary={seriesSummary} />
+          )}
         </main>
 
-        <aside className="sidebar-right">
-          <AIAssistant />
-        </aside>
-      </div>
-    </div>
-  );
-}
+                <aside className="sidebar-right">
+                  <AIAssistant />
+                </aside>
+              </div>
+            </div>
+          );
+        }
 
 export default App;

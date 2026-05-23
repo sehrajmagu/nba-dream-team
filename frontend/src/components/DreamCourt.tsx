@@ -1,26 +1,17 @@
 import React from 'react';
 import { Player, Position } from '../types';
+import { OpponentTeamBuilder } from './OpponentTeamBuilder';
 import './DreamCourt.css';
 
 interface DreamCourtProps {
+  allPlayers: Player[];
   selectedTeam: Player[];
-  selectedOpponent: string | null;
-  onOpponentChange: (opponent: string) => void;
+  selectedOpponent: Player[];
+  onOpponentChange: (opponent: Player[]) => void;
   onSimulate: () => void;
   isSimulating: boolean;
   teamRoster?: Record<Position, Player | null>;
 }
-
-const OPPONENTS = [
-  'Lakers',
-  'Celtics',
-  'Warriors',
-  'Heat',
-  'Nuggets',
-  'Bucks',
-  'Suns',
-  'Thunder',
-];
 
 const POSITION_COORDS: Record<string, { x: number; y: number; label: string }> = {
   PG: { x: 50, y: 30, label: 'PG' },
@@ -31,6 +22,7 @@ const POSITION_COORDS: Record<string, { x: number; y: number; label: string }> =
 };
 
 export const DreamCourt: React.FC<DreamCourtProps> = ({
+  allPlayers,
   selectedTeam,
   selectedOpponent,
   onOpponentChange,
@@ -38,7 +30,7 @@ export const DreamCourt: React.FC<DreamCourtProps> = ({
   isSimulating,
   teamRoster,
 }) => {
-  const canSimulate = selectedTeam.length === 5 && selectedOpponent;
+  const canSimulate = selectedTeam.length === 5 && selectedOpponent.length === 5;
 
   // Create a position to player mapping from roster or selectedTeam
   const positionMap: Record<string, Player | undefined> = {};
@@ -147,31 +139,22 @@ export const DreamCourt: React.FC<DreamCourtProps> = ({
       </div>
 
       <div className="simulation-section">
-        <h3>Series Simulation</h3>
-        <div className="opponent-selector">
-          <label>Select Opponent:</label>
-          <select
-            value={selectedOpponent || ''}
-            onChange={(e) => onOpponentChange(e.target.value)}
-            className="opponent-dropdown"
+        <div className="simulate-controls">
+          <button
+            className="simulate-btn"
+            onClick={onSimulate}
+            disabled={!canSimulate || isSimulating}
           >
-            <option value="">Choose opponent...</option>
-            {OPPONENTS.map(opp => (
-              <option key={opp} value={opp}>
-                {opp}
-              </option>
-            ))}
-          </select>
+            {isSimulating ? 'Simulating...' : 'Simulate Series'}
+          </button>
+          {!canSimulate && <p className="warning">Select 5 players for your team and 5 for opponent to simulate</p>}
         </div>
 
-        <button
-          className="simulate-btn"
-          onClick={onSimulate}
-          disabled={!canSimulate || isSimulating}
-        >
-          {isSimulating ? 'Simulating...' : 'Simulate Series'}
-        </button>
-        {!canSimulate && <p className="warning">Select 5 players and an opponent to simulate</p>}
+        <OpponentTeamBuilder
+          allPlayers={allPlayers}
+          selectedOpponent={selectedOpponent}
+          onOpponentChange={onOpponentChange}
+        />
       </div>
     </div>
   );

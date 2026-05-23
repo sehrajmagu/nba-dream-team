@@ -45,15 +45,15 @@
 
 .main-content {
   background-color: var(--nba-black);
-  display: grid;
-  grid-template-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
   gap: 0;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .sidebar-right {
   background-color: var(--nba-dark);
-  overflow: hidden;
+  overflow-y: auto;
   border-left: 1px solid var(--nba-gray);
   display: flex;
   flex-direction: column;

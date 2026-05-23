@@ -14,6 +14,7 @@
   margin: 0 0 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  flex-shrink: 0;
 }
 
 .log-empty {
@@ -24,12 +25,58 @@
   color: var(--nba-gray-light);
 }
 
+.series-summary-header {
+  background: linear-gradient(135deg, var(--nba-gray) 0%, #2a2a2a 100%);
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--nba-red);
+  margin-bottom: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.series-summary-header.victory {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.05) 100%);
+  border-color: #4caf50;
+}
+
+.series-summary-header.defeat {
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.1) 0%, rgba(244, 67, 54, 0.05) 100%);
+  border-color: #f44336;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.series-winner {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+.series-summary-header.defeat .series-winner {
+  color: #f44336;
+}
+
+.series-score {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--nba-light);
+}
+
 .series-summary {
   flex: 1;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  min-height: 0;
+  padding-right: 4px;
 }
 
 .game-result {
@@ -102,4 +149,62 @@
   color: var(--nba-red);
   font-style: italic;
   margin-top: 4px;
+}
+
+.box-score {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.team-score {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team-score h4 {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--nba-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.team-score.opponent h4 {
+  color: var(--nba-gray-light);
+}
+
+.player-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.player-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.player-name {
+  color: var(--nba-light);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-points {
+  color: var(--nba-red);
+  font-weight: 700;
+  margin-left: 8px;
+  flex-shrink: 0;
 }

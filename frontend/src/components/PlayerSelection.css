@@ -125,3 +125,158 @@
   font-size: 16px;
   font-weight: 700;
 }
+
+.position-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.helper-text {
+  font-size: 14px;
+  color: var(--nba-gray-light);
+  margin: 0 0 24px;
+}
+
+.position-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.position-btn {
+  padding: 16px 12px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  background-color: var(--nba-red);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.position-btn:hover {
+  background-color: #d41c2c;
+  transform: scale(1.05);
+}
+
+.position-btn:active {
+  transform: scale(0.98);
+}
+
+.full-team {
+  margin-top: 24px;
+  font-size: 16px;
+  color: var(--nba-red);
+  font-weight: 600;
+}
+
+.player-picker-modal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--nba-gray);
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--nba-gray-light);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: var(--nba-light);
+}
+
+.selected-opponents {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+.opponent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 70px;
+  position: relative;
+}
+
+.opponent-card img {
+  width: 50px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid var(--nba-red);
+}
+
+.opponent-card-info {
+  text-align: center;
+}
+
+.opponent-card-info h4 {
+  font-size: 9px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70px;
+}
+
+.opponent-card-info p {
+  font-size: 9px;
+  margin: 0;
+  color: var(--nba-gray-light);
+}
+
+.opponent-card .remove-btn {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--nba-red);
+  border: none;
+  color: white;
+  font-size: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
