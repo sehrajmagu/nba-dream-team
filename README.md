@@ -1,11 +1,11 @@
 # NBA Dream Team Sandbox
 
-Pick 5 current NBA players within a $25M budget and simulate a 7-game playoff series against an opponent team. A built-in AI assistant helps you build your roster given your budget and playstyle preferences.
+Pick 5 current NBA players within a $30M budget and simulate a 7-game playoff series against an opponent team. A built-in AI assistant helps you build your roster given your budget and playstyle preferences.
 
 ## What it does
 
 - **Player pool**: 500+ current NBA players, each priced $1M–$10M based on performance
-- **$25M budget cap**: Forces real roster construction tradeoffs — you can't just stack superstars
+- **$30M budget cap**: Forces real roster construction tradeoffs — you can't just stack superstars
 - **Possession-by-possession simulation**: ~200 possessions per game, each one sampling a play type, calculating offensive efficiency, applying defensive adjustments, and resolving an outcome
 - **7-game series**: Full playoff series with game-by-game scores and play-by-play logs
 - **AI assistant**: Describe your budget and playstyle, get lineup recommendations powered by Claude
@@ -14,9 +14,9 @@ Pick 5 current NBA players within a $25M budget and simulate a 7-game playoff se
 
 - **Data pipeline**: Python, nba_api, pandas
 - **Simulation engine**: Python (statistical model)
-- **Backend API**: Flask (in progress)
-- **Frontend**: React (in progress)
-- **AI chatbot**: Anthropic Claude API (in progress)
+- **Backend API**: Flask 
+- **Frontend**: React 
+- **AI chatbot**: Gemini API
 
 ## Project structure
 
@@ -85,9 +85,8 @@ Each possession:
 4. A defensive adjustment is applied based on the defender's defensive rating: `adjusted_PPP = base_PPP × (112 / defender_drtg)`
 5. Outcome is sampled: turnover (13%), score, or miss based on adjusted PPP
 
-## What's coming
+## AI Chatbot
+There is now an AI chatbot powered by Gemini which looks at the current state of your team and the remaining budget, and can give you advice on what players to pick to maximise results while staying within the budget constraints. 
 
-- [ ] Flask API to expose simulation as endpoints
-- [ ] React frontend with player search, budget tracker, court view, and play-by-play log
-- [ ] LLM chatbot integration for lineup recommendations
+## What's coming
 - [ ] Logistic regression model to replace heuristic outcome sampling with a trained model
