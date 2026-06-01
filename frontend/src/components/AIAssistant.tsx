@@ -8,7 +8,11 @@ interface Message {
   timestamp: Date;
 }
 
-export const AIAssistant: React.FC = () => {
+interface AIAssistantProps {
+  remainingBudget: number;
+}
+
+export const AIAssistant: React.FC<AIAssistantProps> = ({ remainingBudget }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -18,6 +22,7 @@ export const AIAssistant: React.FC = () => {
     },
   ]);
   const [inputValue, setInputValue] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -28,7 +33,7 @@ export const AIAssistant: React.FC = () => {
     scrollToBottom();
   }, [messages]);
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
 
     const userMessage: Message = {
@@ -40,16 +45,44 @@ export const AIAssistant: React.FC = () => {
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
+    setIsLoading(true);
 
-    setTimeout(() => {
+    try {
+      const response = await fetch('http://localhost:5000/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: userMessage.content,
+          remaining_budget: remainingBudget,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: 'Thanks for your message! Backend integration coming soon. Stay tuned for real AI insights!',
+        content: data.response || 'Sorry, I couldn\'t generate a response. Please try again.',
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, assistantMessage]);
-    }, 500);
+    } catch (error) {
+      console.error('Chat error:', error);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        role: 'assistant',
+        content: 'Sorry, I encountered an error. Make sure the backend is running on http://localhost:5000.',
+        timestamp: new Date(),
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -69,7 +102,48 @@ export const AIAssistant: React.FC = () => {
               {msg.role === 'assistant' ? '🤖' : '👤'}
             </div>
             <div className="message-content">
-              <p>{msg.content}</p>
+              {msg.role === 'assistant' ? (
+                <div className="formatted-response">
+                  {msg.content.split('\n').map((line, idx) => {
+                    if (!line.trim()) return <br key={idx} />;
+                    
+                    // Parse markdown: **text** → bold, * item → bullet point
+                    const parts: React.ReactNode[] = [];
+                    let lastIdx = 0;
+                    const boldRegex = /\*\*([^\*]+)\*\*/g;
+                    let match;
+                    
+                    while ((match = boldRegex.exec(line)) !== null) {
+                      if (match.index > lastIdx) {
+                        parts.push(line.slice(lastIdx, match.index));
+                      }
+                      parts.push(<strong key={`bold-${idx}-${match.index}`}>{match[1]}</strong>);
+                      lastIdx = boldRegex.lastIndex;
+                    }
+                    
+                    if (lastIdx < line.length) {
+                      parts.push(line.slice(lastIdx));
+                    }
+                    
+                    // Format bullet points
+                    if (line.trim().startsWith('*')) {
+                      return (
+                        <li key={idx} style={{ marginLeft: '20px' }}>
+                          {parts.length > 0 ? parts : line.replace(/^\*\s/, '')}
+                        </li>
+                      );
+                    }
+                    
+                    return (
+                      <p key={idx} style={{ margin: '8px 0' }}>
+                        {parts.length > 0 ? parts : line}
+                      </p>
+                    );
+                  })}
+                </div>
+              ) : (
+                <p>{msg.content}</p>
+              )}
               <span className="timestamp">
                 {msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </span>
@@ -87,13 +161,14 @@ export const AIAssistant: React.FC = () => {
           placeholder="Ask a question..."
           className="message-input"
           rows={3}
+          disabled={isLoading}
         />
         <button
           onClick={handleSendMessage}
-          disabled={!inputValue.trim()}
+          disabled={!inputValue.trim() || isLoading}
           className="send-btn"
         >
-          Send
+          {isLoading ? 'Sending...' : 'Send'}
         </button>
       </div>
     </div>

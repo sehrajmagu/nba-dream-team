@@ -121,7 +121,7 @@ function App() {
         </main>
 
                 <aside className="sidebar-right">
-                  <AIAssistant />
+                  <AIAssistant remainingBudget={30 - selectedTeamArray.reduce((sum, p) => sum + p.price, 0)} />
                 </aside>
               </div>
             </div>
