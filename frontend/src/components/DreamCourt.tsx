@@ -1,15 +1,22 @@
 import React from 'react';
-import { Player, Position } from '../types';
-import { OpponentTeamBuilder } from './OpponentTeamBuilder';
+import { ClassicTeams, Player, Position } from '../types';
+import { ClassicTeamSelector } from './ClassicTeamSelector';
 import './DreamCourt.css';
 
 interface DreamCourtProps {
   allPlayers: Player[];
   selectedTeam: Player[];
   selectedOpponent: Player[];
-  onOpponentChange: (opponent: Player[]) => void;
-  onSimulate: () => void;
+  classicTeams: ClassicTeams;
+  selectedOpponentTeamKey: string | null;
+  onSelectOpponentTeam: (teamKey: string) => void;
+  onPlayGame: () => void;
   isSimulating: boolean;
+  currentGame: number;
+  gamesPlayed: number;
+  userWins: number;
+  opponentWins: number;
+  seriesOver: boolean;
   teamRoster?: Record<Position, Player | null>;
 }
 
@@ -25,12 +32,29 @@ export const DreamCourt: React.FC<DreamCourtProps> = ({
   allPlayers,
   selectedTeam,
   selectedOpponent,
-  onOpponentChange,
-  onSimulate,
+  classicTeams,
+  selectedOpponentTeamKey,
+  onSelectOpponentTeam,
+  onPlayGame,
   isSimulating,
+  currentGame,
+  gamesPlayed,
+  userWins,
+  opponentWins,
+  seriesOver,
   teamRoster,
 }) => {
   const canSimulate = selectedTeam.length === 5 && selectedOpponent.length === 5;
+
+  const leadMessage = (() => {
+    if (userWins === 0 && opponentWins === 0) return null;
+    if (userWins === opponentWins) return `Series tied ${userWins}-${opponentWins}`;
+    return userWins > opponentWins
+      ? `You lead ${userWins}-${opponentWins}`
+      : `Opponent leads ${opponentWins}-${userWins}`;
+  })();
+
+  const playButtonLabel = gamesPlayed === 0 ? `Play Game ${currentGame}` : 'Play Next Game';
 
   // Create a position to player mapping from roster or selectedTeam
   const positionMap: Record<string, Player | undefined> = {};
@@ -140,20 +164,25 @@ export const DreamCourt: React.FC<DreamCourtProps> = ({
 
       <div className="simulation-section">
         <div className="simulate-controls">
-          <button
-            className="simulate-btn"
-            onClick={onSimulate}
-            disabled={!canSimulate || isSimulating}
-          >
-            {isSimulating ? 'Simulating...' : 'Simulate Series'}
-          </button>
+          {leadMessage && !seriesOver && <p className="series-lead">{leadMessage}</p>}
+          {seriesOver ? (
+            <p className="series-over-note">Series over — start a new matchup to play again</p>
+          ) : (
+            <button
+              className="simulate-btn"
+              onClick={onPlayGame}
+              disabled={!canSimulate || isSimulating}
+            >
+              {isSimulating ? 'Simulating...' : playButtonLabel}
+            </button>
+          )}
           {!canSimulate && <p className="warning">Select 5 players for your team and 5 for opponent to simulate</p>}
         </div>
 
-        <OpponentTeamBuilder
-          allPlayers={allPlayers}
-          selectedOpponent={selectedOpponent}
-          onOpponentChange={onOpponentChange}
+        <ClassicTeamSelector
+          classicTeams={classicTeams}
+          selectedTeamKey={selectedOpponentTeamKey}
+          onSelectTeam={onSelectOpponentTeam}
         />
       </div>
     </div>

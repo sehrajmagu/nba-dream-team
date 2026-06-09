@@ -7,7 +7,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import google.generativeai as genai
 
-from engine.simulate import simulate_series
+from engine.simulate import simulate_game, simulate_series
 
 BASE_DIR = Path(__file__).resolve().parent
 ROOT_DIR = BASE_DIR.parent
@@ -29,6 +29,16 @@ def load_players():
         return json.load(f)
 
 
+def load_classic_players():
+    data_path = BASE_DIR / 'data' / 'classics.json'
+    with open(data_path, 'r', encoding='utf-8') as f:
+        classics = json.load(f)
+    players = []
+    for team in classics.values():
+        players.extend(team.get('players', []))
+    return players
+
+
 def normalize_ids(ids):
     normalized = []
     if not isinstance(ids, list):
@@ -47,27 +57,39 @@ def get_players():
     return jsonify(players), 200
 
 
-@app.route('/api/simulate', methods=['POST'])
-def simulate():
-    payload = request.get_json(silent=True) or {}
+def resolve_teams(payload):
     team_ids = normalize_ids(payload.get('teamIds', []))
     opponent_ids = normalize_ids(payload.get('opponentIds', []))
 
     if len(team_ids) != 5:
-        return jsonify({'error': 'Must provide exactly 5 player IDs for teamIds'}), 400
+        return None, None, (jsonify({'error': 'Must provide exactly 5 player IDs for teamIds'}), 400)
     if len(opponent_ids) != 5:
-        return jsonify({'error': 'Must provide exactly 5 player IDs for opponentIds'}), 400
+        return None, None, (jsonify({'error': 'Must provide exactly 5 player IDs for opponentIds'}), 400)
 
     players = load_players()
     players_by_id = {p['id']: p for p in players}
 
+    opponent_lookup = dict(players_by_id)
+    for p in load_classic_players():
+        opponent_lookup.setdefault(p['id'], p)
+
     user_team = [players_by_id.get(pid) for pid in team_ids]
-    opponent_team = [players_by_id.get(pid) for pid in opponent_ids]
+    opponent_team = [opponent_lookup.get(pid) for pid in opponent_ids]
 
     if any(p is None for p in user_team):
-        return jsonify({'error': 'One or more teamIds are invalid'}), 404
+        return None, None, (jsonify({'error': 'One or more teamIds are invalid'}), 404)
     if any(p is None for p in opponent_team):
-        return jsonify({'error': 'One or more opponentIds are invalid'}), 404
+        return None, None, (jsonify({'error': 'One or more opponentIds are invalid'}), 404)
+
+    return user_team, opponent_team, None
+
+
+@app.route('/api/simulate', methods=['POST'])
+def simulate():
+    payload = request.get_json(silent=True) or {}
+    user_team, opponent_team, error = resolve_teams(payload)
+    if error:
+        return error
 
     series_results = simulate_series(user_team, opponent_team)
     formatted_results = []
@@ -100,6 +122,23 @@ def simulate():
         'userWins': series_results['team_a_wins'],
         'opponentWins': series_results['team_b_wins'],
         'message': 'Simulation complete!'
+    }), 200
+
+
+@app.route('/api/simulate/game', methods=['POST'])
+def simulate_single_game():
+    payload = request.get_json(silent=True) or {}
+    user_team, opponent_team, error = resolve_teams(payload)
+    if error:
+        return error
+
+    (score_a, score_b), possession_log = simulate_game(user_team, opponent_team)
+
+    return jsonify({
+        'score_a': score_a,
+        'score_b': score_b,
+        'winner': 'user' if score_a > score_b else 'opponent',
+        'possession_log': possession_log,
     }), 200
 
 

@@ -1,52 +1,59 @@
 .budget-tracker {
   background-color: var(--nba-dark);
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  border: 1px solid var(--nba-gray);
+  padding: 14px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 23, 68, 0.2);
 }
 
 .budget-tracker h3 {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 700;
   margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--nba-light);
+  letter-spacing: 3px;
+  color: var(--nba-gray-light);
 }
 
 .budget-bar {
-  height: 12px;
-  background-color: var(--nba-gray);
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 12px;
-  border: 1px solid var(--nba-gray-light);
+  height: 8px;
+  background-color: #15151f;
+  border-radius: 2px;
+  overflow: visible;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 23, 68, 0.15);
+  position: relative;
 }
 
 .budget-fill {
   height: 100%;
-  background-color: var(--nba-red);
-  transition: width 0.3s ease, background-color 0.3s ease;
+  background: linear-gradient(90deg, var(--nba-red) 0%, #ff4081 100%);
+  transition: width 0.4s ease, background 0.3s ease;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(255, 23, 68, 0.55), 0 0 18px rgba(255, 23, 68, 0.2);
 }
 
 .budget-bar.warning .budget-fill {
-  background-color: #ff9800;
+  background: linear-gradient(90deg, #ff6d00 0%, #ff9100 100%);
+  box-shadow: 0 0 8px rgba(255, 109, 0, 0.6), 0 0 18px rgba(255, 109, 0, 0.2);
 }
 
 .budget-bar.over-budget .budget-fill {
-  background-color: #f44336;
+  background: linear-gradient(90deg, #d50000 0%, var(--nba-red) 100%);
+  box-shadow: 0 0 12px rgba(255, 23, 68, 0.8), 0 0 24px rgba(255, 23, 68, 0.3);
+  animation: border-pulse 0.8s ease-in-out infinite;
 }
 
 .budget-info {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
+  font-family: 'Orbitron', monospace;
   font-weight: 600;
 }
 
 .budget-info .spent {
-  color: var(--nba-red);
+  color: var(--arc-yellow);
 }
 
 .budget-info .separator {
@@ -58,8 +65,12 @@
 }
 
 .over-warning {
-  color: #f44336;
-  font-size: 12px;
+  color: var(--nba-red);
+  font-size: 11px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   margin-top: 8px;
-  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255, 23, 68, 0.5);
 }

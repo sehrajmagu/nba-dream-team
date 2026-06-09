@@ -1,19 +1,21 @@
 .play-by-play-log {
   background-color: var(--nba-dark);
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid var(--nba-gray);
-  height: 100%;
+  padding: 14px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 23, 68, 0.2);
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
 }
 
 .play-by-play-log h3 {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 700;
   margin: 0 0 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  color: var(--nba-gray-light);
   flex-shrink: 0;
 }
 
@@ -23,50 +25,59 @@
   align-items: center;
   justify-content: center;
   color: var(--nba-gray-light);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .series-summary-header {
-  background: linear-gradient(135deg, var(--nba-gray) 0%, #2a2a2a 100%);
-  padding: 20px;
-  border-radius: 8px;
-  border: 2px solid var(--nba-red);
-  margin-bottom: 16px;
+  background: linear-gradient(135deg, #1a1a26 0%, #111118 100%);
+  padding: 18px;
+  border-radius: 2px;
+  border: 1px solid var(--nba-red);
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.12), inset 0 0 20px rgba(255, 23, 68, 0.02);
+  margin-bottom: 14px;
   text-align: center;
   flex-shrink: 0;
 }
 
 .series-summary-header.victory {
-  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.05) 100%);
-  border-color: #4caf50;
+  border-color: var(--arc-cyan);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.18), inset 0 0 20px rgba(0, 229, 255, 0.03);
 }
 
 .series-summary-header.defeat {
-  background: linear-gradient(135deg, rgba(244, 67, 54, 0.1) 0%, rgba(244, 67, 54, 0.05) 100%);
-  border-color: #f44336;
+  border-color: var(--nba-red);
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.18), inset 0 0 20px rgba(255, 23, 68, 0.03);
 }
 
 .summary-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .series-winner {
   margin: 0;
-  font-size: 28px;
-  font-weight: 700;
-  color: #4caf50;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--arc-cyan);
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.55), 0 0 40px rgba(0, 229, 255, 0.2);
 }
 
 .series-summary-header.defeat .series-winner {
-  color: #f44336;
+  color: var(--nba-red);
+  text-shadow: 0 0 20px rgba(255, 23, 68, 0.55), 0 0 40px rgba(255, 23, 68, 0.2);
 }
 
 .series-score {
   margin: 0;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Orbitron', monospace;
   color: var(--nba-light);
+  letter-spacing: 2px;
 }
 
 .series-summary {
@@ -74,103 +85,119 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   min-height: 0;
-  padding-right: 4px;
+  padding-right: 2px;
 }
 
 .game-result {
   background-color: var(--nba-gray);
-  padding: 12px;
-  border-radius: 6px;
-  border-left: 4px solid var(--nba-red);
+  padding: 10px;
+  border-radius: 2px;
+  border-left: 3px solid rgba(255, 23, 68, 0.35);
   transition: all 0.2s ease;
 }
 
 .game-result.win {
-  border-left-color: #4caf50;
+  border-left-color: var(--arc-cyan);
 }
 
 .game-result.loss {
-  border-left-color: #f44336;
+  border-left-color: var(--nba-red);
+}
+
+.game-result:hover {
+  background-color: var(--arc-panel-hover);
 }
 
 .game-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .game-number {
-  font-size: 12px;
+  font-size: 10px;
+  font-family: 'Orbitron', monospace;
   font-weight: 600;
   color: var(--nba-light);
+  letter-spacing: 1px;
 }
 
 .game-result-badge {
-  font-size: 11px;
+  font-size: 10px;
+  font-family: 'Orbitron', monospace;
   font-weight: 700;
   padding: 2px 8px;
-  border-radius: 4px;
+  border-radius: 2px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .game-result-badge.WIN {
-  background-color: rgba(76, 175, 80, 0.2);
-  color: #4caf50;
+  background: rgba(255, 234, 0, 0.1);
+  color: var(--arc-yellow);
+  border: 1px solid rgba(255, 234, 0, 0.35);
+  box-shadow: 0 0 6px rgba(255, 234, 0, 0.12);
 }
 
 .game-result-badge.LOSS {
-  background-color: rgba(244, 67, 54, 0.2);
-  color: #f44336;
+  background: rgba(255, 23, 68, 0.1);
+  color: var(--nba-red);
+  border: 1px solid rgba(255, 23, 68, 0.35);
 }
 
 .game-score {
-  font-size: 14px;
+  font-size: 13px;
+  font-family: 'Orbitron', monospace;
   font-weight: 700;
-  color: var(--nba-red);
-  margin-bottom: 8px;
+  color: var(--arc-yellow);
+  margin-bottom: 6px;
+  letter-spacing: 1px;
 }
 
 .game-plays {
   font-size: 11px;
+  font-family: 'Rajdhani', sans-serif;
   color: var(--nba-gray-light);
 }
 
 .play {
   margin: 2px 0;
   padding-left: 8px;
-  border-left: 2px solid var(--nba-red);
-  line-height: 1.3;
+  border-left: 1px solid rgba(255, 23, 68, 0.3);
+  line-height: 1.35;
 }
 
 .more-plays {
-  color: var(--nba-red);
+  color: var(--arc-cyan);
   font-style: italic;
   margin-top: 4px;
+  font-size: 10px;
 }
 
 .box-score {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 12px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .team-score {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .team-score h4 {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 10px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
   margin: 0;
-  color: var(--nba-light);
+  color: var(--arc-cyan);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .team-score.opponent h4 {
@@ -180,31 +207,36 @@
 .player-stats {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .player-stat {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 8px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 5px 8px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  font-size: 11px;
 }
 
 .player-name {
+  font-family: 'Rajdhani', sans-serif;
   color: var(--nba-light);
   flex: 1;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight: 600;
 }
 
 .player-points {
-  color: var(--nba-red);
+  font-family: 'Orbitron', monospace;
+  color: var(--arc-yellow);
   font-weight: 700;
   margin-left: 8px;
   flex-shrink: 0;
+  font-size: 12px;
 }

@@ -84,6 +84,24 @@ def normalize_and_price(all_stats_list):
     return prices
 
 
+def get_tier_positions(position):
+    if position in ('G-F', 'F-G'):
+        return ['G', 'F']
+    if position in ('F-C', 'C-F'):
+        return ['F', 'C']
+    if position in ('G', 'F', 'C'):
+        return [position]
+    return ['F']
+
+
+def get_tier_class(price):
+    if price <= 4:
+        return 'A'
+    if price <= 7:
+        return 'B'
+    return 'C'
+
+
 def main():
     print("=== NBA Player Price Calculator ===\n")
 
@@ -148,6 +166,8 @@ def main():
             'team_name': stats['team_name'],
             'team_abbreviation': stats['team_abbreviation'],
             'price': prices[i],
+            'tier_positions': get_tier_positions(stats['position']),
+            'tier_class': get_tier_class(prices[i]),
             'pie': round(stats['PIE'], 4),
             'ts_pct': round(stats['TS_PCT'], 4),
             'usg_pct': round(stats['USG_PCT'], 4),

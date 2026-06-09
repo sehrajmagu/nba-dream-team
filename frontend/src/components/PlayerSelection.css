@@ -1,6 +1,6 @@
 .player-selection {
   background-color: var(--nba-dark);
-  border-right: 1px solid var(--nba-gray);
+  border-right: 1px solid rgba(255, 23, 68, 0.18);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -8,11 +8,14 @@
 }
 
 .player-selection h2 {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 700;
-  padding: 20px 16px 12px;
+  letter-spacing: 3px;
+  padding: 18px 16px 14px;
   margin: 0;
-  border-bottom: 1px solid var(--nba-gray);
+  border-bottom: 1px solid rgba(255, 23, 68, 0.2);
+  text-transform: uppercase;
+  color: var(--nba-light);
 }
 
 .search-bar {
@@ -22,25 +25,28 @@
 
 .results-info {
   padding: 0 16px;
-  font-size: 12px;
+  font-size: 11px;
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: var(--nba-gray-light);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .player-list {
   flex: 1;
   overflow-y: auto;
-  padding: 0 12px 12px;
+  padding: 0 10px 12px;
 }
 
 .player-card {
   display: flex;
-  gap: 12px;
-  padding: 12px;
+  gap: 10px;
+  padding: 10px;
   background-color: var(--nba-gray);
-  border-radius: 6px;
-  margin-bottom: 10px;
-  border: 1px solid var(--nba-gray-light);
+  border-radius: 2px;
+  margin-bottom: 6px;
+  border: 1px solid rgba(255, 23, 68, 0.18);
   transition: all 0.2s ease;
   cursor: pointer;
   align-items: center;
@@ -48,19 +54,21 @@
 
 .player-card:hover:not(.disabled) {
   border-color: var(--nba-red);
-  background-color: #444444;
+  background-color: var(--arc-panel-hover);
+  box-shadow: 0 0 14px rgba(255, 23, 68, 0.2), inset 0 0 20px rgba(255, 23, 68, 0.02);
 }
 
 .player-card.disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 .player-headshot {
-  width: 50px;
-  height: 65px;
+  width: 48px;
+  height: 62px;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 23, 68, 0.3);
   flex-shrink: 0;
 }
 
@@ -70,29 +78,38 @@
 }
 
 .player-card-info h4 {
-  font-size: 13px;
-  font-weight: 600;
-  margin: 0 0 4px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 2px;
   color: var(--nba-light);
+  letter-spacing: 0.5px;
 }
 
 .team {
-  font-size: 11px;
+  font-size: 10px;
+  font-family: 'Rajdhani', sans-serif;
   color: var(--nba-red);
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .position {
-  font-size: 11px;
-  color: var(--nba-gray-light);
+  font-size: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--arc-cyan);
+  font-weight: 600;
   margin: 2px 0 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .player-card-stats {
   display: flex;
   gap: 8px;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .stat {
@@ -103,7 +120,8 @@
 }
 
 .stat .label {
-  font-size: 10px;
+  font-size: 9px;
+  font-family: 'Rajdhani', sans-serif;
   color: var(--nba-gray-light);
   font-weight: 600;
   text-transform: uppercase;
@@ -111,19 +129,21 @@
 }
 
 .stat .value {
-  font-size: 12px;
-  color: var(--nba-red);
-  font-weight: 600;
+  font-size: 11px;
+  font-family: 'Orbitron', monospace;
+  color: var(--arc-cyan);
+  font-weight: 700;
 }
 
 .select-btn {
   flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 2px;
+  font-size: 14px;
   font-weight: 700;
+  letter-spacing: 0;
 }
 
 .position-selector {
@@ -137,45 +157,54 @@
 }
 
 .helper-text {
-  font-size: 14px;
+  font-size: 12px;
+  font-family: 'Rajdhani', sans-serif;
   color: var(--nba-gray-light);
   margin: 0 0 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .position-buttons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 12px;
+  gap: 10px;
   width: 100%;
   max-width: 300px;
 }
 
 .position-btn {
-  padding: 16px 12px;
-  font-size: 18px;
+  padding: 14px 10px;
+  font-family: 'Orbitron', monospace;
+  font-size: 14px;
   font-weight: 700;
-  border-radius: 8px;
-  background-color: var(--nba-red);
+  border-radius: 2px;
+  background: linear-gradient(135deg, var(--nba-red) 0%, var(--nba-red-dark) 100%);
   color: white;
   border: none;
   cursor: pointer;
+  letter-spacing: 1px;
   transition: all 0.2s ease;
 }
 
 .position-btn:hover {
-  background-color: #d41c2c;
-  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.55), 0 0 40px rgba(255, 23, 68, 0.18);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .position-btn:active {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
 .full-team {
   margin-top: 24px;
-  font-size: 16px;
+  font-size: 13px;
+  font-family: 'Rajdhani', sans-serif;
   color: var(--nba-red);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 23, 68, 0.4);
 }
 
 .player-picker-modal {
@@ -189,33 +218,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  border-bottom: 1px solid var(--nba-gray);
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 23, 68, 0.2);
 }
 
 .modal-header h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 11px;
   font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--nba-light);
 }
 
 .close-btn {
   background: none;
-  border: none;
+  border: 1px solid rgba(255, 23, 68, 0.3);
   color: var(--nba-gray-light);
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   padding: 0;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .close-btn:hover {
+  border-color: var(--nba-red);
   color: var(--nba-light);
+  box-shadow: 0 0 8px rgba(255, 23, 68, 0.3);
+  transform: none;
 }
 
 .selected-opponents {
@@ -237,11 +275,12 @@
 }
 
 .opponent-card img {
-  width: 50px;
-  height: 60px;
+  width: 48px;
+  height: 58px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 2px;
   border: 2px solid var(--nba-red);
+  box-shadow: 0 0 8px rgba(255, 23, 68, 0.3);
 }
 
 .opponent-card-info {
@@ -279,4 +318,6 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  letter-spacing: 0;
+  text-transform: none;
 }

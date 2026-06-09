@@ -1,0 +1,338 @@
+{
+  "west_r1": {
+    "name": "2012 Thunder",
+    "conference": "West",
+    "players": [
+      {
+        "id": 201142,
+        "name": "Kevin Durant",
+        "position": "F",
+        "team": "OKC",
+        "pie": 0.186,
+        "ts_pct": 0.61,
+        "usg_pct": 0.303,
+        "def_rating": 101.9
+      },
+      {
+        "id": 201566,
+        "name": "Russell Westbrook",
+        "position": "G",
+        "team": "OKC",
+        "pie": 0.145,
+        "ts_pct": 0.538,
+        "usg_pct": 0.318,
+        "def_rating": 101.5
+      },
+      {
+        "id": 201935,
+        "name": "James Harden",
+        "position": "G",
+        "team": "OKC",
+        "pie": 0.139,
+        "ts_pct": 0.66,
+        "usg_pct": 0.213,
+        "def_rating": 103.5
+      },
+      {
+        "id": 201586,
+        "name": "Serge Ibaka",
+        "position": "F-C",
+        "team": "OKC",
+        "pie": 0.11,
+        "ts_pct": 0.556,
+        "usg_pct": 0.153,
+        "def_rating": 100.5
+      },
+      {
+        "id": 101141,
+        "name": "Kendrick Perkins",
+        "position": "C",
+        "team": "OKC",
+        "pie": 0.136,
+        "ts_pct": 0.577,
+        "usg_pct": 0.197,
+        "def_rating": 105.3
+      }
+    ]
+  },
+  "west_r2": {
+    "name": "2001 Lakers",
+    "conference": "West",
+    "players": [
+      {
+        "id": 406,
+        "name": "Shaquille O'Neal",
+        "position": "C",
+        "team": "LAL",
+        "pie": 0.186,
+        "ts_pct": 0.574,
+        "usg_pct": 0.315,
+        "def_rating": 102.6
+      },
+      {
+        "id": 977,
+        "name": "Kobe Bryant",
+        "position": "G",
+        "team": "LAL",
+        "pie": 0.16,
+        "ts_pct": 0.552,
+        "usg_pct": 0.309,
+        "def_rating": 101.9
+      },
+      {
+        "id": 1031,
+        "name": "Derek Fisher",
+        "position": "G",
+        "team": "LAL",
+        "pie": 0.09,
+        "ts_pct": 0.534,
+        "usg_pct": 0.151,
+        "def_rating": 99.6
+      },
+      {
+        "id": 430,
+        "name": "Robert Horry",
+        "position": "F",
+        "team": "LAL",
+        "pie": 0.068,
+        "ts_pct": 0.489,
+        "usg_pct": 0.138,
+        "def_rating": 103.1
+      },
+      {
+        "id": 776,
+        "name": "Rick Fox",
+        "position": "F",
+        "team": "LAL",
+        "pie": 0.088,
+        "ts_pct": 0.562,
+        "usg_pct": 0.16,
+        "def_rating": 101.2
+      }
+    ]
+  },
+  "west_finals": {
+    "name": "2016 Warriors",
+    "conference": "West",
+    "players": [
+      {
+        "id": 201939,
+        "name": "Stephen Curry",
+        "position": "G",
+        "team": "GSW",
+        "pie": 0.197,
+        "ts_pct": 0.669,
+        "usg_pct": 0.314,
+        "def_rating": 99.8
+      },
+      {
+        "id": 202691,
+        "name": "Klay Thompson",
+        "position": "G",
+        "team": "GSW",
+        "pie": 0.114,
+        "ts_pct": 0.597,
+        "usg_pct": 0.26,
+        "def_rating": 101.3
+      },
+      {
+        "id": 203110,
+        "name": "Draymond Green",
+        "position": "F",
+        "team": "GSW",
+        "pie": 0.136,
+        "ts_pct": 0.587,
+        "usg_pct": 0.184,
+        "def_rating": 99.1
+      },
+      {
+        "id": 2738,
+        "name": "Andre Iguodala",
+        "position": "G-F",
+        "team": "GSW",
+        "pie": 0.089,
+        "ts_pct": 0.565,
+        "usg_pct": 0.117,
+        "def_rating": 99.6
+      },
+      {
+        "id": 101106,
+        "name": "Andrew Bogut",
+        "position": "C",
+        "team": "GSW",
+        "pie": 0.106,
+        "ts_pct": 0.623,
+        "usg_pct": 0.115,
+        "def_rating": 97.9
+      }
+    ]
+  },
+  "east_r1": {
+    "name": "2016 Cavaliers",
+    "conference": "East",
+    "players": [
+      {
+        "id": 2544,
+        "name": "LeBron James",
+        "position": "F",
+        "team": "CLE",
+        "pie": 0.189,
+        "ts_pct": 0.588,
+        "usg_pct": 0.305,
+        "def_rating": 102.6
+      },
+      {
+        "id": 202681,
+        "name": "Kyrie Irving",
+        "position": "G",
+        "team": "CLE",
+        "pie": 0.122,
+        "ts_pct": 0.54,
+        "usg_pct": 0.285,
+        "def_rating": 105.8
+      },
+      {
+        "id": 201567,
+        "name": "Kevin Love",
+        "position": "F-C",
+        "team": "CLE",
+        "pie": 0.143,
+        "ts_pct": 0.553,
+        "usg_pct": 0.233,
+        "def_rating": 103.6
+      },
+      {
+        "id": 2747,
+        "name": "JR Smith",
+        "position": "G",
+        "team": "CLE",
+        "pie": 0.067,
+        "ts_pct": 0.542,
+        "usg_pct": 0.177,
+        "def_rating": 105.6
+      },
+      {
+        "id": 202684,
+        "name": "Tristan Thompson",
+        "position": "F-C",
+        "team": "CLE",
+        "pie": 0.106,
+        "ts_pct": 0.611,
+        "usg_pct": 0.114,
+        "def_rating": 102.2
+      }
+    ]
+  },
+  "east_r2": {
+    "name": "2013 Heat",
+    "conference": "East",
+    "players": [
+      {
+        "id": 2544,
+        "name": "LeBron James",
+        "position": "F",
+        "team": "MIA",
+        "pie": 0.221,
+        "ts_pct": 0.64,
+        "usg_pct": 0.294,
+        "def_rating": 101.9
+      },
+      {
+        "id": 2548,
+        "name": "Dwyane Wade",
+        "position": "G",
+        "team": "MIA",
+        "pie": 0.153,
+        "ts_pct": 0.571,
+        "usg_pct": 0.288,
+        "def_rating": 100.9
+      },
+      {
+        "id": 203076,
+        "name": "Chris Bosh",
+        "position": "F-C",
+        "team": "MIA",
+        "pie": 0.135,
+        "ts_pct": 0.559,
+        "usg_pct": 0.212,
+        "def_rating": 107.8
+      },
+      {
+        "id": 951,
+        "name": "Ray Allen",
+        "position": "G",
+        "team": "MIA",
+        "pie": 0.096,
+        "ts_pct": 0.599,
+        "usg_pct": 0.185,
+        "def_rating": 104.8
+      },
+      {
+        "id": 2207,
+        "name": "Shane Battier",
+        "position": "F",
+        "team": "MIA",
+        "pie": 0.092,
+        "ts_pct": 0.521,
+        "usg_pct": 0.216,
+        "def_rating": 103.8
+      }
+    ]
+  },
+  "east_finals": {
+    "name": "2008 Celtics",
+    "conference": "East",
+    "players": [
+      {
+        "id": 1718,
+        "name": "Paul Pierce",
+        "position": "F",
+        "team": "BOS",
+        "pie": 0.147,
+        "ts_pct": 0.599,
+        "usg_pct": 0.245,
+        "def_rating": 97.3
+      },
+      {
+        "id": 708,
+        "name": "Kevin Garnett",
+        "position": "F-C",
+        "team": "BOS",
+        "pie": 0.197,
+        "ts_pct": 0.588,
+        "usg_pct": 0.256,
+        "def_rating": 96.0
+      },
+      {
+        "id": 951,
+        "name": "Ray Allen",
+        "position": "G",
+        "team": "BOS",
+        "pie": 0.111,
+        "ts_pct": 0.584,
+        "usg_pct": 0.212,
+        "def_rating": 99.0
+      },
+      {
+        "id": 200765,
+        "name": "Rajon Rondo",
+        "position": "G",
+        "team": "BOS",
+        "pie": 0.113,
+        "ts_pct": 0.515,
+        "usg_pct": 0.186,
+        "def_rating": 97.1
+      },
+      {
+        "id": 101141,
+        "name": "Kendrick Perkins",
+        "position": "C",
+        "team": "BOS",
+        "pie": 0.085,
+        "ts_pct": 0.632,
+        "usg_pct": 0.134,
+        "def_rating": 96.6
+      }
+    ]
+  }
+}

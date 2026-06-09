@@ -1,22 +1,24 @@
 .team-slots {
   background-color: var(--nba-dark);
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid var(--nba-gray);
-  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 23, 68, 0.2);
+  margin-bottom: 16px;
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.04);
 }
 
 .team-slots h3 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 14px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  color: var(--nba-gray-light);
 }
 
 .slots-container {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -25,67 +27,83 @@
   min-width: 80px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .position-label {
-  font-size: 12px;
+  font-size: 10px;
+  font-family: 'Orbitron', monospace;
   font-weight: 700;
   color: var(--nba-red);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .player-slot {
-  border: 2px solid var(--nba-gray);
-  border-radius: 4px;
-  padding: 8px;
+  border: 1px solid rgba(255, 23, 68, 0.2);
+  border-radius: 2px;
+  padding: 8px 6px;
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   min-height: 100px;
 }
 
 .player-slot.empty {
   border-style: dashed;
-  color: var(--nba-gray-light);
+  border-color: rgba(255, 23, 68, 0.18);
+  color: #252535;
   justify-content: center;
-  font-size: 12px;
+  font-size: 11px;
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .player-slot.filled {
-  background-color: var(--nba-gray);
-  border-color: var(--nba-red);
+  background-color: rgba(30, 30, 42, 0.8);
+  border-color: rgba(255, 23, 68, 0.4);
   position: relative;
+  box-shadow: 0 0 10px rgba(255, 23, 68, 0.06);
+}
+
+.player-slot.filled:hover {
+  border-color: var(--nba-red);
+  box-shadow: 0 0 16px rgba(255, 23, 68, 0.2);
 }
 
 .headshot {
-  width: 60px;
-  height: 75px;
+  width: 56px;
+  height: 70px;
   object-fit: cover;
   border-radius: 2px;
+  border: 1px solid rgba(0, 229, 255, 0.45);
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.2);
 }
 
 .player-info {
   text-align: center;
   width: 100%;
-  padding: 0 4px;
+  padding: 0 2px;
 }
 
 .player-name {
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
   color: var(--nba-light);
   margin: 0;
   line-height: 1.2;
+  letter-spacing: 0.3px;
 }
 
 .player-price {
-  font-size: 10px;
-  color: var(--nba-red);
-  margin: 0;
+  font-size: 9px;
+  font-family: 'Orbitron', monospace;
+  color: var(--arc-yellow);
+  margin: 2px 0 0;
   font-weight: 600;
 }
 
@@ -93,18 +111,21 @@
   position: absolute;
   top: 2px;
   right: 2px;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   padding: 0;
-  font-size: 12px;
+  font-size: 10px;
   border-radius: 50%;
-  background-color: var(--nba-red);
+  background: var(--nba-red);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.2s ease;
+  text-transform: none;
+  letter-spacing: 0;
+  box-shadow: 0 0 6px rgba(255, 23, 68, 0.5);
 }
 
 .player-slot.filled:hover .remove-btn {
