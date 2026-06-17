@@ -8,16 +8,12 @@ interface Message {
   timestamp: Date;
 }
 
-interface AIAssistantProps {
-  remainingBudget: number;
-}
-
-export const AIAssistant: React.FC<AIAssistantProps> = ({ remainingBudget }) => {
+export const AIAssistant: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
       role: 'assistant',
-      content: 'Hello! I\'m your NBA Dream Team Assistant. I can help you analyze player stats, optimize your team, and provide insights. What would you like to know?',
+      content: 'Hello! I\'m your NBA Gauntlet Assistant. I can help you scout players, plan your draft picks, and break down matchups. What would you like to know?',
       timestamp: new Date(),
     },
   ]);
@@ -55,7 +51,6 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ remainingBudget }) => 
         },
         body: JSON.stringify({
           message: userMessage.content,
-          remaining_budget: remainingBudget,
         }),
       });
 

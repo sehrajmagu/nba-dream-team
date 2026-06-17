@@ -1,0 +1,121 @@
+.conference-select {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
+  gap: 8px;
+}
+
+.conference-title {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #fff;
+  animation: title-glow 4s ease-in-out infinite;
+  margin: 0;
+}
+
+.conference-subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--arc-cyan);
+  margin: 0 0 40px;
+}
+
+.conference-cards {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.conference-card {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px 24px;
+  border-radius: 8px;
+  background: linear-gradient(160deg, #15151f 0%, #0a0a0f 100%);
+  border: 1px solid rgba(255, 23, 68, 0.3);
+  box-shadow: 0 0 24px rgba(255, 23, 68, 0.12), inset 0 0 30px rgba(255, 23, 68, 0.03);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: none;
+}
+
+.conference-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--arc-cyan);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.35), 0 0 60px rgba(0, 229, 255, 0.12), inset 0 0 30px rgba(0, 229, 255, 0.04);
+}
+
+.conference-card--west:hover {
+  border-color: var(--arc-cyan);
+}
+
+.conference-card--east:hover {
+  border-color: var(--nba-red);
+  box-shadow: 0 0 30px rgba(255, 23, 68, 0.45), 0 0 60px rgba(255, 23, 68, 0.15), inset 0 0 30px rgba(255, 23, 68, 0.05);
+}
+
+.conference-card-title {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.25);
+}
+
+.conference-opponents {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.conference-opponent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+}
+
+.conference-opponent-round {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--nba-gray-light);
+}
+
+.conference-opponent-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--nba-light);
+}
+
+@media (max-width: 720px) {
+  .conference-title {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  .conference-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}

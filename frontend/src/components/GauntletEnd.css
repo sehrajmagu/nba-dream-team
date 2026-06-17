@@ -1,0 +1,47 @@
+.gauntlet-end {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.gauntlet-end-title {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--arc-yellow);
+  margin: 0;
+  text-shadow: 0 0 20px rgba(255, 234, 0, 0.6), 0 0 40px rgba(255, 234, 0, 0.25);
+  animation: title-glow 4s ease-in-out infinite;
+}
+
+.gauntlet-end-subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--arc-cyan);
+  margin: 0 0 20px;
+}
+
+.gauntlet-end-roster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.play-again-btn {
+  margin-top: 10px;
+  padding: 16px 56px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}

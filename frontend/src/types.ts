@@ -9,29 +9,19 @@ export interface Player {
   ts_pct: number;
   usg_pct: number;
   def_rating: number;
-  slot?: Position;
+  tier_class: 'A' | 'B' | 'C';
+  tier_positions: string[];
 }
 
 export type Position = 'PG' | 'SG' | 'SF' | 'PF' | 'C';
 
-export interface TeamSlot {
-  position: Position;
-  player: Player | null;
-}
+export type BenchSlot = 'B1' | 'B2' | 'B3' | 'B4' | 'B5';
 
-export interface SeriesResult {
-  game: number;
-  result: string;
-  score: string;
-  userBoxScore: Record<string, number>;
-  opponentBoxScore: Record<string, number>;
-}
+export type DraftSlot = Position | BenchSlot;
 
-export interface SeriesSummary {
-  seriesWinner: string;
-  userWins: number;
-  opponentWins: number;
-}
+export type DraftedRoster = Record<DraftSlot, Player | null>;
+
+export type Conference = 'East' | 'West';
 
 export interface PossessionLogEntry {
   team: 'A' | 'B';
@@ -66,8 +56,10 @@ export interface ClassicTeam {
 
 export type ClassicTeams = Record<string, ClassicTeam>;
 
-export interface SimulationState {
-  isRunning: boolean;
-  results: SeriesResult[];
-  selectedOpponent: Player[] | null;
+export interface GameResult {
+  scoreUser: number;
+  scoreOpponent: number;
+  winner: 'user' | 'opponent';
+  userBoxScore: Record<string, number>;
+  opponentBoxScore: Record<string, number>;
 }

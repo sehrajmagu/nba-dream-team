@@ -146,7 +146,6 @@ def simulate_single_game():
 def chat():
     payload = request.get_json(silent=True) or {}
     message = payload.get('message', '')
-    remaining_budget = payload.get('remaining_budget')
 
     if not isinstance(message, str) or not message.strip():
         return jsonify({'error': 'A non-empty message is required'}), 400
@@ -167,10 +166,9 @@ def chat():
     ]
 
     prompt = (
-        'You are an NBA Dream Team assistant. Use the player database below to answer the user question. '
+        'You are an NBA Gauntlet assistant. Use the player database below to answer the user question. '
         'Do not invent players or prices. Keep the response concise and actionable.\n\n'
         f'Player database: {json.dumps(compact_players, ensure_ascii=False)}\n\n'
-        f'Remaining budget: {remaining_budget}\n'
         f'User message: {message}'
     )
 

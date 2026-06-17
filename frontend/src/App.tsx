@@ -1,103 +1,151 @@
-import React, { useState } from 'react';
-import { ClassicTeams, GameSimulationResponse, Player, Position, SeriesResult, SeriesSummary } from './types';
-import { PlayerSelection } from './components/PlayerSelection';
-import { SelectedTeamSlots } from './components/SelectedTeamSlots';
-import { BudgetTracker } from './components/BudgetTracker';
-import { DreamCourt } from './components/DreamCourt';
-import { PlayByPlayLog } from './components/PlayByPlayLog';
+import { useState } from 'react';
+import {
+  ClassicTeams,
+  Conference,
+  DraftedRoster,
+  DraftSlot,
+  GameResult,
+  GameSimulationResponse,
+  Player,
+} from './types';
+import { ConferenceSelect } from './components/ConferenceSelect';
+import { DraftBoard } from './components/DraftBoard';
+import { DraftModalData } from './components/DraftModal';
+import { StartingFiveSelect } from './components/StartingFiveSelect';
+import { GameView } from './components/GameView';
+import { GauntletEnd } from './components/GauntletEnd';
 import { AIAssistant } from './components/AIAssistant';
 import playersData from './data/players.json';
 import classicTeamsData from './data/classics.json';
 import './styles/theme.css';
 import './App.css';
 
-type TeamRoster = Record<Position, Player | null>;
+type Screen = 'conference' | 'draft' | 'starting5' | 'game' | 'champion';
 
-const EMPTY_ROSTER: TeamRoster = {
+const EMPTY_ROSTER: DraftedRoster = {
   PG: null,
   SG: null,
   SF: null,
   PF: null,
   C: null,
+  B1: null,
+  B2: null,
+  B3: null,
+  B4: null,
+  B5: null,
+};
+
+const SLOT_POSITION_FILTER: Record<DraftSlot, 'G' | 'F' | 'C' | null> = {
+  PG: 'G',
+  SG: 'G',
+  SF: 'F',
+  PF: 'F',
+  C: 'C',
+  B1: null,
+  B2: null,
+  B3: null,
+  B4: null,
+  B5: null,
+};
+
+const ROUND_KEYS = ['r1', 'r2', 'finals'];
+
+const pickTier = (): 'A' | 'B' | 'C' => {
+  const roll = Math.random();
+  if (roll < 0.40) return 'B';
+  if (roll < 0.75) return 'C';
+  return 'A';
+};
+
+const pickRandomPlayers = (pool: Player[], count: number): Player[] => {
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
 };
 
 function App() {
-  const [allPlayers] = useState<Player[]>(playersData);
-  const [classicTeams] = useState<ClassicTeams>(classicTeamsData);
-  const [selectedTeam, setSelectedTeam] = useState<TeamRoster>(EMPTY_ROSTER);
-  const [selectedOpponent, setSelectedOpponent] = useState<Player[]>([]);
-  const [selectedOpponentTeamKey, setSelectedOpponentTeamKey] = useState<string | null>(null);
-  const [seriesResults, setSeriesResults] = useState<SeriesResult[]>([]);
-  const [seriesSummary, setSeriesSummary] = useState<SeriesSummary | null>(null);
-  const [showResults, setShowResults] = useState(false);
-  const [isSimulating, setIsSimulating] = useState(false);
+  const [allPlayers] = useState<Player[]>(playersData as Player[]);
+  const [classicTeams] = useState<ClassicTeams>(classicTeamsData as ClassicTeams);
+
+  const [screen, setScreen] = useState<Screen>('conference');
+  const [conference, setConference] = useState<Conference | null>(null);
+  const [opponentSequence, setOpponentSequence] = useState<string[]>([]);
+  const [roundIndex, setRoundIndex] = useState(0);
+
+  const [roster, setRoster] = useState<DraftedRoster>(EMPTY_ROSTER);
+  const [draftModal, setDraftModal] = useState<DraftModalData | null>(null);
+
+  const [starters, setStarters] = useState<Set<number>>(new Set());
+
   const [userWins, setUserWins] = useState(0);
   const [opponentWins, setOpponentWins] = useState(0);
-  const [currentGame, setCurrentGame] = useState(1);
+  const [lastResult, setLastResult] = useState<GameResult | null>(null);
+  const [isSimulating, setIsSimulating] = useState(false);
 
-  const selectedTeamArray = Object.values(selectedTeam).filter((p): p is Player => p !== null);
-
-  const handleAddPlayer = (player: Player, position: Position) => {
-    const isAlreadySelected = Object.values(selectedTeam).some(p => p?.id === player.id);
-    if (isAlreadySelected) return;
-
-    setSelectedTeam(prev => ({
-      ...prev,
-      [position]: player,
-    }));
+  const handleSelectConference = (conf: Conference) => {
+    const prefix = conf === 'West' ? 'west' : 'east';
+    setConference(conf);
+    setOpponentSequence(ROUND_KEYS.map(key => `${prefix}_${key}`));
+    setRoundIndex(0);
+    setScreen('draft');
   };
 
-  const handleRemovePlayer = (position: Position) => {
-    setSelectedTeam(prev => ({
-      ...prev,
-      [position]: null,
-    }));
+  const handleSlotClick = (slot: DraftSlot) => {
+    if (roster[slot]) return;
+
+    const tier = pickTier();
+    const posFilter = SLOT_POSITION_FILTER[slot];
+    const draftedIds = new Set(
+      Object.values(roster)
+        .filter((p): p is Player => p !== null)
+        .map(p => p.id)
+    );
+
+    const tierPool = allPlayers.filter(
+      p => p.tier_class === tier && (posFilter === null || p.tier_positions.includes(posFilter))
+    );
+    const availablePool = tierPool.filter(p => !draftedIds.has(p.id));
+    const pool = availablePool.length >= 5 ? availablePool : tierPool;
+
+    setDraftModal({ slot, tier, candidates: pickRandomPlayers(pool, 5) });
   };
 
-  const handleSelectOpponentTeam = (teamKey: string) => {
-    const team = classicTeams[teamKey];
-    if (!team) return;
+  const handleCardSelect = (player: Player) => {
+    if (!draftModal) return;
+    setRoster(prev => ({ ...prev, [draftModal.slot]: player }));
+    setDraftModal(null);
+  };
 
-    const opponentPlayers: Player[] = team.players.map(p => ({
-      id: p.id,
-      name: p.name,
-      position: p.position,
-      team_name: team.name,
-      team_abbreviation: p.team,
-      price: 0,
-      pie: p.pie,
-      ts_pct: p.ts_pct,
-      usg_pct: p.usg_pct,
-      def_rating: p.def_rating,
-    }));
+  const handleProceedToGauntlet = () => {
+    setScreen('starting5');
+  };
 
-    setSelectedOpponentTeamKey(teamKey);
-    setSelectedOpponent(opponentPlayers);
+  const handleToggleStarter = (playerId: number) => {
+    setStarters(prev => {
+      const next = new Set(prev);
+      if (next.has(playerId)) {
+        next.delete(playerId);
+      } else if (next.size < 5) {
+        next.add(playerId);
+      }
+      return next;
+    });
+  };
 
-    // Switching opponents starts a fresh series
-    setSeriesResults([]);
-    setSeriesSummary(null);
+  const handleConfirmStarters = () => {
     setUserWins(0);
     setOpponentWins(0);
-    setCurrentGame(1);
-    setShowResults(false);
-  };
-
-  const buildBoxScore = (roster: Player[], possessionLog: GameSimulationResponse['possession_log'], team: 'A' | 'B') => {
-    const boxScore: Record<string, number> = {};
-    roster.forEach(p => { boxScore[p.name] = 0; });
-
-    for (const play of possessionLog) {
-      if (play.team === team && play.ball_handler in boxScore) {
-        boxScore[play.ball_handler] += play.points_scored;
-      }
-    }
-
-    return boxScore;
+    setLastResult(null);
+    setScreen('game');
   };
 
   const handlePlayGame = async () => {
-    if (selectedTeamArray.length !== 5 || selectedOpponent.length !== 5 || seriesSummary) return;
+    const opponentKey = opponentSequence[roundIndex];
+    const opponentTeam = classicTeams[opponentKey];
+    if (!opponentTeam) return;
+
+    const rosterPlayers = Object.values(roster).filter((p): p is Player => p !== null);
+    const startingFive = rosterPlayers.filter(p => starters.has(p.id));
+    if (startingFive.length !== 5) return;
 
     setIsSimulating(true);
 
@@ -108,8 +156,8 @@ function App() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          teamIds: selectedTeamArray.map(p => p.id),
-          opponentIds: selectedOpponent.map(p => p.id),
+          teamIds: startingFive.map(p => p.id),
+          opponentIds: opponentTeam.players.map(p => p.id),
         }),
       });
 
@@ -119,30 +167,32 @@ function App() {
 
       const data: GameSimulationResponse = await response.json();
 
-      const gameResult: SeriesResult = {
-        game: currentGame,
-        result: data.winner === 'user' ? 'WIN' : 'LOSS',
-        score: `${data.score_a} - ${data.score_b}`,
-        userBoxScore: buildBoxScore(selectedTeamArray, data.possession_log, 'A'),
-        opponentBoxScore: buildBoxScore(selectedOpponent, data.possession_log, 'B'),
-      };
+      const userBoxScore: Record<string, number> = {};
+      startingFive.forEach(p => { userBoxScore[p.name] = 0; });
 
-      const nextUserWins = userWins + (data.winner === 'user' ? 1 : 0);
-      const nextOpponentWins = opponentWins + (data.winner === 'opponent' ? 1 : 0);
+      const opponentBoxScore: Record<string, number> = {};
+      opponentTeam.players.forEach(p => { opponentBoxScore[p.name] = 0; });
 
-      setSeriesResults(prev => [...prev, gameResult]);
-      setUserWins(nextUserWins);
-      setOpponentWins(nextOpponentWins);
-      setShowResults(true);
+      for (const play of data.possession_log) {
+        if (play.team === 'A' && play.ball_handler in userBoxScore) {
+          userBoxScore[play.ball_handler] += play.points_scored;
+        } else if (play.team === 'B' && play.ball_handler in opponentBoxScore) {
+          opponentBoxScore[play.ball_handler] += play.points_scored;
+        }
+      }
 
-      if (nextUserWins === 4 || nextOpponentWins === 4) {
-        setSeriesSummary({
-          seriesWinner: nextUserWins === 4 ? 'You' : 'Opponent',
-          userWins: nextUserWins,
-          opponentWins: nextOpponentWins,
-        });
+      setLastResult({
+        scoreUser: data.score_a,
+        scoreOpponent: data.score_b,
+        winner: data.winner,
+        userBoxScore,
+        opponentBoxScore,
+      });
+
+      if (data.winner === 'user') {
+        setUserWins(prev => prev + 1);
       } else {
-        setCurrentGame(prev => prev + 1);
+        setOpponentWins(prev => prev + 1);
       }
     } catch (error) {
       console.error('Error running simulation:', error);
@@ -152,54 +202,93 @@ function App() {
     }
   };
 
+  const handleContinue = () => {
+    if (roundIndex < opponentSequence.length - 1) {
+      setRoundIndex(prev => prev + 1);
+      setUserWins(0);
+      setOpponentWins(0);
+      setLastResult(null);
+      setScreen('starting5');
+    } else {
+      setScreen('champion');
+    }
+  };
+
+  const handleRestart = () => {
+    setScreen('conference');
+    setConference(null);
+    setOpponentSequence([]);
+    setRoundIndex(0);
+    setRoster(EMPTY_ROSTER);
+    setDraftModal(null);
+    setStarters(new Set());
+    setUserWins(0);
+    setOpponentWins(0);
+    setLastResult(null);
+  };
+
+  const currentOpponentTeam = opponentSequence[roundIndex] ? classicTeams[opponentSequence[roundIndex]] : null;
+
   return (
     <div className="app">
       <header className="app-header">
-        <h1>🏀 NBA Dream Team Sandbox</h1>
-        <p>Draft your ultimate NBA team and simulate playoffs</p>
+        <h1>🏀 NBA Gauntlet</h1>
+        <p>Draft your legends. Survive three rounds. Become the champion.</p>
       </header>
 
       <div className="app-container">
-        <aside className="sidebar-left">
-          <BudgetTracker selectedTeam={selectedTeamArray} />
-          <SelectedTeamSlots
-            selectedTeam={selectedTeam}
-            onRemovePlayer={handleRemovePlayer}
-          />
-          <PlayerSelection
-            allPlayers={allPlayers}
-            selectedTeam={selectedTeamArray}
-            onAddPlayer={handleAddPlayer}
-          />
-        </aside>
-
         <main className="main-content">
-          <DreamCourt
-            allPlayers={allPlayers}
-            selectedTeam={selectedTeamArray}
-            selectedOpponent={selectedOpponent}
-            classicTeams={classicTeams}
-            selectedOpponentTeamKey={selectedOpponentTeamKey}
-            onSelectOpponentTeam={handleSelectOpponentTeam}
-            onPlayGame={handlePlayGame}
-            isSimulating={isSimulating}
-            currentGame={currentGame}
-            gamesPlayed={seriesResults.length}
-            userWins={userWins}
-            opponentWins={opponentWins}
-            seriesOver={seriesSummary !== null}
-          />
-          {seriesResults.length > 0 && (
-            <PlayByPlayLog results={seriesResults} summary={seriesSummary} />
+          {screen === 'conference' && (
+            <ConferenceSelect classicTeams={classicTeams} onSelect={handleSelectConference} />
+          )}
+
+          {screen === 'draft' && (
+            <DraftBoard
+              roster={roster}
+              modalData={draftModal}
+              onSlotClick={handleSlotClick}
+              onCardSelect={handleCardSelect}
+              onProceed={handleProceedToGauntlet}
+            />
+          )}
+
+          {screen === 'starting5' && currentOpponentTeam && (
+            <StartingFiveSelect
+              roster={roster}
+              starters={starters}
+              onToggleStarter={handleToggleStarter}
+              opponentTeam={currentOpponentTeam}
+              roundIndex={roundIndex}
+              onConfirm={handleConfirmStarters}
+            />
+          )}
+
+          {screen === 'game' && currentOpponentTeam && (
+            <GameView
+              roundIndex={roundIndex}
+              opponentTeam={currentOpponentTeam}
+              userWins={userWins}
+              opponentWins={opponentWins}
+              lastResult={lastResult}
+              isSimulating={isSimulating}
+              isFinalRound={roundIndex === opponentSequence.length - 1}
+              onPlayGame={handlePlayGame}
+              onContinue={handleContinue}
+              onRestart={handleRestart}
+            />
+          )}
+
+          {screen === 'champion' && conference && (
+            <GauntletEnd conference={conference} roster={roster} starters={starters} onRestart={handleRestart} />
           )}
         </main>
 
-                <aside className="sidebar-right">
-                  <AIAssistant remainingBudget={30 - selectedTeamArray.reduce((sum, p) => sum + p.price, 0)} />
-                </aside>
-              </div>
-            </div>
-          );
-        }
+        <aside className="sidebar-right">
+          <AIAssistant />
+        </aside>
+      </div>
+    </div>
+  );
+}
 
 export default App;
