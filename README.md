@@ -1,21 +1,22 @@
-# NBA Dream Team Sandbox
+# NBA Gauntlet
 
-Pick 5 current NBA players within a $30M budget and simulate a 7-game playoff series against an opponent team. A built-in AI assistant helps you build your roster given your budget and playstyle preferences.
+A FUT-style draft game for NBA fans: pick a conference, draft a 10-man roster pack by pack, then survive a 3-round gauntlet against legendary classic teams to become champion.
 
 ## What it does
 
-- **Player pool**: 500+ current NBA players, each priced $1M–$10M based on performance
-- **$30M budget cap**: Forces real roster construction tradeoffs — you can't just stack superstars
+- **Conference select**: Choose East or West, setting your gauntlet's opponent sequence (Round 1 → Round 2 → Finals)
+- **Pack-style draft**: Fill each roster slot (PG, SG, SF, PF, C, plus 5 bench spots) by pulling a random tier (A/B/C) and choosing 1 of 5 randomly drawn player cards for that tier
+- **Starting five**: Before each round, pick which 5 drafted players start against that round's opponent
 - **Possession-by-possession simulation**: ~200 possessions per game, each one sampling a play type, calculating offensive efficiency, applying defensive adjustments, and resolving an outcome
-- **7-game series**: Full playoff series with game-by-game scores and play-by-play logs
-- **AI assistant**: Describe your budget and playstyle, get lineup recommendations powered by Claude
+- **Classic opponent teams**: Real legendary teams (e.g. 2016 Cavaliers, 2001 Lakers, 2016 Warriors) staffed as gauntlet bosses
+- **AI assistant**: Get lineup and draft-pick advice powered by Gemini
 
 ## Tech stack
 
 - **Data pipeline**: Python, nba_api, pandas
 - **Simulation engine**: Python (statistical model)
-- **Backend API**: Flask 
-- **Frontend**: React 
+- **Backend API**: Flask
+- **Frontend**: React + TypeScript
 - **AI chatbot**: Gemini API
 
 ## Project structure
@@ -24,12 +25,20 @@ Pick 5 current NBA players within a $30M budget and simulate a 7-game playoff se
 nba-dream-team/
 ├── backend/
 │   ├── data/
-│   │   └── players.json          # Fetched and priced player pool
+│   │   ├── players.json          # Fetched and priced player pool (draft pool)
+│   │   └── classics.json         # Legendary opponent teams for the gauntlet
 │   ├── pipeline/
-│   │   └── fetch_players.py      # Pulls stats from nba_api, calculates prices
-│   └── engine/
-│       └── simulate.py           # Possession-by-possession simulation engine
-├── frontend/                     # React app (in progress)
+│   │   ├── fetch_players.py      # Pulls stats from nba_api, calculates prices/tiers
+│   │   └── fetch_classics.py     # Builds the classic opponent team rosters
+│   ├── engine/
+│   │   └── simulate.py           # Possession-by-possession simulation engine
+│   ├── api.py                    # Flask API (draft data, simulation, AI chat)
+│   └── app.py
+├── frontend/                     # React app
+│   └── src/
+│       ├── components/           # ConferenceSelect, DraftBoard, DraftModal,
+│       │                         # StartingFiveSelect, GameView, GauntletEnd, AIAssistant
+│       └── data/                 # players.json, classics.json (bundled for the frontend)
 ├── requirements.txt
 └── README.md
 ```
@@ -46,8 +55,13 @@ python -m venv venv
 source venv/bin/activate        # Mac/Linux
 venv\Scripts\activate           # Windows
 
-# Install dependencies
+# Install backend dependencies
 pip install -r requirements.txt
+
+# Install frontend dependencies
+cd frontend
+npm install
+cd ..
 ```
 
 ## Running it
@@ -57,24 +71,43 @@ pip install -r requirements.txt
 python backend/pipeline/fetch_players.py
 ```
 
-This pulls all active NBA players, fetches their advanced stats, calculates a price for each one, and saves to `backend/data/players.json`.
+This pulls all active NBA players, fetches their advanced stats, calculates a price and draft tier for each one, and saves to `backend/data/players.json`.
 
-**Run a test simulation:**
+**Fetch classic team data** (only needs to run once):
 ```bash
-python backend/engine/simulate.py
+python backend/pipeline/fetch_classics.py
 ```
 
-Simulates a 7-game series between two teams and prints the results to the terminal.
+This builds the roster of legendary opponent teams used as gauntlet bosses, saved to `backend/data/classics.json`.
 
-## How player pricing works
+**Start the backend:**
+```bash
+python backend/api.py
+```
 
-Each player is priced between $1M and $10M using a weighted formula:
+Runs the Flask API on `http://localhost:5000`, serving the draft pool, running possession simulations, and proxying AI chat requests.
 
-- **50% PER** (Player Efficiency Rating) — overall statistical contribution per minute
+**Start the frontend:**
+```bash
+cd frontend
+npm start
+```
+
+Runs the React app on `http://localhost:3000`.
+
+## How player tiering works
+
+Each player is priced between $1M and $10M and assigned a draft tier (A/B/C) using a weighted formula:
+
+- **50% PIE** (Player Impact Estimate) — overall statistical contribution per minute
 - **30% TS%** (True Shooting Percentage) — shooting efficiency across 2PT, 3PT, and free throws
 - **20% USG%** (Usage Rate) — share of team possessions used while on court
 
-Raw scores are min-max scaled across all players so the best player costs exactly $10M and the worst costs exactly $1M. Only players who appeared in at least 41 games are included to avoid small sample size inflation.
+Raw scores are min-max scaled across all players. Tier A is the rarest pull, tier C the most common — mirroring a pack-opening draft. Only players who appeared in at least 41 games are included to avoid small sample size inflation.
+
+## How the draft works
+
+For each roster slot, a tier (A/B/C) is randomly rolled — weighted toward the more common tiers — then 5 eligible players from that tier are drawn as candidate cards. You pick one to fill the slot. Position-specific slots (PG/SG/SF/PF/C) restrict candidates to matching positions; bench slots draw from the full pool.
 
 ## How the simulation works
 
@@ -86,7 +119,8 @@ Each possession:
 5. Outcome is sampled: turnover (13%), score, or miss based on adjusted PPP
 
 ## AI Chatbot
-There is now an AI chatbot powered by Gemini which looks at the current state of your team and the remaining budget, and can give you advice on what players to pick to maximise results while staying within the budget constraints. 
+
+An AI assistant powered by Gemini looks at your current roster and draft progress, and gives advice on which cards to pick to build the strongest possible lineup.
 
 ## What's coming
 - [ ] Logistic regression model to replace heuristic outcome sampling with a trained model
