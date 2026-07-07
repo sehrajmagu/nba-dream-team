@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { DraftedRoster, DraftSlot } from '../types';
+import { DraftModalData } from './DraftModal';
 import './AIAssistant.css';
 
 interface Message {
@@ -8,7 +10,51 @@ interface Message {
   timestamp: Date;
 }
 
-export const AIAssistant: React.FC = () => {
+interface AIAssistantProps {
+  isDraftScreen: boolean;
+  draftModal: DraftModalData | null;
+  roster: DraftedRoster;
+  draftAdviceUsesRemaining: number;
+  onUseDraftAdvice: () => void;
+}
+
+const ROSTER_SLOT_ORDER: DraftSlot[] = ['PG', 'SG', 'SF', 'PF', 'C', 'B1', 'B2', 'B3', 'B4', 'B5'];
+
+const formatSlotLabel = (slot: DraftSlot): string => {
+  if (['PG', 'SG', 'SF', 'PF', 'C'].includes(slot)) return slot;
+  return `Bench ${slot.slice(1)}`;
+};
+
+const buildDraftAdvicePrompt = (modal: DraftModalData, roster: DraftedRoster): string => {
+  const candidateLines = modal.candidates
+    .map((p, i) =>
+      `${i + 1}. ${p.name} — ${p.position}, ${p.team_abbreviation}, $${p.price}M, ` +
+      `PIE ${p.pie}, TS% ${(p.ts_pct * 100).toFixed(1)}, USG% ${(p.usg_pct * 100).toFixed(1)}, ` +
+      `DEF RTG ${p.def_rating}, Tier ${p.tier_class}`
+    )
+    .join('\n');
+
+  const rosterLines = ROSTER_SLOT_ORDER.map(slot => {
+    const player = roster[slot];
+    return `${formatSlotLabel(slot)}: ${player ? player.name : '(empty)'}`;
+  }).join('\n');
+
+  return (
+    `I'm drafting for the ${formatSlotLabel(modal.slot)} slot (Tier ${modal.tier} pull). ` +
+    `Here are my 5 candidate cards:\n${candidateLines}\n\n` +
+    `Here is my roster drafted so far:\n${rosterLines}\n\n` +
+    `Which of the 5 candidates should I draft for this slot, and why? ` +
+    `Consider fit with my existing roster as well as the stats above. Keep it concise.`
+  );
+};
+
+export const AIAssistant: React.FC<AIAssistantProps> = ({
+  isDraftScreen,
+  draftModal,
+  roster,
+  draftAdviceUsesRemaining,
+  onUseDraftAdvice,
+}) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -29,28 +75,25 @@ export const AIAssistant: React.FC = () => {
     scrollToBottom();
   }, [messages]);
 
-  const handleSendMessage = async () => {
-    if (!inputValue.trim()) return;
-
+  const sendChatRequest = async (displayText: string, promptOverride?: string) => {
     const userMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
-      content: inputValue,
+      content: displayText,
       timestamp: new Date(),
     };
 
     setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const response = await fetch('http://localhost:5050/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: userMessage.content,
+          message: promptOverride ?? displayText,
         }),
       });
 
@@ -71,13 +114,27 @@ export const AIAssistant: React.FC = () => {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Make sure the backend is running on http://localhost:5000.',
+        content: 'Sorry, I encountered an error. Make sure the backend is running on http://localhost:5050.',
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleSendMessage = () => {
+    if (!inputValue.trim()) return;
+    const text = inputValue;
+    setInputValue('');
+    sendChatRequest(text);
+  };
+
+  const handleGetDraftAdvice = () => {
+    if (!draftModal || draftAdviceUsesRemaining <= 0 || isLoading) return;
+    onUseDraftAdvice();
+    const prompt = buildDraftAdvicePrompt(draftModal, roster);
+    sendChatRequest(`Get Draft Advice — ${formatSlotLabel(draftModal.slot)} (Tier ${draftModal.tier})`, prompt);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -147,6 +204,20 @@ export const AIAssistant: React.FC = () => {
         ))}
         <div ref={messagesEndRef} />
       </div>
+
+      {isDraftScreen && draftModal && (
+        <div className="draft-advice-bar">
+          <button
+            onClick={handleGetDraftAdvice}
+            disabled={draftAdviceUsesRemaining <= 0 || isLoading}
+            className="draft-advice-btn"
+          >
+            {draftAdviceUsesRemaining > 0
+              ? `Get Draft Advice (${draftAdviceUsesRemaining} use${draftAdviceUsesRemaining === 1 ? '' : 's'} remaining)`
+              : 'No draft advice remaining'}
+          </button>
+        </div>
+      )}
 
       <div className="input-area">
         <textarea

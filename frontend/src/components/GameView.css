@@ -16,47 +16,41 @@
 }
 
 .game-round-title {
-  font-size: 24px;
-  font-weight: 900;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--nba-light);
   margin: 0;
-  animation: title-glow 4s ease-in-out infinite;
 }
 
 .series-tracker {
-  font-family: 'Orbitron', monospace;
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: 4px;
   color: var(--nba-light);
 }
 
 .series-score {
   color: var(--arc-cyan);
-  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .game-result-panel {
   background-color: var(--nba-dark);
-  border: 1px solid rgba(255, 23, 68, 0.25);
-  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  box-shadow: inset 0 0 30px rgba(255, 23, 68, 0.04);
+  box-shadow: 0 4px 16px rgba(38, 38, 58, 0.08);
 }
 
 .game-result-score {
-  font-family: 'Orbitron', monospace;
-  font-size: 40px;
-  font-weight: 900;
-  letter-spacing: 6px;
-  color: #fff;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--nba-light);
 }
 
 .score-divider {
@@ -66,34 +60,29 @@
 
 .score-user {
   color: var(--arc-cyan);
-  text-shadow: 0 0 18px rgba(0, 229, 255, 0.5);
 }
 
 .score-opponent {
   color: var(--nba-red);
-  text-shadow: 0 0 18px rgba(255, 23, 68, 0.5);
 }
 
 .game-result-winner {
-  font-family: 'Rajdhani', sans-serif;
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: 4px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   padding: 6px 16px;
-  border-radius: 4px;
+  border-radius: 999px;
 }
 
 .game-result-winner.user {
   color: var(--arc-cyan);
-  border: 1px solid var(--arc-cyan);
-  box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+  background-color: rgba(46, 156, 232, 0.12);
 }
 
 .game-result-winner.opponent {
   color: var(--nba-red);
-  border: 1px solid var(--nba-red);
-  box-shadow: 0 0 12px rgba(255, 23, 68, 0.3);
+  background-color: rgba(255, 107, 53, 0.12);
 }
 
 .box-score {
@@ -112,7 +101,7 @@
 .box-score-team h3 {
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--arc-cyan);
   margin: 0 0 4px;
@@ -126,14 +115,12 @@
   display: flex;
   justify-content: space-between;
   padding: 6px 10px;
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
+  background-color: var(--nba-gray);
+  border-radius: 6px;
   font-size: 12px;
 }
 
 .box-score-name {
-  font-family: 'Rajdhani', sans-serif;
   font-weight: 600;
   color: var(--nba-light);
   overflow: hidden;
@@ -142,9 +129,8 @@
 }
 
 .box-score-points {
-  font-family: 'Orbitron', monospace;
-  font-weight: 700;
-  color: var(--arc-yellow);
+  font-weight: 800;
+  color: var(--nba-red-dark);
   margin-left: 8px;
 }
 
@@ -155,13 +141,11 @@
 }
 
 .play-game-btn {
-  padding: 18px 56px;
-  font-size: 16px;
+  padding: 16px 52px;
+  font-size: 15px;
   font-weight: 800;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  box-shadow: 0 0 24px rgba(255, 23, 68, 0.35), 0 0 48px rgba(255, 23, 68, 0.12);
+  letter-spacing: 0.5px;
+  border-radius: 999px;
 }
 
 .series-outcome {
@@ -173,45 +157,38 @@
 
 .series-outcome h2 {
   margin: 0;
-  font-size: 26px;
-  font-weight: 900;
-  letter-spacing: 6px;
-  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 800;
 }
 
 .series-outcome--win h2 {
   color: var(--arc-cyan);
-  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6), 0 0 40px rgba(0, 229, 255, 0.25);
 }
 
 .series-outcome--loss h2 {
   color: var(--nba-red);
-  text-shadow: 0 0 20px rgba(255, 23, 68, 0.6), 0 0 40px rgba(255, 23, 68, 0.25);
 }
 
 .continue-btn {
   padding: 16px 48px;
   font-size: 15px;
   font-weight: 800;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  background: linear-gradient(135deg, var(--arc-cyan) 0%, #0091a8 100%);
-  color: #03161a;
-  box-shadow: 0 0 24px rgba(0, 229, 255, 0.45), 0 0 48px rgba(0, 229, 255, 0.18);
+  letter-spacing: 0.5px;
+  border-radius: 999px;
+  background-color: var(--arc-cyan);
+  color: #ffffff;
 }
 
 .continue-btn:hover {
-  box-shadow: 0 0 36px rgba(0, 229, 255, 0.7), 0 0 64px rgba(0, 229, 255, 0.3);
+  background-color: #2384c9;
 }
 
 .restart-btn {
   padding: 16px 48px;
   font-size: 15px;
   font-weight: 800;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  border-radius: 4px;
+  letter-spacing: 0.5px;
+  border-radius: 999px;
 }
 
 @media (max-width: 720px) {

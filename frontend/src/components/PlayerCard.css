@@ -2,17 +2,14 @@
   position: relative;
   width: 190px;
   height: 270px;
-  border-radius: 10px;
+  border-radius: 14px;
   padding: 14px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Rajdhani', sans-serif;
   color: #1a1208;
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.45),
-    inset 0 0 24px rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   flex-shrink: 0;
 }
@@ -36,18 +33,12 @@
 
 .player-card--clickable:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.55),
-    0 0 22px rgba(0, 229, 255, 0.35),
-    inset 0 0 24px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
 }
 
 .player-card--selected {
-  border: 2px solid var(--arc-cyan);
-  box-shadow:
-    0 0 18px rgba(0, 229, 255, 0.6),
-    0 0 36px rgba(0, 229, 255, 0.25),
-    inset 0 0 24px rgba(255, 255, 255, 0.15);
+  border: 3px solid var(--arc-cyan);
+  box-shadow: 0 0 0 4px rgba(46, 156, 232, 0.2);
 }
 
 .player-card-badge {
@@ -56,13 +47,12 @@
   left: -10px;
   background: var(--nba-red);
   color: #fff;
-  font-family: 'Orbitron', monospace;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   padding: 4px 8px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(255, 23, 68, 0.55);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
@@ -75,17 +65,14 @@
 }
 
 .player-card-rating {
-  font-family: 'Orbitron', monospace;
   font-size: 28px;
-  font-weight: 900;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  font-weight: 800;
 }
 
 .player-card-position {
-  font-family: 'Orbitron', monospace;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   opacity: 0.85;
 }
 
@@ -95,9 +82,9 @@
   border-radius: 50%;
   overflow: hidden;
   margin-top: 4px;
-  border: 3px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
-  background-color: rgba(0, 0, 0, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,7 +99,6 @@
 }
 
 .player-card-initials {
-  font-family: 'Orbitron', monospace;
   font-size: 26px;
   font-weight: 800;
   color: rgba(0, 0, 0, 0.55);
@@ -127,8 +113,7 @@
 .player-card-name {
   font-size: 13px;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -138,7 +123,7 @@
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   opacity: 0.75;
   margin-top: 2px;
 }
@@ -148,7 +133,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding-top: 8px;
 }
 
@@ -160,7 +145,6 @@
 }
 
 .player-card-stat .stat-value {
-  font-family: 'Orbitron', monospace;
   font-size: 14px;
   font-weight: 800;
 }
@@ -168,7 +152,7 @@
 .player-card-stat .stat-label {
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   opacity: 0.7;
 }
 
@@ -177,7 +161,7 @@
   width: 130px;
   height: 190px;
   padding: 10px 8px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .player-card--small .player-card-rating {

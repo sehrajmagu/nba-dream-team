@@ -1,8 +1,8 @@
 .draft-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(5, 5, 10, 0.82);
-  backdrop-filter: blur(3px);
+  background: rgba(38, 38, 58, 0.45);
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,10 +16,10 @@
 }
 
 .draft-modal {
-  background: linear-gradient(160deg, #15151f 0%, #0a0a0f 100%);
-  border: 1px solid var(--arc-cyan);
-  border-radius: 8px;
-  box-shadow: 0 0 40px rgba(0, 229, 255, 0.25), 0 0 80px rgba(0, 229, 255, 0.1);
+  background-color: var(--nba-dark);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(38, 38, 58, 0.25);
   padding: 28px 32px;
   max-width: 92vw;
   max-height: 90vh;
@@ -38,18 +38,15 @@
 .draft-modal-header h2 {
   margin: 0;
   font-size: 18px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #fff;
+  color: var(--nba-light);
 }
 
 .draft-modal-tier {
-  font-family: 'Orbitron', monospace;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   padding: 4px 12px;
-  border-radius: 4px;
+  border-radius: 999px;
   text-transform: uppercase;
 }
 
@@ -70,9 +67,8 @@
 
 .draft-modal-subtitle {
   margin: 8px 0 20px;
-  font-family: 'Rajdhani', sans-serif;
   font-size: 12px;
-  letter-spacing: 3px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--arc-cyan);
 }

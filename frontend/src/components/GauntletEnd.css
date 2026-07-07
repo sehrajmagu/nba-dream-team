@@ -10,22 +10,15 @@
 }
 
 .gauntlet-end-title {
-  font-size: 40px;
-  font-weight: 900;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  color: var(--arc-yellow);
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--nba-red-dark);
   margin: 0;
-  text-shadow: 0 0 20px rgba(255, 234, 0, 0.6), 0 0 40px rgba(255, 234, 0, 0.25);
-  animation: title-glow 4s ease-in-out infinite;
 }
 
 .gauntlet-end-subtitle {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 14px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--arc-cyan);
+  font-size: 15px;
+  color: var(--nba-gray-light);
   margin: 0 0 20px;
 }
 
@@ -38,10 +31,9 @@
 
 .play-again-btn {
   margin-top: 10px;
-  padding: 16px 56px;
+  padding: 16px 52px;
   font-size: 16px;
   font-weight: 800;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  border-radius: 4px;
+  letter-spacing: 0.5px;
+  border-radius: 999px;
 }

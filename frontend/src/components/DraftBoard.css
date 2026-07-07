@@ -16,21 +16,16 @@
 }
 
 .draft-title {
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--nba-light);
   margin: 0;
 }
 
 .draft-progress {
-  font-family: 'Orbitron', monospace;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 2px;
   color: var(--arc-cyan);
-  text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
 }
 
 .draft-court {
@@ -38,9 +33,9 @@
   flex: 1;
   min-height: 360px;
   max-height: 520px;
-  border: 1px solid var(--nba-red);
-  border-radius: 4px;
-  box-shadow: 0 0 24px rgba(255, 23, 68, 0.18), inset 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(38, 38, 58, 0.06);
   overflow: hidden;
 }
 
@@ -63,34 +58,31 @@
   border-radius: 50%;
   border: none;
   padding: 6px;
-  font-family: 'Orbitron', monospace;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .draft-slot--empty {
-  background: rgba(255, 255, 255, 0.04);
+  background-color: var(--arc-panel-hover);
   border: 2px dashed var(--arc-cyan);
   color: var(--arc-cyan);
-  animation: slot-glow 1.8s ease-in-out infinite;
 }
 
 .draft-slot--empty:hover {
-  background: rgba(0, 229, 255, 0.12);
+  background-color: rgba(46, 156, 232, 0.15);
   transform: translate(-50%, -50%) scale(1.08);
 }
 
 .draft-slot--filled {
-  background: rgba(0, 0, 0, 0.35);
+  background-color: var(--nba-gray);
   border: 2px solid var(--nba-red);
   cursor: default;
-  box-shadow: 0 0 14px rgba(255, 23, 68, 0.35);
 }
 
 .draft-slot-label {
   font-size: 14px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .draft-slot-headshot {
@@ -104,17 +96,11 @@
 .draft-slot-name {
   font-size: 8px;
   font-weight: 700;
-  letter-spacing: 0.5px;
   color: var(--nba-light);
   white-space: nowrap;
   max-width: 70px;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-@keyframes slot-glow {
-  0%, 100% { box-shadow: 0 0 8px rgba(0, 229, 255, 0.35); }
-  50% { box-shadow: 0 0 20px rgba(0, 229, 255, 0.75); }
 }
 
 .draft-bench {
@@ -126,7 +112,7 @@
 .draft-bench-title {
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--nba-gray-light);
   margin: 0;
@@ -143,7 +129,7 @@
   transform: none;
   width: 100%;
   height: 84px;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .draft-slot--bench:hover {
@@ -156,15 +142,12 @@
   padding: 16px 48px;
   font-size: 16px;
   font-weight: 800;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  background: linear-gradient(135deg, var(--arc-cyan) 0%, #0091a8 100%);
-  color: #03161a;
-  box-shadow: 0 0 24px rgba(0, 229, 255, 0.45), 0 0 48px rgba(0, 229, 255, 0.18);
-  animation: cyan-glow-pulse 2.2s ease-in-out infinite;
+  letter-spacing: 0.5px;
+  border-radius: 999px;
+  background-color: var(--arc-cyan);
+  color: #ffffff;
 }
 
 .proceed-btn:hover {
-  box-shadow: 0 0 36px rgba(0, 229, 255, 0.7), 0 0 64px rgba(0, 229, 255, 0.3);
+  background-color: #2384c9;
 }

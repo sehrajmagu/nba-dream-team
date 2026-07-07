@@ -2,14 +2,13 @@
   display: block;
   object-fit: cover;
   object-position: top center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--nba-gray);
 }
 
 .headshot-fallback {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Orbitron', monospace;
   font-weight: 800;
   color: var(--arc-cyan);
 }

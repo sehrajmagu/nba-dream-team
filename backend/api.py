@@ -17,7 +17,7 @@ GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
 
-MODEL_NAME = 'models/gemini-3.5-flash'
+MODEL_NAME = 'models/gemini-flash-lite-latest'
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
@@ -177,7 +177,7 @@ def chat():
 
     try:
         model = genai.GenerativeModel(MODEL_NAME)
-        response = model.generate_content(prompt)
+        response = model.generate_content(prompt, request_options={'timeout': 20})
         answer = getattr(response, 'text', None)
 
         if not answer:
@@ -192,4 +192,4 @@ def chat():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5050, debug=True)

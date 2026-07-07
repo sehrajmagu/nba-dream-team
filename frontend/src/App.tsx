@@ -81,6 +81,8 @@ function App() {
   const [lastResult, setLastResult] = useState<GameResult | null>(null);
   const [isSimulating, setIsSimulating] = useState(false);
 
+  const [draftAdviceUses, setDraftAdviceUses] = useState(2);
+
   const handleSelectConference = (conf: Conference) => {
     const prefix = conf === 'West' ? 'west' : 'east';
     setConference(conf);
@@ -150,7 +152,7 @@ function App() {
     setIsSimulating(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/simulate/game', {
+      const response = await fetch('http://localhost:5050/api/simulate/game', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -196,7 +198,7 @@ function App() {
       }
     } catch (error) {
       console.error('Error running simulation:', error);
-      alert('Failed to run simulation. Make sure the backend is running on http://localhost:5000');
+      alert('Failed to run simulation. Make sure the backend is running on http://localhost:5050');
     } finally {
       setIsSimulating(false);
     }
@@ -225,6 +227,7 @@ function App() {
     setUserWins(0);
     setOpponentWins(0);
     setLastResult(null);
+    setDraftAdviceUses(2);
   };
 
   const currentOpponentTeam = opponentSequence[roundIndex] ? classicTeams[opponentSequence[roundIndex]] : null;
@@ -284,7 +287,13 @@ function App() {
         </main>
 
         <aside className="sidebar-right">
-          <AIAssistant />
+          <AIAssistant
+            isDraftScreen={screen === 'draft'}
+            draftModal={draftModal}
+            roster={roster}
+            draftAdviceUsesRemaining={draftAdviceUses}
+            onUseDraftAdvice={() => setDraftAdviceUses(prev => Math.max(0, prev - 1))}
+          />
         </aside>
       </div>
     </div>
