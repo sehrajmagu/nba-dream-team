@@ -157,7 +157,7 @@ def chat():
             'name': p['name'],
             'position': p.get('position'),
             'team': p.get('team_abbreviation'),
-            'price': p.get('price'),
+            'rating': p.get('rating'),
             'usg_pct': p.get('usg_pct'),
             'ts_pct': p.get('ts_pct'),
             'def_rating': p.get('def_rating'),
@@ -167,7 +167,7 @@ def chat():
 
     prompt = (
         'You are an NBA Gauntlet assistant. Use the player database below to answer the user question. '
-        'Do not invent players or prices. Keep the response concise and actionable.\n\n'
+        'Do not invent players or ratings. Keep the response concise and actionable.\n\n'
         f'Player database: {json.dumps(compact_players, ensure_ascii=False)}\n\n'
         f'User message: {message}'
     )

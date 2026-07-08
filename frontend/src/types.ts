@@ -4,11 +4,17 @@ export interface Player {
   position: string;
   team_name: string;
   team_abbreviation: string;
-  price: number;
+  rating: number;
   pie: number;
   ts_pct: number;
   usg_pct: number;
   def_rating: number;
+  pts: number;
+  ast: number;
+  reb: number;
+  stl: number;
+  blk: number;
+  tov: number;
   tier_class: 'A' | 'B' | 'C';
   tier_positions: string[];
 }

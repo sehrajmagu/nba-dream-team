@@ -280,12 +280,12 @@ def main():
     print("Team A:")
     for p in team_a:
         name = p['name'].encode('ascii', 'replace').decode('ascii')
-        print(f"  {name} ({p['team_abbreviation']}) - {p['price']}M")
+        print(f"  {name} ({p['team_abbreviation']}) - {p['rating']}")
 
     print("\nTeam B:")
     for p in team_b:
         name = p['name'].encode('ascii', 'replace').decode('ascii')
-        print(f"  {name} ({p['team_abbreviation']}) - {p['price']}M")
+        print(f"  {name} ({p['team_abbreviation']}) - {p['rating']}")
 
     print("\n" + "="*50)
     series_result = simulate_series(team_a, team_b)
@@ -302,10 +302,10 @@ def main():
     print(f"Final: Team A {series_result['team_a_wins']}-{series_result['team_b_wins']} Team B")
 
     players = load_players('backend/data/players.json')
-    players_by_price = sorted(players, key=lambda p: p['price'], reverse=True)
+    players_by_rating = sorted(players, key=lambda p: p['rating'], reverse=True)
 
-    team_a = players_by_price[0:5]
-    team_b = players_by_price[5:10]
+    team_a = players_by_rating[0:5]
+    team_b = players_by_rating[5:10]
 
     print("Team A defensive ratings:")
     for p in team_a:
@@ -319,7 +319,7 @@ def main():
     for name in ['Precious Achiuwa', 'Ochai Agbaji', 'Nickeil Alexander-Walker']:
         p = next((x for x in players if x['name'] == name), None)
         if p:
-            print(f"  {p['name']}: pie={p['pie']}, ts={p['ts_pct']}, usg={p['usg_pct']}, price={p['price']}")
+            print(f"  {p['name']}: pie={p['pie']}, ts={p['ts_pct']}, usg={p['usg_pct']}, rating={p['rating']}")
 
 
 if __name__ == '__main__':

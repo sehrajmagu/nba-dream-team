@@ -12,7 +12,6 @@ interface PlayerCardProps {
 
 export const PlayerCard: React.FC<PlayerCardProps> = ({ player, size = 'normal', selected, badge, onClick }) => {
   const [imgError, setImgError] = useState(false);
-  const rating = Math.round(player.price * 10);
   const tierClass = `tier-${player.tier_class.toLowerCase()}`;
   const initials = player.name
     .split(' ')
@@ -33,7 +32,7 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ player, size = 'normal',
     <div className={classNames} onClick={onClick}>
       {badge && <div className="player-card-badge">{badge}</div>}
       <div className="player-card-top">
-        <div className="player-card-rating">{rating}</div>
+        <div className="player-card-rating">{player.rating}</div>
         <div className="player-card-position">{player.position}</div>
       </div>
       <div className="player-card-photo">
@@ -53,16 +52,16 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ player, size = 'normal',
       </div>
       <div className="player-card-stats">
         <div className="player-card-stat">
-          <span className="stat-value">{(player.pie * 100).toFixed(1)}</span>
-          <span className="stat-label">PIE</span>
+          <span className="stat-value">{player.pts.toFixed(1)}</span>
+          <span className="stat-label">PPG</span>
         </div>
         <div className="player-card-stat">
-          <span className="stat-value">{(player.ts_pct * 100).toFixed(1)}</span>
-          <span className="stat-label">TS%</span>
+          <span className="stat-value">{player.reb.toFixed(1)}</span>
+          <span className="stat-label">RPG</span>
         </div>
         <div className="player-card-stat">
-          <span className="stat-value">{(player.usg_pct * 100).toFixed(1)}</span>
-          <span className="stat-label">USG%</span>
+          <span className="stat-value">{player.ast.toFixed(1)}</span>
+          <span className="stat-label">APG</span>
         </div>
       </div>
     </div>

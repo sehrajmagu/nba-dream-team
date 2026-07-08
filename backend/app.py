@@ -45,7 +45,7 @@ def get_opponent_team(opponent_name, all_players):
         if team_abbr:
             team_players = sorted(
                 [p for p in all_players if p['team_abbreviation'] == team_abbr],
-                key=lambda p: p['price'],
+                key=lambda p: p['rating'],
                 reverse=True
             )[:5]
             return team_players

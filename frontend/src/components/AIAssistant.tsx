@@ -28,7 +28,8 @@ const formatSlotLabel = (slot: DraftSlot): string => {
 const buildDraftAdvicePrompt = (modal: DraftModalData, roster: DraftedRoster): string => {
   const candidateLines = modal.candidates
     .map((p, i) =>
-      `${i + 1}. ${p.name} — ${p.position}, ${p.team_abbreviation}, $${p.price}M, ` +
+      `${i + 1}. ${p.name} — ${p.position}, ${p.team_abbreviation}, OVR ${p.rating}, ` +
+      `${p.pts.toFixed(1)} PPG, ${p.reb.toFixed(1)} RPG, ${p.ast.toFixed(1)} APG, ` +
       `PIE ${p.pie}, TS% ${(p.ts_pct * 100).toFixed(1)}, USG% ${(p.usg_pct * 100).toFixed(1)}, ` +
       `DEF RTG ${p.def_rating}, Tier ${p.tier_class}`
     )
