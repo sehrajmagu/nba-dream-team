@@ -58,6 +58,7 @@
 }
 
 .main-content {
+  position: relative;
   background-color: var(--nba-black);
   display: flex;
   flex-direction: column;

@@ -16,11 +16,11 @@ const STARTING_POSITIONS: Position[] = ['PG', 'SG', 'SF', 'PF', 'C'];
 const BENCH_SLOTS: BenchSlot[] = ['B1', 'B2', 'B3', 'B4', 'B5'];
 
 const POSITION_COORDS: Record<Position, { x: number; y: number }> = {
-  C: { x: 50, y: 16 },
-  PF: { x: 26, y: 28 },
-  SF: { x: 74, y: 28 },
-  SG: { x: 20, y: 58 },
-  PG: { x: 50, y: 80 },
+  C: { x: 50, y: 19 },
+  PF: { x: 28, y: 27 },
+  SF: { x: 72, y: 27 },
+  SG: { x: 20, y: 40 },
+  PG: { x: 50, y: 58 },
 };
 
 export const DraftBoard: React.FC<DraftBoardProps> = ({ roster, modalData, onSlotClick, onCardSelect, onProceed }) => {

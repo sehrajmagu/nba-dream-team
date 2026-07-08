@@ -70,7 +70,6 @@
 
 .draft-slot--empty:hover {
   background-color: rgba(46, 156, 232, 0.15);
-  transform: translate(-50%, -50%) scale(1.08);
 }
 
 .draft-slot--filled {
@@ -130,10 +129,6 @@
   width: 100%;
   height: 84px;
   border-radius: 10px;
-}
-
-.draft-slot--bench:hover {
-  transform: scale(1.04);
 }
 
 .proceed-btn {

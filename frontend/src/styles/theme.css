@@ -50,13 +50,13 @@ button {
   box-shadow: 0 2px 8px rgba(255, 107, 53, 0.25);
 }
 
-button:hover:not(:disabled) {
+button:hover:not(:disabled):not(.draft-slot) {
   background-color: var(--nba-red-dark);
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(255, 107, 53, 0.3);
 }
 
-button:active:not(:disabled) {
+button:active:not(:disabled):not(.draft-slot) {
   transform: translateY(0);
 }
 
