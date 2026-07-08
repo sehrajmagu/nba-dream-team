@@ -116,9 +116,10 @@ def simulate_possession(
     defensive_team: List[Dict]
 ) -> Dict:
     # Simulate a single possession and return the outcome details
-    # Select ball handler weighted by usage rate
-    usg_rates = [p.get('usg_pct', 0.2) for p in offensive_team]
-    ball_handler = random.choices(offensive_team, weights=usg_rates, k=1)[0]
+    # Select ball handler weighted by usage rate, normalized across the lineup
+    total_usg = sum(p['usg_pct'] for p in offensive_team)
+    weights = [p['usg_pct'] / total_usg for p in offensive_team]
+    ball_handler = random.choices(offensive_team, weights=weights, k=1)[0]
 
     # Assign defender based on positional matchup
     defender = get_positional_matchup(ball_handler, defensive_team)
@@ -134,7 +135,10 @@ def simulate_possession(
     base_ppp = get_base_ppp(play_type, ball_handler.get('ts_pct', 0.55))
     adjusted_ppp = apply_defensive_adjustment(base_ppp, defender.get('def_rating', 112))
 
-    quality_multiplier = max(0.7, min(1.3, 0.85 + (ball_handler.get('pie', 0.1) / 0.1) * 0.15))
+    ovr_component = (ball_handler.get('rating', 82) - 82) / 50 * 0.70
+    ppg_component = (ball_handler.get('pts', 15) - 15) / 50 * 0.30
+    quality_multiplier = 1.0 + ovr_component + ppg_component
+    quality_multiplier = max(0.7, min(1.4, quality_multiplier))
     adjusted_ppp *= quality_multiplier
 
     # Determine outcome
