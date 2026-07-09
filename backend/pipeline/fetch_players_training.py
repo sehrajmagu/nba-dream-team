@@ -42,7 +42,7 @@ def get_player_positions(season="2023-24"):
     print("Fetching player positions...")
     import time
     time.sleep(1)
-    position_data = playerindex.PlayerIndex(season=season).get_data_frames()[0]
+    position_data = playerindex.PlayerIndex(season=season, historical_nullable=1).get_data_frames()[0]
     return position_data[['PERSON_ID', 'POSITION']]
 
 

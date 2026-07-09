@@ -111,16 +111,24 @@ For each roster slot, a tier (A/B/C) is randomly rolled — weighted toward the 
 
 ## How the simulation works
 
-Each possession:
-1. Ball handler is selected weighted by usage rate
-2. Play type is sampled based on position and usage (ISO, P&R, Spot-up, Post, Transition, Cut)
-3. Base PPP (points per possession) is calculated from the player's true shooting percentage
-4. A defensive adjustment is applied based on the defender's defensive rating: `adjusted_PPP = base_PPP × (112 / defender_drtg)`
-5. Outcome is sampled: turnover (13%), score, or miss based on adjusted PPP
+Each game simulates ~200 possessions alternating between teams. For each possession:
 
+Ball handler selection — players are weighted by a combination of usage rate and overall rating. Higher usage, higher rated players get the ball more often.
+Play type sampling — based on the ball handler's position and usage rate, a play type is sampled (ISO, P&R, Spot-up, Post, Transition, Cut).
+Defensive matchup — the defender is assigned based on positional matchup. Their defensive rating is used to adjust the offensive player's efficiency.
+Quality multiplier — a per-possession multiplier is applied based on the ball handler's overall rating and PPG, ensuring elite players score more consistently than role players.
+Outcome prediction (ML model) — a multinomial logistic regression model trained on 50,000+ real NBA possessions from the 2023-24 season predicts the outcome. The model takes 5 features as input:
+
+Offensive player's overall rating
+Offensive player's PPG
+Offensive player's true shooting percentage
+Offensive player's usage rate
+Defender's defensive rating
+
+It outputs probabilities for 4 outcomes — turnover, miss, 2PT make, 3PT make — and samples from those probabilities to determine what happens.
+
+Training data — play-by-play event data from the 2023-24 NBA season, joined with per-player advanced stats. Labels were derived from event types: made shots (2PT/3PT), missed shots, and turnovers.
+Why logistic regression — the feature set is small and the relationships between player quality and possession outcomes are relatively linear. Logistic regression is interpretable, fast, and sufficient for this problem. Each weight in the model has a clear meaning — high defensive rating reduces scoring probability, elite offensive rating increases it.
 ## AI Chatbot
 
 An AI assistant powered by Gemini looks at your current roster and draft progress, and gives advice on which cards to pick to build the strongest possible lineup.
-
-## What's coming
-- [ ] Logistic regression model to replace heuristic outcome sampling with a trained model
