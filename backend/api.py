@@ -20,7 +20,10 @@ if GEMINI_API_KEY:
 MODEL_NAME = 'models/gemini-flash-lite-latest'
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/api/*": {"origins": [
+    "http://localhost:3000",
+    "https://nbagauntlet.vercel.app",
+]}})
 
 
 def load_players():

@@ -182,7 +182,7 @@ function App() {
     setLiveScore({ a: 0, b: 0 });
 
     try {
-      const response = await fetch('http://localhost:5050/api/simulate/game', {
+      const response = await fetch('https://nba-dream-team.onrender.com/api/simulate/game', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -271,7 +271,7 @@ function App() {
       }, tickMs);
     } catch (error) {
       console.error('Error running simulation:', error);
-      alert('Failed to run simulation. Make sure the backend is running on http://localhost:5050');
+      alert('Failed to run simulation. Make sure the backend is running on https://nba-dream-team.onrender.com');
       setIsSimulating(false);
     }
   };

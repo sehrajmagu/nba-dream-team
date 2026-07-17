@@ -88,7 +88,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5050/api/chat', {
+      const response = await fetch('https://nba-dream-team.onrender.com/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Make sure the backend is running on http://localhost:5050.',
+        content: 'Sorry, I encountered an error. Make sure the backend is running on https://nba-dream-team.onrender.com.',
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, errorMessage]);
