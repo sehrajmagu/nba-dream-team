@@ -1,4 +1,5 @@
 import json
+import math
 import pickle
 import random
 from pathlib import Path
@@ -125,11 +126,38 @@ def sample_shot_distance(play_type: str) -> int:
     return random.randint(low, high)
 
 
-def apply_defensive_adjustment(base_value: float, defender_drtg: float) -> float:
-    # Scale a value (PPP, scoring probability, etc.) by the defender's DRTG.
-    # Lower DRTG means better defense, so it should scale scoring down, not up.
+def logit(p: float) -> float:
+    p = min(max(p, 1e-6), 1 - 1e-6)
+    return math.log(p / (1 - p))
+
+
+def sigmoid(x: float) -> float:
+    return 1.0 / (1.0 + math.exp(-x))
+
+
+# Adjustments below are applied as log-odds deltas rather than multiplying the
+# raw probability directly. Multiplying probabilities has no graceful ceiling:
+# a strong-enough multiplier pushes make_prob straight to a hard 1.0 clip,
+# giving high-rated players a near-100% shot-make rate. Log-odds are unbounded
+# and pass through a sigmoid on the way back to a probability, so the same
+# adjustment yields diminishing returns as probability approaches 1 instead of
+# an abrupt wall.
+
+def defensive_log_odds_adjustment(defender_drtg: float) -> float:
+    # Lower DRTG (better defense) should suppress scoring odds, higher should
+    # inflate them.
     league_avg_drtg = 112
-    return base_value * (defender_drtg / league_avg_drtg)
+    return math.log(defender_drtg / league_avg_drtg)
+
+
+def quality_log_odds_adjustment(rating: float, matchup_avg_rating: float, strength: float = 4.0) -> float:
+    # Skill bonus/penalty from the ball handler's overall rating, since the
+    # model's own offensive_pts/ts_pct coefficients are too weak relative to
+    # shot_distance to reliably separate stars from role players. Anchored to
+    # the average rating of the 10 players actually in this matchup (not a
+    # fixed constant), so two elite teams playing each other still produce a
+    # normal-range game instead of both sides' scoring inflating together.
+    return (rating - matchup_avg_rating) / 34 * strength
 
 
 def get_positional_matchup(offense_player: Dict, defense_players: List[Dict]) -> Dict:
@@ -155,6 +183,9 @@ def simulate_possession(
     defensive_team: List[Dict]
 ) -> Dict:
     # Simulate a single possession and return the outcome details
+    all_players_on_court = offensive_team + defensive_team
+    matchup_avg_rating = sum(p.get('rating', 82) for p in all_players_on_court) / len(all_players_on_court)
+
     # Select ball handler weighted by usage rate, normalized across the lineup
     total_usg = sum(p['usg_pct'] for p in offensive_team)
     weights = [p['usg_pct'] / total_usg for p in offensive_team]
@@ -186,11 +217,15 @@ def simulate_possession(
 
     p_2pt = class_probs.get(OUTCOME_2PT_MAKE, 0.0)
     p_3pt = class_probs.get(OUTCOME_3PT_MAKE, 0.0)
+    make_total = min(p_2pt + p_3pt, 1.0)
 
-    # Apply the defender's rating on top of the model's shot-quality prediction
-    defensive_factor = apply_defensive_adjustment(1.0, defender.get('def_rating', 112))
-    make_prob = min((p_2pt + p_3pt) * defensive_factor, 1.0)
-    make_total = p_2pt + p_3pt
+    # Layer the defender's rating and the ball handler's overall skill on top
+    # of the model's shot-quality prediction, in log-odds space (see comment
+    # on quality_log_odds_adjustment for why not a direct probability multiply).
+    log_odds = logit(make_total)
+    log_odds += defensive_log_odds_adjustment(defender.get('def_rating', 112))
+    log_odds += quality_log_odds_adjustment(ball_handler.get('rating', 82), matchup_avg_rating)
+    make_prob = sigmoid(log_odds)
     three_pt_share = (p_3pt / make_total) if make_total > 0 else 0.0
 
     # Determine outcome
