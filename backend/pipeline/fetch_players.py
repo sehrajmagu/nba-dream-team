@@ -47,10 +47,10 @@ def get_player_positions(season="2025-26"):
 
 
 RATING_WEIGHTS = {
-    'PIE': 0.30,
-    'TS_PCT': 0.20,
-    'USG_PCT': 0.15,
-    'PTS': 0.10,
+    'PIE': 0.25,
+    'TS_PCT': 0.12,
+    'USG_PCT': 0.20,
+    'PTS': 0.18,
     'AST': 0.08,
     'REB': 0.07,
     'STL': 0.05,

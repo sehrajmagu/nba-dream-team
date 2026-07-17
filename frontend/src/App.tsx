@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import {
   ClassicTeams,
   Conference,
@@ -7,6 +7,7 @@ import {
   GameResult,
   GameSimulationResponse,
   Player,
+  PossessionLogEntry,
 } from './types';
 import { ConferenceSelect } from './components/ConferenceSelect';
 import { DraftBoard } from './components/DraftBoard';
@@ -57,6 +58,17 @@ const pickTier = (): 'A' | 'B' | 'C' => {
   return 'A';
 };
 
+// Bench slots skew much weaker than starters, so role players don't end up
+// nearly as strong as the starting five.
+const pickBenchTier = (): 'A' | 'B' | 'C' => {
+  const roll = Math.random();
+  if (roll < 0.65) return 'A';
+  if (roll < 0.90) return 'B';
+  return 'C';
+};
+
+const BENCH_SLOT_SET = new Set<DraftSlot>(['B1', 'B2', 'B3', 'B4', 'B5']);
+
 const pickRandomPlayers = (pool: Player[], count: number): Player[] => {
   const shuffled = [...pool].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count);
@@ -81,6 +93,21 @@ function App() {
   const [lastResult, setLastResult] = useState<GameResult | null>(null);
   const [isSimulating, setIsSimulating] = useState(false);
 
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [livePlays, setLivePlays] = useState<PossessionLogEntry[]>([]);
+  const [liveScore, setLiveScore] = useState({ a: 0, b: 0 });
+  const animationTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const GAME_ANIMATION_DURATION_MS = 30000;
+
+  const stopAnimation = () => {
+    if (animationTimerRef.current) {
+      clearInterval(animationTimerRef.current);
+      animationTimerRef.current = null;
+    }
+    setIsAnimating(false);
+  };
+
   const [draftAdviceUses, setDraftAdviceUses] = useState(2);
 
   const handleSelectConference = (conf: Conference) => {
@@ -94,7 +121,7 @@ function App() {
   const handleSlotClick = (slot: DraftSlot) => {
     if (roster[slot]) return;
 
-    const tier = pickTier();
+    const tier = BENCH_SLOT_SET.has(slot) ? pickBenchTier() : pickTier();
     const posFilter = SLOT_POSITION_FILTER[slot];
     const draftedIds = new Set(
       Object.values(roster)
@@ -150,6 +177,9 @@ function App() {
     if (startingFive.length !== 5) return;
 
     setIsSimulating(true);
+    setLastResult(null);
+    setLivePlays([]);
+    setLiveScore({ a: 0, b: 0 });
 
     try {
       const response = await fetch('http://localhost:5050/api/simulate/game', {
@@ -168,6 +198,7 @@ function App() {
       }
 
       const data: GameSimulationResponse = await response.json();
+      const possessions = data.possession_log;
 
       const userBoxScore: Record<string, number> = {};
       startingFive.forEach(p => { userBoxScore[p.name] = 0; });
@@ -175,31 +206,46 @@ function App() {
       const opponentBoxScore: Record<string, number> = {};
       opponentTeam.players.forEach(p => { opponentBoxScore[p.name] = 0; });
 
-      for (const play of data.possession_log) {
+      setIsSimulating(false);
+      setIsAnimating(true);
+
+      const tickMs = Math.max(20, GAME_ANIMATION_DURATION_MS / Math.max(possessions.length, 1));
+      let index = 0;
+
+      animationTimerRef.current = setInterval(() => {
+        const play = possessions[index];
+        index += 1;
+
+        setLiveScore({ a: play.score_a, b: play.score_b });
+        setLivePlays(prev => [...prev, play]);
+
         if (play.team === 'A' && play.ball_handler in userBoxScore) {
           userBoxScore[play.ball_handler] += play.points_scored;
         } else if (play.team === 'B' && play.ball_handler in opponentBoxScore) {
           opponentBoxScore[play.ball_handler] += play.points_scored;
         }
-      }
 
-      setLastResult({
-        scoreUser: data.score_a,
-        scoreOpponent: data.score_b,
-        winner: data.winner,
-        userBoxScore,
-        opponentBoxScore,
-      });
+        if (index >= possessions.length) {
+          stopAnimation();
 
-      if (data.winner === 'user') {
-        setUserWins(prev => prev + 1);
-      } else {
-        setOpponentWins(prev => prev + 1);
-      }
+          setLastResult({
+            scoreUser: data.score_a,
+            scoreOpponent: data.score_b,
+            winner: data.winner,
+            userBoxScore,
+            opponentBoxScore,
+          });
+
+          if (data.winner === 'user') {
+            setUserWins(prev => prev + 1);
+          } else {
+            setOpponentWins(prev => prev + 1);
+          }
+        }
+      }, tickMs);
     } catch (error) {
       console.error('Error running simulation:', error);
       alert('Failed to run simulation. Make sure the backend is running on http://localhost:5050');
-    } finally {
       setIsSimulating(false);
     }
   };
@@ -217,6 +263,7 @@ function App() {
   };
 
   const handleRestart = () => {
+    stopAnimation();
     setScreen('conference');
     setConference(null);
     setOpponentSequence([]);
@@ -274,6 +321,9 @@ function App() {
               opponentWins={opponentWins}
               lastResult={lastResult}
               isSimulating={isSimulating}
+              isAnimating={isAnimating}
+              livePlays={livePlays}
+              liveScore={liveScore}
               isFinalRound={roundIndex === opponentSequence.length - 1}
               onPlayGame={handlePlayGame}
               onContinue={handleContinue}

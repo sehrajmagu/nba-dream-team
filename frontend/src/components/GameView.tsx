@@ -1,5 +1,5 @@
-import React from 'react';
-import { ClassicTeam, GameResult } from '../types';
+import React, { useEffect, useRef } from 'react';
+import { ClassicTeam, GameResult, PossessionLogEntry } from '../types';
 import './GameView.css';
 
 interface GameViewProps {
@@ -9,6 +9,9 @@ interface GameViewProps {
   opponentWins: number;
   lastResult: GameResult | null;
   isSimulating: boolean;
+  isAnimating: boolean;
+  livePlays: PossessionLogEntry[];
+  liveScore: { a: number; b: number };
   isFinalRound: boolean;
   onPlayGame: () => void;
   onContinue: () => void;
@@ -18,6 +21,13 @@ interface GameViewProps {
 const sortedEntries = (boxScore: Record<string, number>) =>
   Object.entries(boxScore).sort((a, b) => b[1] - a[1]);
 
+const OUTCOME_LABELS: Record<string, string> = {
+  Turnover: 'TURNOVER',
+  Miss: 'MISS',
+  'Made 2PT': '2PT MAKE',
+  'Made 3PT': '3PT MAKE',
+};
+
 export const GameView: React.FC<GameViewProps> = ({
   roundIndex,
   opponentTeam,
@@ -25,11 +35,22 @@ export const GameView: React.FC<GameViewProps> = ({
   opponentWins,
   lastResult,
   isSimulating,
+  isAnimating,
+  livePlays,
+  liveScore,
   isFinalRound,
   onPlayGame,
   onContinue,
   onRestart,
 }) => {
+  const feedRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (feedRef.current) {
+      feedRef.current.scrollTop = feedRef.current.scrollHeight;
+    }
+  }, [livePlays]);
+
   const roundWon = userWins === 4;
   const eliminated = opponentWins === 4;
   const seriesDecided = roundWon || eliminated;
@@ -43,7 +64,34 @@ export const GameView: React.FC<GameViewProps> = ({
         </div>
       </div>
 
-      {lastResult && (
+      {isAnimating && (
+        <div className="live-game-panel">
+          <div className="live-scoreboard">
+            <span className="score-user">{liveScore.a}</span>
+            <span className="score-divider">:</span>
+            <span className="score-opponent">{liveScore.b}</span>
+            <span className="live-quarter">
+              Q{livePlays.length > 0 ? livePlays[livePlays.length - 1].quarter : 1}
+            </span>
+          </div>
+          <div className="play-feed" ref={feedRef}>
+            {livePlays.map((play, idx) => (
+              <div
+                key={idx}
+                className={`play-feed-row ${play.team === 'A' ? 'user' : 'opponent'}`}
+              >
+                <span className="play-feed-player">{play.ball_handler}</span>
+                <span className="play-feed-type">({play.play_type})</span>
+                <span className="play-feed-outcome">
+                  {OUTCOME_LABELS[play.outcome] ?? play.outcome}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {!isAnimating && lastResult && (
         <div className="game-result-panel">
           <div className="game-result-score">
             <span className="score-user">{lastResult.scoreUser}</span>
@@ -93,8 +141,8 @@ export const GameView: React.FC<GameViewProps> = ({
             </div>
           )
         ) : (
-          <button className="play-game-btn" onClick={onPlayGame} disabled={isSimulating}>
-            {isSimulating ? 'Simulating...' : 'Play Game'}
+          <button className="play-game-btn" onClick={onPlayGame} disabled={isSimulating || isAnimating}>
+            {isSimulating ? 'Tipping off...' : isAnimating ? 'Game in progress...' : 'Play Game'}
           </button>
         )}
       </div>

@@ -30,9 +30,16 @@ export type DraftedRoster = Record<DraftSlot, Player | null>;
 export type Conference = 'East' | 'West';
 
 export interface PossessionLogEntry {
+  possession: number;
+  quarter: number;
   team: 'A' | 'B';
   ball_handler: string;
+  defender: string;
+  play_type: string;
+  outcome: 'Turnover' | 'Miss' | 'Made 2PT' | 'Made 3PT';
   points_scored: number;
+  score_a: number;
+  score_b: number;
   [key: string]: unknown;
 }
 

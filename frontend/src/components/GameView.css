@@ -34,6 +34,82 @@
   font-weight: 800;
 }
 
+.live-game-panel {
+  background-color: var(--nba-dark);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 16px rgba(38, 38, 58, 0.08);
+}
+
+.live-scoreboard {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--nba-light);
+}
+
+.live-quarter {
+  margin-left: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--nba-gray-light);
+  align-self: center;
+}
+
+.play-feed {
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 4px;
+}
+
+.play-feed-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background-color: var(--nba-gray);
+  border-radius: 6px;
+  font-size: 12px;
+  border-left: 3px solid transparent;
+}
+
+.play-feed-row.user {
+  border-left-color: var(--arc-cyan);
+}
+
+.play-feed-row.opponent {
+  border-left-color: var(--nba-red);
+}
+
+.play-feed-player {
+  font-weight: 700;
+  color: var(--nba-light);
+}
+
+.play-feed-type {
+  color: var(--nba-gray-light);
+}
+
+.play-feed-outcome {
+  margin-left: auto;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: var(--nba-red-dark);
+}
+
 .game-result-panel {
   background-color: var(--nba-dark);
   border: 1px solid var(--border-soft);

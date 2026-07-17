@@ -12,7 +12,16 @@ MODEL_DIR = 'backend/model'
 MODEL_PATH = os.path.join(MODEL_DIR, 'possession_model.pkl')
 SCALER_PATH = os.path.join(MODEL_DIR, 'scaler.pkl')
 
-FEATURE_COLUMNS = ['offensive_rating', 'offensive_pts', 'offensive_ts_pct', 'offensive_usg_pct']
+# offensive_rating and offensive_usg_pct are deliberately excluded: they're
+# highly collinear with offensive_pts (rating is itself partly built from pts/
+# ts_pct/usg_pct), which let the model assign an unstable, sign-flipped
+# coefficient to rating on the minority 3PT Make class.
+FEATURE_COLUMNS = [
+    'offensive_pts',
+    'offensive_ts_pct',
+    'shot_distance',
+    'shot_quality_distance'
+]
 LABEL_COLUMN = 'outcome'
 
 
@@ -21,6 +30,10 @@ def main():
 
     data = pd.read_csv(TRAINING_DATA_PATH)
     print(f"Loaded {len(data)} rows\n")
+
+    # Interaction term: lets the model learn that shooting efficiency's effect
+    # on scoring changes with distance, instead of treating them as independent.
+    data['shot_quality_distance'] = data['offensive_ts_pct'] * data['shot_distance']
 
     X = data[FEATURE_COLUMNS]
     y = data[LABEL_COLUMN]
@@ -33,7 +46,10 @@ def main():
 
     # lbfgs is the default solver and already fits a multinomial (softmax) model
     # for multi-class problems; the multi_class param was removed in newer sklearn.
-    model = LogisticRegression(max_iter=1000)
+    # A partial class_weight boosts the minority 3PT Make class without fully
+    # equalizing it like class_weight='balanced' does (which overcorrected and
+    # made the model over-predict 3PT Make at the expense of Miss recall).
+    model = LogisticRegression(max_iter=1000, class_weight={1: 1, 2: 1, 3: 2})
     model.fit(X_train_scaled, y_train)
 
     y_pred = model.predict(X_test_scaled)

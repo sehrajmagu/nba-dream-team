@@ -1,6 +1,43 @@
 import json
+import pickle
 import random
+from pathlib import Path
 from typing import List, Dict, Tuple
+
+import pandas as pd
+
+MODEL_DIR = Path(__file__).resolve().parent.parent / 'model'
+MODEL_PATH = MODEL_DIR / 'possession_model.pkl'
+SCALER_PATH = MODEL_DIR / 'scaler.pkl'
+
+# Must match the feature set the model was trained on in
+# backend/pipeline/train_model.py (offensive_rating/offensive_usg_pct are
+# deliberately excluded there due to collinearity with offensive_pts).
+FEATURE_COLUMNS = [
+    'offensive_pts',
+    'offensive_ts_pct',
+    'shot_distance',
+    'shot_quality_distance'
+]
+
+# Outcome classes the model was trained on (turnovers are handled separately
+# as a fixed-rate gate, since they were excluded from training entirely).
+OUTCOME_2PT_MAKE = 2
+OUTCOME_3PT_MAKE = 3
+
+_model = None
+_scaler = None
+
+
+def load_model_artifacts():
+    # Lazily load and cache the trained possession outcome model + scaler
+    global _model, _scaler
+    if _model is None or _scaler is None:
+        with open(MODEL_PATH, 'rb') as f:
+            _model = pickle.load(f)
+        with open(SCALER_PATH, 'rb') as f:
+            _scaler = pickle.load(f)
+    return _model, _scaler
 
 
 def load_players(filepath: str) -> List[Dict]:  #Load player data from JSON file
@@ -69,28 +106,30 @@ def get_play_type_distribution(position: str, usage_rate: float) -> Dict[str, fl
             }
 
 
-def get_base_ppp(play_type: str, ts_pct: float) -> float:
-    # Calculate base PPP for a play type, adjusted by player's TS%
-    ts_pct_normalized = ts_pct / 0.57
-
-    ppp_multipliers = {
-        'ISO': 0.85,
-        'PnR ball handler': 0.92,
-        'PnR roll': 1.05,
-        'Post': 0.88,
-        'Spot up': 1.02,
-        'Transition': 1.15,
-        'Cut': 1.20
-    }
-
-    multiplier = ppp_multipliers.get(play_type, 1.0)
-    return multiplier * ts_pct_normalized
+# Distance (in feet) a shot is taken from, sampled per play type since the
+# real distance isn't known until a possession actually happens.
+PLAY_TYPE_DISTANCE_RANGES = {
+    'ISO': (10, 22),
+    'PnR ball handler': (5, 24),
+    'PnR roll': (0, 5),
+    'Post': (1, 10),
+    'Spot up': (18, 27),
+    'Transition': (0, 8),
+    'Cut': (0, 4),
+}
 
 
-def apply_defensive_adjustment(base_ppp: float, defender_drtg: float) -> float:
-    # Adjust PPP based on defender's defensive rating (DRTG)
+def sample_shot_distance(play_type: str) -> int:
+    # Sample a plausible shot distance (feet) for the given play type
+    low, high = PLAY_TYPE_DISTANCE_RANGES.get(play_type, (0, 24))
+    return random.randint(low, high)
+
+
+def apply_defensive_adjustment(base_value: float, defender_drtg: float) -> float:
+    # Scale a value (PPP, scoring probability, etc.) by the defender's DRTG.
+    # Lower DRTG means better defense, so it should scale scoring down, not up.
     league_avg_drtg = 112
-    return base_ppp * (league_avg_drtg / defender_drtg)
+    return base_value * (defender_drtg / league_avg_drtg)
 
 
 def get_positional_matchup(offense_player: Dict, defense_players: List[Dict]) -> Dict:
@@ -130,16 +169,29 @@ def simulate_possession(
         ball_handler.get('usg_pct', 0.2)
     )
     play_type = sample_play_type(distribution)
+    shot_distance = sample_shot_distance(play_type)
 
-    # Calculate adjusted PPP
-    base_ppp = get_base_ppp(play_type, ball_handler.get('ts_pct', 0.55))
-    adjusted_ppp = apply_defensive_adjustment(base_ppp, defender.get('def_rating', 112))
+    # Predict shot-outcome probabilities (conditioned on the shot happening,
+    # i.e. no turnover) from the trained possession model
+    model, scaler = load_model_artifacts()
+    offensive_ts_pct = ball_handler.get('ts_pct', 0.55)
+    features = pd.DataFrame([{
+        'offensive_pts': ball_handler.get('pts', 15),
+        'offensive_ts_pct': offensive_ts_pct,
+        'shot_distance': shot_distance,
+        'shot_quality_distance': offensive_ts_pct * shot_distance
+    }], columns=FEATURE_COLUMNS)
+    scaled_features = scaler.transform(features)
+    class_probs = dict(zip(model.classes_, model.predict_proba(scaled_features)[0]))
 
-    ovr_component = (ball_handler.get('rating', 82) - 82) / 50 * 0.70
-    ppg_component = (ball_handler.get('pts', 15) - 15) / 50 * 0.30
-    quality_multiplier = 1.0 + ovr_component + ppg_component
-    quality_multiplier = max(0.7, min(1.4, quality_multiplier))
-    adjusted_ppp *= quality_multiplier
+    p_2pt = class_probs.get(OUTCOME_2PT_MAKE, 0.0)
+    p_3pt = class_probs.get(OUTCOME_3PT_MAKE, 0.0)
+
+    # Apply the defender's rating on top of the model's shot-quality prediction
+    defensive_factor = apply_defensive_adjustment(1.0, defender.get('def_rating', 112))
+    make_prob = min((p_2pt + p_3pt) * defensive_factor, 1.0)
+    make_total = p_2pt + p_3pt
+    three_pt_share = (p_3pt / make_total) if make_total > 0 else 0.0
 
     # Determine outcome
     turnover_prob = 0.13
@@ -147,17 +199,13 @@ def simulate_possession(
         outcome = 'Turnover'
         points_scored = 0
     else:
-        # Score probability derived from adjusted_PPP
-        # E[PPP] = 0.87 * score_prob * 2.25, so score_prob = adjusted_PPP / 2.0
-        score_prob = min(adjusted_ppp / 2.0, 1.0)
-        if random.random() < score_prob:
-            # Randomly determine if 2 or 3 pointer (75% 2pt, 25% 3pt)
-            if random.random() < 0.75:
-                points_scored = 2
-                outcome = 'Made 2PT'
-            else:
+        if random.random() < make_prob:
+            if random.random() < three_pt_share:
                 points_scored = 3
                 outcome = 'Made 3PT'
+            else:
+                points_scored = 2
+                outcome = 'Made 2PT'
         else:
             outcome = 'Miss'
             points_scored = 0

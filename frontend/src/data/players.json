@@ -5,7 +5,7 @@
     "position": "F",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
-    "rating": 80,
+    "rating": 79,
     "tier_positions": [
       "F"
     ],
@@ -72,7 +72,7 @@
     "position": "F-C",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
-    "rating": 82,
+    "rating": 83,
     "tier_positions": [
       "F",
       "C"
@@ -95,7 +95,7 @@
     "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 84,
+    "rating": 85,
     "tier_positions": [
       "G"
     ],
@@ -139,7 +139,7 @@
     "position": "C",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
-    "rating": 87,
+    "rating": 86,
     "tier_positions": [
       "C"
     ],
@@ -183,7 +183,7 @@
     "position": "F-G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "G",
       "F"
@@ -206,7 +206,7 @@
     "position": "F-G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
-    "rating": 82,
+    "rating": 83,
     "tier_positions": [
       "G",
       "F"
@@ -229,7 +229,7 @@
     "position": "F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 90,
+    "rating": 91,
     "tier_positions": [
       "F"
     ],
@@ -251,7 +251,7 @@
     "position": "C",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
-    "rating": 83,
+    "rating": 82,
     "tier_positions": [
       "C"
     ],
@@ -273,7 +273,7 @@
     "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 82,
+    "rating": 81,
     "tier_positions": [
       "F"
     ],
@@ -295,7 +295,7 @@
     "position": "F",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
-    "rating": 77,
+    "rating": 78,
     "tier_positions": [
       "F"
     ],
@@ -317,7 +317,7 @@
     "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 88,
+    "rating": 89,
     "tier_positions": [
       "G"
     ],
@@ -339,7 +339,7 @@
     "position": "F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
-    "rating": 88,
+    "rating": 89,
     "tier_positions": [
       "F"
     ],
@@ -361,7 +361,7 @@
     "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
-    "rating": 84,
+    "rating": 85,
     "tier_positions": [
       "G"
     ],
@@ -383,11 +383,11 @@
     "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 76,
+    "rating": 75,
     "tier_positions": [
       "F"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.078,
     "ts_pct": 0.597,
     "usg_pct": 0.125,
@@ -405,11 +405,11 @@
     "position": "F",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
-    "rating": 76,
+    "rating": 75,
     "tier_positions": [
       "F"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.075,
     "ts_pct": 0.608,
     "usg_pct": 0.144,
@@ -450,7 +450,7 @@
     "position": "F-G",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
-    "rating": 84,
+    "rating": 85,
     "tier_positions": [
       "G",
       "F"
@@ -473,7 +473,7 @@
     "position": "F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
-    "rating": 73,
+    "rating": 71,
     "tier_positions": [
       "F"
     ],
@@ -495,7 +495,7 @@
     "position": "G-F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 71,
+    "rating": 69,
     "tier_positions": [
       "G",
       "F"
@@ -541,7 +541,7 @@
     "position": "C-F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
-    "rating": 81,
+    "rating": 79,
     "tier_positions": [
       "F",
       "C"
@@ -564,7 +564,7 @@
     "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
-    "rating": 81,
+    "rating": 82,
     "tier_positions": [
       "G"
     ],
@@ -586,7 +586,7 @@
     "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 74,
+    "rating": 72,
     "tier_positions": [
       "F"
     ],
@@ -608,7 +608,7 @@
     "position": "G",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 89,
+    "rating": 90,
     "tier_positions": [
       "G"
     ],
@@ -630,7 +630,7 @@
     "position": "G",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "G"
     ],
@@ -652,7 +652,7 @@
     "position": "C-F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 72,
+    "rating": 71,
     "tier_positions": [
       "F",
       "C"
@@ -720,7 +720,7 @@
     "position": "F",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 83,
+    "rating": 84,
     "tier_positions": [
       "F"
     ],
@@ -742,7 +742,7 @@
     "position": "G-F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 81,
+    "rating": 83,
     "tier_positions": [
       "G",
       "F"
@@ -788,7 +788,7 @@
     "position": "G-F",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 91,
+    "rating": 93,
     "tier_positions": [
       "G",
       "F"
@@ -833,7 +833,7 @@
     "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
-    "rating": 88,
+    "rating": 90,
     "tier_positions": [
       "G"
     ],
@@ -855,7 +855,7 @@
     "position": "F",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
-    "rating": 72,
+    "rating": 71,
     "tier_positions": [
       "F"
     ],
@@ -877,7 +877,7 @@
     "position": "C-F",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "F",
       "C"
@@ -966,11 +966,11 @@
     "position": "C",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
-    "rating": 76,
+    "rating": 75,
     "tier_positions": [
       "C"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.11,
     "ts_pct": 0.54,
     "usg_pct": 0.133,
@@ -988,7 +988,7 @@
     "position": "C",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "C"
     ],
@@ -1010,7 +1010,7 @@
     "position": "C",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
-    "rating": 78,
+    "rating": 77,
     "tier_positions": [
       "C"
     ],
@@ -1032,7 +1032,7 @@
     "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
-    "rating": 76,
+    "rating": 77,
     "tier_positions": [
       "G"
     ],
@@ -1099,7 +1099,7 @@
     "position": "G",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "G"
     ],
@@ -1121,11 +1121,11 @@
     "position": "G",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
-    "rating": 85,
+    "rating": 86,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "C",
     "pie": 0.117,
     "ts_pct": 0.575,
     "usg_pct": 0.243,
@@ -1188,7 +1188,7 @@
     "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 71,
+    "rating": 70,
     "tier_positions": [
       "G"
     ],
@@ -1254,7 +1254,7 @@
     "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 70,
+    "rating": 69,
     "tier_positions": [
       "G"
     ],
@@ -1276,7 +1276,7 @@
     "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
-    "rating": 74,
+    "rating": 75,
     "tier_positions": [
       "G"
     ],
@@ -1364,7 +1364,7 @@
     "position": "C",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 85,
+    "rating": 84,
     "tier_positions": [
       "C"
     ],
@@ -1386,7 +1386,7 @@
     "position": "F-C",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
-    "rating": 77,
+    "rating": 78,
     "tier_positions": [
       "F",
       "C"
@@ -1409,7 +1409,7 @@
     "position": "G-F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 71,
+    "rating": 69,
     "tier_positions": [
       "G",
       "F"
@@ -1477,7 +1477,7 @@
     "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 71,
+    "rating": 70,
     "tier_positions": [
       "G"
     ],
@@ -1499,11 +1499,11 @@
     "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 76,
+    "rating": 74,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.117,
     "ts_pct": 0.586,
     "usg_pct": 0.15,
@@ -1521,7 +1521,7 @@
     "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
-    "rating": 78,
+    "rating": 77,
     "tier_positions": [
       "G"
     ],
@@ -1587,7 +1587,7 @@
     "position": "G",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
-    "rating": 92,
+    "rating": 93,
     "tier_positions": [
       "G"
     ],
@@ -1609,7 +1609,7 @@
     "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
-    "rating": 90,
+    "rating": 91,
     "tier_positions": [
       "G"
     ],
@@ -1653,7 +1653,7 @@
     "position": "G-F",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
-    "rating": 83,
+    "rating": 84,
     "tier_positions": [
       "G",
       "F"
@@ -1698,7 +1698,7 @@
     "position": "F",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 81,
+    "rating": 79,
     "tier_positions": [
       "F"
     ],
@@ -1787,7 +1787,7 @@
     "position": "G",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
-    "rating": 73,
+    "rating": 74,
     "tier_positions": [
       "G"
     ],
@@ -1809,7 +1809,7 @@
     "position": "F-G",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
-    "rating": 97,
+    "rating": 99,
     "tier_positions": [
       "G",
       "F"
@@ -1876,7 +1876,7 @@
     "position": "C",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "C"
     ],
@@ -1920,7 +1920,7 @@
     "position": "F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "F"
     ],
@@ -1942,7 +1942,7 @@
     "position": "F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
-    "rating": 89,
+    "rating": 90,
     "tier_positions": [
       "F"
     ],
@@ -1964,7 +1964,7 @@
     "position": "C",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
-    "rating": 91,
+    "rating": 90,
     "tier_positions": [
       "C"
     ],
@@ -2030,7 +2030,7 @@
     "position": "G",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 81,
+    "rating": 82,
     "tier_positions": [
       "G"
     ],
@@ -2052,7 +2052,7 @@
     "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 90,
+    "rating": 92,
     "tier_positions": [
       "G"
     ],
@@ -2118,7 +2118,7 @@
     "position": "F-C",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "F",
       "C"
@@ -2141,7 +2141,7 @@
     "position": "G",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
-    "rating": 81,
+    "rating": 82,
     "tier_positions": [
       "G"
     ],
@@ -2185,7 +2185,7 @@
     "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 87,
+    "rating": 88,
     "tier_positions": [
       "F"
     ],
@@ -2251,11 +2251,11 @@
     "position": "G",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
-    "rating": 85,
+    "rating": 86,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "C",
     "pie": 0.117,
     "ts_pct": 0.578,
     "usg_pct": 0.242,
@@ -2273,7 +2273,7 @@
     "position": "F-C",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 82,
+    "rating": 80,
     "tier_positions": [
       "F",
       "C"
@@ -2296,7 +2296,7 @@
     "position": "F",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "F"
     ],
@@ -2318,11 +2318,11 @@
     "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 85,
+    "rating": 86,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "C",
     "pie": 0.112,
     "ts_pct": 0.582,
     "usg_pct": 0.266,
@@ -2340,7 +2340,7 @@
     "position": "C",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "C"
     ],
@@ -2362,7 +2362,7 @@
     "position": "G",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
-    "rating": 87,
+    "rating": 88,
     "tier_positions": [
       "G"
     ],
@@ -2384,7 +2384,7 @@
     "position": "F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
-    "rating": 81,
+    "rating": 82,
     "tier_positions": [
       "F"
     ],
@@ -2450,11 +2450,11 @@
     "position": "F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
-    "rating": 76,
+    "rating": 74,
     "tier_positions": [
       "F"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.08,
     "ts_pct": 0.682,
     "usg_pct": 0.116,
@@ -2494,7 +2494,7 @@
     "position": "C",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 84,
+    "rating": 82,
     "tier_positions": [
       "C"
     ],
@@ -2516,7 +2516,7 @@
     "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 72,
+    "rating": 71,
     "tier_positions": [
       "G"
     ],
@@ -2560,7 +2560,7 @@
     "position": "F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 81,
+    "rating": 82,
     "tier_positions": [
       "F"
     ],
@@ -2626,7 +2626,7 @@
     "position": "G",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "G"
     ],
@@ -2648,7 +2648,7 @@
     "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 72,
+    "rating": 70,
     "tier_positions": [
       "G"
     ],
@@ -2670,7 +2670,7 @@
     "position": "G",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 79,
+    "rating": 80,
     "tier_positions": [
       "G"
     ],
@@ -2692,7 +2692,7 @@
     "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 73,
+    "rating": 72,
     "tier_positions": [
       "F"
     ],
@@ -2759,7 +2759,7 @@
     "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
-    "rating": 89,
+    "rating": 90,
     "tier_positions": [
       "G"
     ],
@@ -2781,11 +2781,11 @@
     "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
-    "rating": 75,
+    "rating": 76,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "A",
+    "tier_class": "B",
     "pie": 0.066,
     "ts_pct": 0.566,
     "usg_pct": 0.239,
@@ -2825,7 +2825,7 @@
     "position": "G",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
-    "rating": 69,
+    "rating": 67,
     "tier_positions": [
       "G"
     ],
@@ -2891,7 +2891,7 @@
     "position": "C-F",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
-    "rating": 85,
+    "rating": 83,
     "tier_positions": [
       "F",
       "C"
@@ -2914,11 +2914,11 @@
     "position": "F",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 76,
+    "rating": 75,
     "tier_positions": [
       "F"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.08,
     "ts_pct": 0.59,
     "usg_pct": 0.141,
@@ -2958,7 +2958,7 @@
     "position": "C-F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
-    "rating": 80,
+    "rating": 78,
     "tier_positions": [
       "F",
       "C"
@@ -3047,7 +3047,7 @@
     "position": "G",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 84,
+    "rating": 85,
     "tier_positions": [
       "G"
     ],
@@ -3091,7 +3091,7 @@
     "position": "C-F",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
-    "rating": 88,
+    "rating": 87,
     "tier_positions": [
       "F",
       "C"
@@ -3114,7 +3114,7 @@
     "position": "C-F",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "F",
       "C"
@@ -3137,7 +3137,7 @@
     "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
-    "rating": 73,
+    "rating": 72,
     "tier_positions": [
       "G"
     ],
@@ -3182,7 +3182,7 @@
     "position": "C",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "C"
     ],
@@ -3204,7 +3204,7 @@
     "position": "C",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
-    "rating": 73,
+    "rating": 71,
     "tier_positions": [
       "C"
     ],
@@ -3226,7 +3226,7 @@
     "position": "F-G",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
-    "rating": 78,
+    "rating": 79,
     "tier_positions": [
       "G",
       "F"
@@ -3249,7 +3249,7 @@
     "position": "G",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "G"
     ],
@@ -3271,7 +3271,7 @@
     "position": "F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 78,
+    "rating": 76,
     "tier_positions": [
       "F"
     ],
@@ -3293,11 +3293,11 @@
     "position": "F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
-    "rating": 85,
+    "rating": 87,
     "tier_positions": [
       "F"
     ],
-    "tier_class": "B",
+    "tier_class": "C",
     "pie": 0.121,
     "ts_pct": 0.573,
     "usg_pct": 0.264,
@@ -3315,7 +3315,7 @@
     "position": "F",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
-    "rating": 71,
+    "rating": 70,
     "tier_positions": [
       "F"
     ],
@@ -3359,7 +3359,7 @@
     "position": "F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "F"
     ],
@@ -3403,7 +3403,7 @@
     "position": "G",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
-    "rating": 67,
+    "rating": 68,
     "tier_positions": [
       "G"
     ],
@@ -3425,7 +3425,7 @@
     "position": "F-C",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
-    "rating": 84,
+    "rating": 85,
     "tier_positions": [
       "F",
       "C"
@@ -3448,7 +3448,7 @@
     "position": "F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "F"
     ],
@@ -3470,7 +3470,7 @@
     "position": "G",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
-    "rating": 75,
+    "rating": 73,
     "tier_positions": [
       "G"
     ],
@@ -3624,7 +3624,7 @@
     "position": "G",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 67,
+    "rating": 69,
     "tier_positions": [
       "G"
     ],
@@ -3668,7 +3668,7 @@
     "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 91,
+    "rating": 92,
     "tier_positions": [
       "F"
     ],
@@ -3713,7 +3713,7 @@
     "position": "G",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
-    "rating": 76,
+    "rating": 77,
     "tier_positions": [
       "G"
     ],
@@ -3757,7 +3757,7 @@
     "position": "F",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
-    "rating": 74,
+    "rating": 75,
     "tier_positions": [
       "F"
     ],
@@ -3779,7 +3779,7 @@
     "position": "F",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
-    "rating": 71,
+    "rating": 70,
     "tier_positions": [
       "F"
     ],
@@ -3823,7 +3823,7 @@
     "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
-    "rating": 69,
+    "rating": 68,
     "tier_positions": [
       "G"
     ],
@@ -3889,7 +3889,7 @@
     "position": "C",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 81,
+    "rating": 78,
     "tier_positions": [
       "C"
     ],
@@ -3911,7 +3911,7 @@
     "position": "G",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "G"
     ],
@@ -3933,7 +3933,7 @@
     "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "F"
     ],
@@ -3955,7 +3955,7 @@
     "position": "F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
-    "rating": 66,
+    "rating": 65,
     "tier_positions": [
       "F"
     ],
@@ -4022,11 +4022,11 @@
     "position": "G",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
-    "rating": 76,
+    "rating": 75,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.101,
     "ts_pct": 0.533,
     "usg_pct": 0.173,
@@ -4044,11 +4044,11 @@
     "position": "G",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
-    "rating": 76,
+    "rating": 75,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.09,
     "ts_pct": 0.568,
     "usg_pct": 0.09,
@@ -4066,7 +4066,7 @@
     "position": "C-F",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
-    "rating": 80,
+    "rating": 77,
     "tier_positions": [
       "F",
       "C"
@@ -4221,7 +4221,7 @@
     "position": "F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 94,
+    "rating": 95,
     "tier_positions": [
       "F"
     ],
@@ -4265,7 +4265,7 @@
     "position": "G",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 76,
+    "rating": 77,
     "tier_positions": [
       "G"
     ],
@@ -4287,7 +4287,7 @@
     "position": "C",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 75,
+    "rating": 73,
     "tier_positions": [
       "C"
     ],
@@ -4309,7 +4309,7 @@
     "position": "F-C",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
-    "rating": 82,
+    "rating": 81,
     "tier_positions": [
       "F",
       "C"
@@ -4355,7 +4355,7 @@
     "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 72,
+    "rating": 73,
     "tier_positions": [
       "G"
     ],
@@ -4377,7 +4377,7 @@
     "position": "F-C",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
-    "rating": 88,
+    "rating": 90,
     "tier_positions": [
       "F",
       "C"
@@ -4422,7 +4422,7 @@
     "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 71,
+    "rating": 70,
     "tier_positions": [
       "F"
     ],
@@ -4466,7 +4466,7 @@
     "position": "G-F",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 82,
+    "rating": 83,
     "tier_positions": [
       "G",
       "F"
@@ -4489,7 +4489,7 @@
     "position": "F-C",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
-    "rating": 79,
+    "rating": 76,
     "tier_positions": [
       "F",
       "C"
@@ -4512,7 +4512,7 @@
     "position": "G",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 91,
+    "rating": 93,
     "tier_positions": [
       "G"
     ],
@@ -4578,7 +4578,7 @@
     "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 83,
+    "rating": 84,
     "tier_positions": [
       "G"
     ],
@@ -4600,7 +4600,7 @@
     "position": "G",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
-    "rating": 85,
+    "rating": 84,
     "tier_positions": [
       "G"
     ],
@@ -4622,7 +4622,7 @@
     "position": "F",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 80,
+    "rating": 81,
     "tier_positions": [
       "F"
     ],
@@ -4644,7 +4644,7 @@
     "position": "G",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "G"
     ],
@@ -4666,7 +4666,7 @@
     "position": "G",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
-    "rating": 73,
+    "rating": 72,
     "tier_positions": [
       "G"
     ],
@@ -4688,7 +4688,7 @@
     "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
-    "rating": 80,
+    "rating": 81,
     "tier_positions": [
       "G"
     ],
@@ -4732,7 +4732,7 @@
     "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 76,
+    "rating": 77,
     "tier_positions": [
       "F"
     ],
@@ -4754,11 +4754,11 @@
     "position": "F",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 85,
+    "rating": 86,
     "tier_positions": [
       "F"
     ],
-    "tier_class": "B",
+    "tier_class": "C",
     "pie": 0.113,
     "ts_pct": 0.574,
     "usg_pct": 0.272,
@@ -4776,7 +4776,7 @@
     "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 80,
+    "rating": 79,
     "tier_positions": [
       "G"
     ],
@@ -4820,7 +4820,7 @@
     "position": "F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "F"
     ],
@@ -4842,7 +4842,7 @@
     "position": "C",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "C"
     ],
@@ -4908,7 +4908,7 @@
     "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
-    "rating": 91,
+    "rating": 93,
     "tier_positions": [
       "G"
     ],
@@ -4952,7 +4952,7 @@
     "position": "G",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
-    "rating": 79,
+    "rating": 80,
     "tier_positions": [
       "G"
     ],
@@ -4996,7 +4996,7 @@
     "position": "F",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
-    "rating": 86,
+    "rating": 87,
     "tier_positions": [
       "F"
     ],
@@ -5018,7 +5018,7 @@
     "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
-    "rating": 89,
+    "rating": 90,
     "tier_positions": [
       "G"
     ],
@@ -5040,7 +5040,7 @@
     "position": "F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 72,
+    "rating": 71,
     "tier_positions": [
       "F"
     ],
@@ -5062,7 +5062,7 @@
     "position": "F",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "F"
     ],
@@ -5107,7 +5107,7 @@
     "position": "F",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "F"
     ],
@@ -5174,7 +5174,7 @@
     "position": "G-F",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
-    "rating": 76,
+    "rating": 77,
     "tier_positions": [
       "G",
       "F"
@@ -5197,7 +5197,7 @@
     "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "F"
     ],
@@ -5219,11 +5219,11 @@
     "position": "C",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 77,
+    "rating": 75,
     "tier_positions": [
       "C"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.098,
     "ts_pct": 0.691,
     "usg_pct": 0.153,
@@ -5241,7 +5241,7 @@
     "position": "F-C",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
-    "rating": 72,
+    "rating": 71,
     "tier_positions": [
       "F",
       "C"
@@ -5286,7 +5286,7 @@
     "position": "F",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 78,
+    "rating": 77,
     "tier_positions": [
       "F"
     ],
@@ -5308,7 +5308,7 @@
     "position": "G",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
-    "rating": 71,
+    "rating": 70,
     "tier_positions": [
       "G"
     ],
@@ -5376,7 +5376,7 @@
     "position": "F-C",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "F",
       "C"
@@ -5399,7 +5399,7 @@
     "position": "F-G",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 79,
+    "rating": 80,
     "tier_positions": [
       "G",
       "F"
@@ -5422,7 +5422,7 @@
     "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
-    "rating": 80,
+    "rating": 79,
     "tier_positions": [
       "G"
     ],
@@ -5512,7 +5512,7 @@
     "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "G"
     ],
@@ -5556,7 +5556,7 @@
     "position": "C",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
-    "rating": 83,
+    "rating": 81,
     "tier_positions": [
       "C"
     ],
@@ -5578,7 +5578,7 @@
     "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "G"
     ],
@@ -5600,7 +5600,7 @@
     "position": "F",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
-    "rating": 88,
+    "rating": 90,
     "tier_positions": [
       "F"
     ],
@@ -5618,7 +5618,7 @@
   },
   {
     "id": 1626171,
-    "name": "Bobby Portis",
+    "name": "Bobby Portis Jr.",
     "position": "F",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
@@ -5644,7 +5644,7 @@
     "position": "C",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "C"
     ],
@@ -5666,7 +5666,7 @@
     "position": "C",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
-    "rating": 81,
+    "rating": 80,
     "tier_positions": [
       "C"
     ],
@@ -5711,7 +5711,7 @@
     "position": "F-C",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 74,
+    "rating": 72,
     "tier_positions": [
       "F",
       "C"
@@ -5734,11 +5734,11 @@
     "position": "G",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
-    "rating": 84,
+    "rating": 86,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "C",
     "pie": 0.113,
     "ts_pct": 0.609,
     "usg_pct": 0.262,
@@ -5756,7 +5756,7 @@
     "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 83,
+    "rating": 84,
     "tier_positions": [
       "G"
     ],
@@ -5778,11 +5778,11 @@
     "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
-    "rating": 76,
+    "rating": 75,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.087,
     "ts_pct": 0.556,
     "usg_pct": 0.214,
@@ -5800,7 +5800,7 @@
     "position": "F",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
-    "rating": 80,
+    "rating": 79,
     "tier_positions": [
       "F"
     ],
@@ -5844,7 +5844,7 @@
     "position": "C",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 84,
+    "rating": 82,
     "tier_positions": [
       "C"
     ],
@@ -5888,7 +5888,7 @@
     "position": "F-C",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 87,
+    "rating": 88,
     "tier_positions": [
       "F",
       "C"
@@ -5933,7 +5933,7 @@
     "position": "G",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
-    "rating": 88,
+    "rating": 89,
     "tier_positions": [
       "G"
     ],
@@ -5955,7 +5955,7 @@
     "position": "F",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
-    "rating": 85,
+    "rating": 83,
     "tier_positions": [
       "F"
     ],
@@ -5977,7 +5977,7 @@
     "position": "C-F",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 82,
+    "rating": 83,
     "tier_positions": [
       "F",
       "C"
@@ -6000,7 +6000,7 @@
     "position": "G",
     "team_name": "Warriors",
     "team_abbreviation": "GSW",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "G"
     ],
@@ -6022,7 +6022,7 @@
     "position": "C",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "C"
     ],
@@ -6044,7 +6044,7 @@
     "position": "G",
     "team_name": "Magic",
     "team_abbreviation": "ORL",
-    "rating": 73,
+    "rating": 72,
     "tier_positions": [
       "G"
     ],
@@ -6066,7 +6066,7 @@
     "position": "F",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
-    "rating": 76,
+    "rating": 77,
     "tier_positions": [
       "F"
     ],
@@ -6088,11 +6088,11 @@
     "position": "F",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 75,
+    "rating": 76,
     "tier_positions": [
       "F"
     ],
-    "tier_class": "A",
+    "tier_class": "B",
     "pie": 0.07,
     "ts_pct": 0.557,
     "usg_pct": 0.168,
@@ -6132,7 +6132,7 @@
     "position": "C-F",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
-    "rating": 81,
+    "rating": 79,
     "tier_positions": [
       "F",
       "C"
@@ -6200,7 +6200,7 @@
     "position": "G",
     "team_name": "Clippers",
     "team_abbreviation": "LAC",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "G"
     ],
@@ -6266,11 +6266,11 @@
     "position": "C",
     "team_name": "Wizards",
     "team_abbreviation": "WAS",
-    "rating": 85,
+    "rating": 86,
     "tier_positions": [
       "C"
     ],
-    "tier_class": "B",
+    "tier_class": "C",
     "pie": 0.121,
     "ts_pct": 0.544,
     "usg_pct": 0.252,
@@ -6288,7 +6288,7 @@
     "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 75,
+    "rating": 73,
     "tier_positions": [
       "G"
     ],
@@ -6310,7 +6310,7 @@
     "position": "G",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
-    "rating": 79,
+    "rating": 80,
     "tier_positions": [
       "G"
     ],
@@ -6332,7 +6332,7 @@
     "position": "C",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
-    "rating": 89,
+    "rating": 90,
     "tier_positions": [
       "C"
     ],
@@ -6354,7 +6354,7 @@
     "position": "F",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
-    "rating": 80,
+    "rating": 81,
     "tier_positions": [
       "F"
     ],
@@ -6420,7 +6420,7 @@
     "position": "G-F",
     "team_name": "Timberwolves",
     "team_abbreviation": "MIN",
-    "rating": 73,
+    "rating": 72,
     "tier_positions": [
       "G",
       "F"
@@ -6443,7 +6443,7 @@
     "position": "C",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
-    "rating": 84,
+    "rating": 83,
     "tier_positions": [
       "C"
     ],
@@ -6465,11 +6465,11 @@
     "position": "G",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 84,
+    "rating": 86,
     "tier_positions": [
       "G"
     ],
-    "tier_class": "B",
+    "tier_class": "C",
     "pie": 0.108,
     "ts_pct": 0.546,
     "usg_pct": 0.293,
@@ -6531,7 +6531,7 @@
     "position": "G",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
-    "rating": 81,
+    "rating": 82,
     "tier_positions": [
       "G"
     ],
@@ -6553,7 +6553,7 @@
     "position": "F",
     "team_name": "Pacers",
     "team_abbreviation": "IND",
-    "rating": 87,
+    "rating": 89,
     "tier_positions": [
       "F"
     ],
@@ -6575,7 +6575,7 @@
     "position": "G",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
-    "rating": 79,
+    "rating": 80,
     "tier_positions": [
       "G"
     ],
@@ -6597,11 +6597,11 @@
     "position": "C",
     "team_name": "Bucks",
     "team_abbreviation": "MIL",
-    "rating": 77,
+    "rating": 74,
     "tier_positions": [
       "C"
     ],
-    "tier_class": "B",
+    "tier_class": "A",
     "pie": 0.083,
     "ts_pct": 0.772,
     "usg_pct": 0.095,
@@ -6685,7 +6685,7 @@
     "position": "F-C",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
-    "rating": 81,
+    "rating": 80,
     "tier_positions": [
       "F",
       "C"
@@ -6708,7 +6708,7 @@
     "position": "F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
-    "rating": 80,
+    "rating": 81,
     "tier_positions": [
       "F"
     ],
@@ -6730,7 +6730,7 @@
     "position": "F",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
-    "rating": 73,
+    "rating": 72,
     "tier_positions": [
       "F"
     ],
@@ -6752,7 +6752,7 @@
     "position": "G",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
-    "rating": 82,
+    "rating": 81,
     "tier_positions": [
       "G"
     ],
@@ -6796,7 +6796,7 @@
     "position": "F-C",
     "team_name": "Pistons",
     "team_abbreviation": "DET",
-    "rating": 79,
+    "rating": 78,
     "tier_positions": [
       "F",
       "C"
@@ -6863,7 +6863,7 @@
     "position": "F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
-    "rating": 71,
+    "rating": 69,
     "tier_positions": [
       "F"
     ],
@@ -6907,7 +6907,7 @@
     "position": "G-F",
     "team_name": "Rockets",
     "team_abbreviation": "HOU",
-    "rating": 86,
+    "rating": 87,
     "tier_positions": [
       "G",
       "F"
@@ -6953,7 +6953,7 @@
     "position": "G",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 76,
+    "rating": 77,
     "tier_positions": [
       "G"
     ],
@@ -6997,7 +6997,7 @@
     "position": "C-F",
     "team_name": "Knicks",
     "team_abbreviation": "NYK",
-    "rating": 89,
+    "rating": 90,
     "tier_positions": [
       "F",
       "C"
@@ -7020,7 +7020,7 @@
     "position": "G",
     "team_name": "Nets",
     "team_abbreviation": "BKN",
-    "rating": 74,
+    "rating": 75,
     "tier_positions": [
       "G"
     ],
@@ -7106,11 +7106,11 @@
   },
   {
     "id": 202685,
-    "name": "Jonas Valan\u010di\u016bnas",
+    "name": "Jonas Valanciunas",
     "position": "C",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
-    "rating": 85,
+    "rating": 84,
     "tier_positions": [
       "C"
     ],
@@ -7132,7 +7132,7 @@
     "position": "F",
     "team_name": "Lakers",
     "team_abbreviation": "LAL",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "F"
     ],
@@ -7243,7 +7243,7 @@
     "position": "F-C",
     "team_name": "Cavaliers",
     "team_abbreviation": "CLE",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "F",
       "C"
@@ -7266,7 +7266,7 @@
     "position": "F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 73,
+    "rating": 72,
     "tier_positions": [
       "F"
     ],
@@ -7332,7 +7332,7 @@
     "position": "G",
     "team_name": "Hawks",
     "team_abbreviation": "ATL",
-    "rating": 73,
+    "rating": 72,
     "tier_positions": [
       "G"
     ],
@@ -7354,7 +7354,7 @@
     "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 75,
+    "rating": 73,
     "tier_positions": [
       "G"
     ],
@@ -7376,7 +7376,7 @@
     "position": "G",
     "team_name": "Raptors",
     "team_abbreviation": "TOR",
-    "rating": 75,
+    "rating": 74,
     "tier_positions": [
       "G"
     ],
@@ -7398,7 +7398,7 @@
     "position": "C",
     "team_name": "Heat",
     "team_abbreviation": "MIA",
-    "rating": 84,
+    "rating": 83,
     "tier_positions": [
       "C"
     ],
@@ -7420,7 +7420,7 @@
     "position": "F",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 80,
+    "rating": 81,
     "tier_positions": [
       "F"
     ],
@@ -7442,7 +7442,7 @@
     "position": "G-F",
     "team_name": "76ers",
     "team_abbreviation": "PHI",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "G",
       "F"
@@ -7487,7 +7487,7 @@
     "position": "G",
     "team_name": "Nuggets",
     "team_abbreviation": "DEN",
-    "rating": 80,
+    "rating": 81,
     "tier_positions": [
       "G"
     ],
@@ -7509,7 +7509,7 @@
     "position": "F",
     "team_name": "Grizzlies",
     "team_abbreviation": "MEM",
-    "rating": 76,
+    "rating": 77,
     "tier_positions": [
       "F"
     ],
@@ -7531,7 +7531,7 @@
     "position": "F-C",
     "team_name": "Spurs",
     "team_abbreviation": "SAS",
-    "rating": 96,
+    "rating": 97,
     "tier_positions": [
       "F",
       "C"
@@ -7554,7 +7554,7 @@
     "position": "G",
     "team_name": "Kings",
     "team_abbreviation": "SAC",
-    "rating": 84,
+    "rating": 85,
     "tier_positions": [
       "G"
     ],
@@ -7576,7 +7576,7 @@
     "position": "G",
     "team_name": "Hornets",
     "team_abbreviation": "CHA",
-    "rating": 83,
+    "rating": 84,
     "tier_positions": [
       "G"
     ],
@@ -7598,7 +7598,7 @@
     "position": "G",
     "team_name": "Celtics",
     "team_abbreviation": "BOS",
-    "rating": 83,
+    "rating": 84,
     "tier_positions": [
       "G"
     ],
@@ -7664,7 +7664,7 @@
     "position": "G",
     "team_name": "Mavericks",
     "team_abbreviation": "DAL",
-    "rating": 82,
+    "rating": 83,
     "tier_positions": [
       "G"
     ],
@@ -7686,7 +7686,7 @@
     "position": "F",
     "team_name": "Jazz",
     "team_abbreviation": "UTA",
-    "rating": 73,
+    "rating": 74,
     "tier_positions": [
       "F"
     ],
@@ -7708,7 +7708,7 @@
     "position": "F",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
-    "rating": 80,
+    "rating": 78,
     "tier_positions": [
       "F"
     ],
@@ -7730,7 +7730,7 @@
     "position": "G-F",
     "team_name": "Thunder",
     "team_abbreviation": "OKC",
-    "rating": 77,
+    "rating": 76,
     "tier_positions": [
       "G",
       "F"
@@ -7753,7 +7753,7 @@
     "position": "C",
     "team_name": "Suns",
     "team_abbreviation": "PHX",
-    "rating": 85,
+    "rating": 84,
     "tier_positions": [
       "C"
     ],
@@ -7819,7 +7819,7 @@
     "position": "C-F",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 85,
+    "rating": 82,
     "tier_positions": [
       "F",
       "C"
@@ -7842,7 +7842,7 @@
     "position": "F",
     "team_name": "Pelicans",
     "team_abbreviation": "NOP",
-    "rating": 87,
+    "rating": 88,
     "tier_positions": [
       "F"
     ],
@@ -7908,7 +7908,7 @@
     "position": "F",
     "team_name": "Bulls",
     "team_abbreviation": "CHI",
-    "rating": 74,
+    "rating": 73,
     "tier_positions": [
       "F"
     ],
@@ -7930,7 +7930,7 @@
     "position": "C",
     "team_name": "Trail Blazers",
     "team_abbreviation": "POR",
-    "rating": 65,
+    "rating": 66,
     "tier_positions": [
       "C"
     ],
