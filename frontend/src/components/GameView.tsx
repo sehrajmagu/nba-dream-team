@@ -14,6 +14,7 @@ interface GameViewProps {
   liveScore: { a: number; b: number };
   isFinalRound: boolean;
   onPlayGame: () => void;
+  onInstantSim: () => void;
   onContinue: () => void;
   onRestart: () => void;
 }
@@ -40,6 +41,7 @@ export const GameView: React.FC<GameViewProps> = ({
   liveScore,
   isFinalRound,
   onPlayGame,
+  onInstantSim,
   onContinue,
   onRestart,
 }) => {
@@ -141,9 +143,14 @@ export const GameView: React.FC<GameViewProps> = ({
             </div>
           )
         ) : (
-          <button className="play-game-btn" onClick={onPlayGame} disabled={isSimulating || isAnimating}>
-            {isSimulating ? 'Tipping off...' : isAnimating ? 'Game in progress...' : 'Play Game'}
-          </button>
+          <div className="game-actions-buttons">
+            <button className="play-game-btn" onClick={onPlayGame} disabled={isSimulating || isAnimating}>
+              {isSimulating ? 'Tipping off...' : isAnimating ? 'Game in progress...' : 'Play Game'}
+            </button>
+            <button className="instant-sim-btn" onClick={onInstantSim} disabled={isSimulating || isAnimating}>
+              Instant Sim
+            </button>
+          </div>
         )}
       </div>
     </div>

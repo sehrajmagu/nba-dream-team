@@ -167,7 +167,7 @@ function App() {
     setScreen('game');
   };
 
-  const handlePlayGame = async () => {
+  const handlePlayGame = async (instant: boolean = false) => {
     const opponentKey = opponentSequence[roundIndex];
     const opponentTeam = classicTeams[opponentKey];
     if (!opponentTeam) return;
@@ -205,6 +205,32 @@ function App() {
 
       const opponentBoxScore: Record<string, number> = {};
       opponentTeam.players.forEach(p => { opponentBoxScore[p.name] = 0; });
+
+      if (instant) {
+        for (const play of possessions) {
+          if (play.team === 'A' && play.ball_handler in userBoxScore) {
+            userBoxScore[play.ball_handler] += play.points_scored;
+          } else if (play.team === 'B' && play.ball_handler in opponentBoxScore) {
+            opponentBoxScore[play.ball_handler] += play.points_scored;
+          }
+        }
+
+        setIsSimulating(false);
+        setLastResult({
+          scoreUser: data.score_a,
+          scoreOpponent: data.score_b,
+          winner: data.winner,
+          userBoxScore,
+          opponentBoxScore,
+        });
+
+        if (data.winner === 'user') {
+          setUserWins(prev => prev + 1);
+        } else {
+          setOpponentWins(prev => prev + 1);
+        }
+        return;
+      }
 
       setIsSimulating(false);
       setIsAnimating(true);
@@ -325,7 +351,8 @@ function App() {
               livePlays={livePlays}
               liveScore={liveScore}
               isFinalRound={roundIndex === opponentSequence.length - 1}
-              onPlayGame={handlePlayGame}
+              onPlayGame={() => handlePlayGame(false)}
+              onInstantSim={() => handlePlayGame(true)}
               onContinue={handleContinue}
               onRestart={handleRestart}
             />

@@ -224,6 +224,31 @@
   border-radius: 999px;
 }
 
+.game-actions-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.instant-sim-btn {
+  padding: 16px 28px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--nba-gray-light);
+  border: 1px solid var(--border-soft);
+  box-shadow: none;
+}
+
+.instant-sim-btn:hover:not(:disabled) {
+  background-color: var(--nba-gray);
+  color: var(--nba-light);
+  transform: none;
+  box-shadow: none;
+}
+
 .series-outcome {
   display: flex;
   flex-direction: column;
