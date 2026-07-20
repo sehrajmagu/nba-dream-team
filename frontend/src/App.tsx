@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ClassicTeams,
   Conference,
@@ -109,6 +109,13 @@ function App() {
   };
 
   const [draftAdviceUses, setDraftAdviceUses] = useState(2);
+
+  // Render's free tier spins the backend down on idle. Ping it as soon as the
+  // app loads so the cold start happens while the user is drafting, not when
+  // they hit Play Game.
+  useEffect(() => {
+    fetch('https://nba-dream-team.onrender.com/api/players').catch(() => {});
+  }, []);
 
   const handleSelectConference = (conf: Conference) => {
     const prefix = conf === 'West' ? 'west' : 'east';
