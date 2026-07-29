@@ -4,3 +4,4 @@ __pycache__/
 .env
 node_modules/
 backend/data/training/
+INTERVIEW_NOTES.md
